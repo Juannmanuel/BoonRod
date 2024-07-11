@@ -72,13 +72,14 @@
 }
 @media (max-width: 450px) {
 .container_cover {
-  height: 55%;
+  height: 70%;
   width: 95%;
   
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
+
 }
 .title {
   font-size: 4.5em;
