@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.categories_main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.container_slider {
+  width: 100vw;
+  height: 100vh;
+}
+.container_cover {
+  width: 90%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 1rem;
+  z-index: 4;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  pointer-events: none;
+
+
+}
+.title {
+  margin: 0;
+  padding: 0;
+  /* text-indent: 50px; Sangría */
+  line-height: .9;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(241, 241, 241);
+  min-width: 90%;
+  min-height: 60%;
+  font-size: 8rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: start;
+  text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
+}
+.title h2 {
+  margin: 0;
+  padding: 0;
+
+}
+@media (max-width: 1440px) {
+  .title {
+    font-size: 9rem;
+    min-width: 20%;
+
+  }
+}
+@media (max-width: 1024px) {
+  .title {
+    font-size: 9.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .title {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 712px) {
+  .title {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 450px) {
+.container_cover {
+  height: 55%;
+  width: 95%;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+}
+.title {
+  font-size: 4.5em;
+  justify-content: center;
+}
+}
+

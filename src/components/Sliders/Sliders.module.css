@@ -1,0 +1,24 @@
+.sliders_main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}

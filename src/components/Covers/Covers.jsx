@@ -1,0 +1,41 @@
+import { useEffect, useRef } from "react";
+import style from "./Covers.module.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Importa los estilos de Swiper
+import Sliders from "../Sliders/Sliders";
+import AnimatedTitle from "../Widges/AnimatedTitle/AnimatedTitle";
+
+function Covers({ categories, handleSlideChange, currentSlide }) {
+  return (
+    <section>
+      <Swiper
+        className={style.categories_main}
+        direction="vertical"
+        slidesPerView={1}
+        spaceBetween={0}
+        onSlideChange={(swiper) => handleSlideChange(swiper)}
+      >
+        {categories.map((item, index) => (
+          <SwiperSlide
+            className={style.container_slider}
+            key={`${currentSlide}-${index}`}
+          >
+            <div className={style.container_cover}>
+              <h2 className={style.title}>{item.description}</h2>
+              <div className={style.containerButton}>
+                <AnimatedTitle
+                  title={item.buttonText}
+                  currentSlide={currentSlide}
+                  index={index}
+                />
+              </div>
+            </div>
+            <Sliders images={item.images} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+}
+
+export default Covers;
