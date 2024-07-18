@@ -69,7 +69,7 @@ export const sections = [
       description: "Todo para arriba!"
   },
   {
-    section: "Quiero Mi pagina",
+    section: "Mi pagina",
     buttonText: "Quiero mi pagina",
     images: [
       footer1,
