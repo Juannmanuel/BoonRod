@@ -29,7 +29,6 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  border: 1px solid black;
 
 }
 /*-----------BOTON-------------*/
@@ -48,19 +47,20 @@
   border: none;
   pointer-events: all;
   font-size: 1.5rem;
+
 }
 
 .cta span {
   letter-spacing: 4px;
   text-transform: uppercase;
   width: 100%;
-  min-width: 10rem;
+  min-width: 5rem;
   height: 2rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 700;
@@ -68,7 +68,6 @@
   font-family: "Anaheim", sans-serif;
   font-optical-sizing: auto;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
-  border: 1px solid black;
   font-style: normal;
 }
 
@@ -149,7 +148,7 @@
     width: 90%;
     left: 50%;
     transform: translate(-50%);
-    height: 10%;
+    height: 20%;
     top: 17rem;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -167,6 +166,10 @@
 @media (max-width: 780px) {
   .link {
     top: 20rem;
+    height: 5rem;
+  }
+  .logo {
+    max-width: 50%;
   }
 }
 @media (max-width: 450px) {
@@ -174,23 +177,25 @@
     height: 50%;
   }
   .link {
-    height: 15%;
+    height: 25%;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
     width: 90%;
-    top: 45%;
+    top: 38%;
   }
   .logo {
-    max-width: 65%;
+    max-width: 60%;
     margin-top: 0.5rem;
   }
   .cta {
     height: auto;
+    width: auto;
+    
   }
   .cta span {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 }
