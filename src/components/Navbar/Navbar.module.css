@@ -166,10 +166,13 @@
 @media (max-width: 780px) {
   .link {
     top: 20rem;
-    height: 5rem;
+    height: 10rem;
+    top: 15rem;
+    display: flex;
+    flex-flow: row wrap;
   }
   .logo {
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 @media (max-width: 450px) {
@@ -185,7 +188,6 @@
     align-items: center;
     width: 100%;
     top: 38%;
-    border: 1px solid black;
   }
   .logo {
     max-width: 60%;
