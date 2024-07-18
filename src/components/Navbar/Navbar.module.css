@@ -186,11 +186,11 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    top: 38%;
+    width: 95%;
+    top: 35%;
   }
   .logo {
-    max-width: 60%;
+    max-width: 50%;
     margin-top: 0.5rem;
   }
   .cta {
