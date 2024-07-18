@@ -1,14 +1,14 @@
 
-import newCollection1 from "../src/assets/images/Categorias/newCollection/1.jpg"
-import newCollection2 from "../src/assets/images/Categorias/newCollection/2.jpg"
-import newCollection3 from "../src/assets/images/Categorias/newCollection/3.jpg"
-import newCollection4 from "../src/assets/images/Categorias/newCollection/4.jpg"
-import newCollection5 from "../src/assets/images/Categorias/newCollection/5.jpg"
-import newCollection6 from "../src/assets/images/Categorias/newCollection/6.jpg"
-import hotSale1 from "../src/assets/images/Categorias/hotSale/1.jpg"
-import hotSale2 from "../src/assets/images/Categorias/hotSale/2.jpg"
-import hotSale3 from "../src/assets/images/Categorias/hotSale/3.jpg"
-import hotSale4 from "../src/assets/images/Categorias/hotSale/4.jpg"
+import newCollection1 from "../src/assets/images/Categorias/newCollection/1.png"
+import newCollection2 from "../src/assets/images/Categorias/newCollection/2.png"
+import newCollection3 from "../src/assets/images/Categorias/newCollection/3.png"
+import newCollection4 from "../src/assets/images/Categorias/newCollection/4.png"
+import newCollection5 from "../src/assets/images/Categorias/newCollection/5.png"
+import newCollection6 from "../src/assets/images/Categorias/newCollection/6.png"
+import hotSale1 from "../src/assets/images/Categorias/hotSale/1.png"
+import hotSale2 from "../src/assets/images/Categorias/hotSale/2.png"
+import hotSale3 from "../src/assets/images/Categorias/hotSale/3.png"
+import hotSale4 from "../src/assets/images/Categorias/hotSale/4.png"
 import hotSale5 from "../src/assets/images/Categorias/hotSale/5.jpg"
 import sobreNosotros1 from "../src/assets/images/Categorias/sobreNosotros/1.jpg"
 import sobreNosotros2 from "../src/assets/images/Categorias/sobreNosotros/2.jpg"
@@ -22,7 +22,7 @@ import footer5 from "./assets/images/Categorias/footer/5.jpg"
 
 export const sections = [
   {
-      section: "Sobre nosotros",
+      section: "Conócenos",
       buttonText: "Contactanos",
       images: [
         sobreNosotros1,
@@ -32,7 +32,7 @@ export const sections = [
       description: "Innovación desde nuestros inicios."
   },
   {
-      section: "New Collection",
+      section: "New",
       buttonText: "Descubrí lo nuevo",
       images: [
           newCollection1,
