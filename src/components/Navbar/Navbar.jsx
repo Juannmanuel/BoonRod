@@ -17,7 +17,7 @@ const Navbar = ({ sections, currentSlide }) => {
             key={index}
             id={index}
           >
-            <span className={styles.hover_underline_animation}>{item}</span>
+            <span className={styles.hover_underline_animation}>{item.section}</span>
           </button>
         ))}
       </div>

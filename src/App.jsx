@@ -5,7 +5,7 @@ import { sections } from "./data";
 import "./App.css";
 
 function App() {
-  let categories = ["Nosotros", "New", "Sale", "Footer"];
+  let categories = ["Nosotros", "New", "Sale", "Footer", "UP"];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar sections={categories} currentSlide={currentSlide} />
+      <Navbar sections={sections} currentSlide={currentSlide} />
       <Covers
         categories={sections}
         handleSlideChange={handleSlideChange}

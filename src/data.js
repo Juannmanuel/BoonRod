@@ -57,8 +57,8 @@ export const sections = [
       description: "Grandes descuentos, grandes estilos."
   },
   {
-      section: "Quiero Mi pagina",
-      buttonText: "Quiero mi pagina",
+      section: "UP",
+      buttonText: "Descubrílo",
       images: [
         footer1,
         footer2,
@@ -66,7 +66,19 @@ export const sections = [
         footer4,
         footer5,
       ],
-      description: "Tu negocio, nuestra creatividad."
-  }
+      description: "Todo para arriba!"
+  },
+  {
+    section: "Quiero Mi pagina",
+    buttonText: "Quiero mi pagina",
+    images: [
+      footer1,
+      footer2,
+      footer3,
+      footer4,
+      footer5,
+    ],
+    description: "Tu negocio, nuestra creatividad."
+}
 ];
 
