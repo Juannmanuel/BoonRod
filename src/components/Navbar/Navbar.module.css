@@ -181,7 +181,7 @@
   }
   .link {
     height: auto;
-    max-height: 30%;
+    max-height: 20%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
