@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import logoImage from "../../assets/images/logo/logo_boonrod_claro.png";
+import logoImage from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 
 const Navbar = ({ sections, currentSlide }) => {
