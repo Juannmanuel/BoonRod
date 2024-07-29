@@ -57,7 +57,7 @@ export const sections = [
       description: "Grandes descuentos, grandes estilos."
   },
   {
-      section: "UP",
+      section: "Accesorios",
       buttonText: "Descubrílo",
       images: [
         footer1,
@@ -69,7 +69,7 @@ export const sections = [
       description: "Todo para arriba!"
   },
   {
-    section: "Mi pagina",
+    section: "Remeras",
     buttonText: "Quiero mi pagina",
     images: [
       footer1,
@@ -79,6 +79,30 @@ export const sections = [
       footer5,
     ],
     description: "Tu negocio, nuestra creatividad."
+},
+{
+  section: "Pantalones",
+  buttonText: "Quiero mi pagina",
+  images: [
+    footer1,
+    footer2,
+    footer3,
+    footer4,
+    footer5,
+  ],
+  description: "Tu negocio, nuestra creatividad."
+},
+{
+  section: "Buzzos",
+  buttonText: "Quiero mi pagina",
+  images: [
+    footer1,
+    footer2,
+    footer3,
+    footer4,
+    footer5,
+  ],
+  description: "Tu negocio, nuestra creatividad."
 }
 ];
 
