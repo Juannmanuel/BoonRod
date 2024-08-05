@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Importa los estilos de Swiper
 import Sliders from "../Sliders/Sliders";
 import AnimatedTitle from "../Widges/AnimatedTitle/AnimatedTitle";
+import { Autoplay } from "swiper/modules";
 
 function Covers({ categories, handleSlideChange, currentSlide }) {
   return (
@@ -14,6 +15,8 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
         slidesPerView={1}
         spaceBetween={0}
         onSlideChange={(swiper) => handleSlideChange(swiper)}
+      modules={[Autoplay]}
+        speed={1000}
       >
         {categories.map((item, index) => (
           <SwiperSlide

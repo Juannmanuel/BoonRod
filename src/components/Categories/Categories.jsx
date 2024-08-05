@@ -11,6 +11,7 @@ function Categories({ categories, handleSlideChange,  currentSlide }) {
       slidesPerView={1}
       spaceBetween={0}
       onSlideChange={(swiper) => handleSlideChange(swiper)}
+      speed={10000}
 
     >
       {categories.map((item, index) => (

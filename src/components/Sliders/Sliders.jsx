@@ -13,16 +13,21 @@ function Sliders({images}) {
     <Swiper
       className={style.sliders_main}
       direction="horizontal"
+      speed={1000}
       loop={true}
       slidesPerView={1}
       spaceBetween={0}
-      modules={Autoplay}
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay]}
       breakpoints={{
         920: {
           slidesPerView: 2,
         },
         1040: {
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
       }}
     >
