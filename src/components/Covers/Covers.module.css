@@ -19,7 +19,7 @@
   z-index: 4;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   pointer-events: none;
   margin-bottom: 3rem;
@@ -37,6 +37,12 @@
   color: rgb(241, 241, 241);
   font-size: 8rem;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
+}
+.container_cover{
+  margin: 0;
+  padding: 0;
+  color: rgb(241, 241, 241);
+  font-size: 1.5rem;
 }
 @media (max-width: 2000px) {
   .container_cover {

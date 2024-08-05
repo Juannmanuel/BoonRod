@@ -20,7 +20,10 @@ function Sliders({ images }) {
         920: {
           slidesPerView: 1,
         },
-        2000: {
+        1024: {
+          slidesPerView: 2,
+        },
+        1366: {
           slidesPerView: 3,
         },
       }}

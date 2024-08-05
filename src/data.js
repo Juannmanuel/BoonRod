@@ -29,7 +29,8 @@ export const sections = [
         sobreNosotros2,
         sobreNosotros3,
       ],
-      description: "Innovación desde nuestros inicios."
+      title: "Innovación desde nuestros inicios.",
+      description: "Somos más que moda, somos un estilo de vida. Conoce a fondo nuestra marca y nuestra propuesta."
   },
   {
       section: "New",
@@ -42,7 +43,8 @@ export const sections = [
           newCollection5,
           newCollection6,
       ],
-      description: "Nueva temporada, nuevos estilos."
+      title: "Nueva temporada, nuevos estilos.",
+      description: "Las últimas tendencias y novedades en moda urbana. ¡No te pierdas lo más reciente!"
   },
   {
       section: "Hot Sale",
@@ -54,7 +56,8 @@ export const sections = [
         hotSale4,
         hotSale5,
       ],
-      description: "Grandes descuentos, grandes estilos."
+      title: "Grandes descuentos, grandes estilos.",
+      description: "Ofertas que no puedes dejar pasar. Descuentos exclusivos en nuestra Hot Sale."
   },
   {
       section: "Accesorios",
@@ -66,20 +69,9 @@ export const sections = [
         footer4,
         footer5,
       ],
-      description: "Todo para arriba!"
+      title: "Todo para arriba!",
+      description: "El toque final para tu look. Encuentra los accesorios ideales para destacar."
   },
-  {
-    section: "Remeras",
-    buttonText: "Quiero mi pagina",
-    images: [
-      footer1,
-      footer2,
-      footer3,
-      footer4,
-      footer5,
-    ],
-    description: "Tu negocio, nuestra creatividad."
-},
 
 ];
 
