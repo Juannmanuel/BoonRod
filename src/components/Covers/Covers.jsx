@@ -24,7 +24,7 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
             key={`${currentSlide}-${index}`}
           >
             <div className={style.container_cover}>
-              <h2 className={style.title}>{item.description}</h2>
+              <h2>{item.description}</h2>
               <div className={style.containerButton}>
                 <AnimatedTitle
                   title={item.buttonText}
