@@ -150,7 +150,7 @@
     width: 80%;
   }
   .cta span {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 800px) {
@@ -202,7 +202,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: end;
-    top: 9rem;
+    top: 10rem;
   }
   .logo {
     max-width: 50%;
@@ -229,6 +229,6 @@
 }
 @media (max-width: 400px) {
   .link {
-    top: 8rem;
+    top: 9rem;
   }
 }
