@@ -1,14 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import style from "./Sliders.module.css";
-import image from "../../assets/images/Ropa/Portadas/Portadas_Prendas/Portada_Prendas_3.jpg";
-import { sections } from "../../data";
 import { Autoplay } from "swiper/modules";
 
-function Sliders({images}) {
-  console.log(images);
-  console.log(sections[0]);
-  // let slider = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
-
+function Sliders({ images }) {
   return (
     <Swiper
       className={style.sliders_main}
@@ -23,17 +17,17 @@ function Sliders({images}) {
       }}
       modules={[Autoplay]}
       breakpoints={{
-        920: {
-          slidesPerView: 2,
-        },
-        1040: {
+        1920: {
           slidesPerView: 3,
         },
       }}
     >
       {images?.map((item, index) => (
-        <SwiperSlide>
-          <img src={item} alt="" style={{ width: "100%", height: "100%" }} />
+        <SwiperSlide key={index}>
+          <div className={style.slider}>
+            <img src={item} alt="" className={style.image} />
+            <div className={style.shadow}></div>
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>
