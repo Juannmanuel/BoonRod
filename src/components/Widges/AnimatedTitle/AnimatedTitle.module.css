@@ -112,3 +112,15 @@ font-size: 1.8rem;
 
   }
 }
+@media screen and (max-width: 480px) {
+  .learnMore {
+    width: 18rem; /* Adjust the width for smaller screens */
+  
+  }
+
+  .learnMore .buttonText {
+    font-size: 1.7rem; /* Adjust the font size */
+    margin: 0 0 0 .5rem; /* Adjust the margin */
+    padding: 0.5rem 0; /* Adjust the padding */
+  }
+}

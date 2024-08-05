@@ -17,7 +17,10 @@ function Sliders({ images }) {
       }}
       modules={[Autoplay]}
       breakpoints={{
-        1920: {
+        920: {
+          slidesPerView: 1,
+        },
+        2000: {
           slidesPerView: 3,
         },
       }}
