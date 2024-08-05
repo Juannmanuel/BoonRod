@@ -80,29 +80,6 @@ export const sections = [
     ],
     description: "Tu negocio, nuestra creatividad."
 },
-{
-  section: "Pantalones",
-  buttonText: "Quiero mi pagina",
-  images: [
-    footer1,
-    footer2,
-    footer3,
-    footer4,
-    footer5,
-  ],
-  description: "Tu negocio, nuestra creatividad."
-},
-{
-  section: "Buzzos",
-  buttonText: "Quiero mi pagina",
-  images: [
-    footer1,
-    footer2,
-    footer3,
-    footer4,
-    footer5,
-  ],
-  description: "Tu negocio, nuestra creatividad."
-}
+
 ];
 

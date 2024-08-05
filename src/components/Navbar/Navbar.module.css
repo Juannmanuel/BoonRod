@@ -22,9 +22,9 @@
   width: 70%;
   max-width: 90%;
   position: absolute;
-  top: 25%;
+  top: 85%;
   left: 50%;
-  transform: translate(50%);
+  transform: translate(-50%);
   height: 20%;
   gap: 0.5rem;
   display: flex;
@@ -104,23 +104,28 @@
 /*------------------------------*/
 @media (max-width: 2000px) {
   .link {
-    top: 85%;
+    top: 11.5rem;
+  }
+  .logo {
+    max-width: 17%;
+    margin-top: 0.2rem;
   }
 }
 
 @media (max-width: 1920px) {
   .link {
-    top: 65%;
+    top: 8rem;
     width: 70%;
     max-width: none;
     font-size: 1rem;
   }
   .logo {
-    max-width: 20%;
-    margin-top: 0.5rem;
+    max-width: 15%;
+    margin-top: 0.2rem;
   }
   .cta span {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 }
 @media (max-width: 1440px) {
@@ -188,31 +193,32 @@
 }
 @media (max-width: 450px) {
   .navbar {
-    height: 50%;
+    height: auto;
   }
   .link {
     height: auto;
-    max-height: 25%;
+    max-height: 20%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    top: 35%;
-    gap: -1rem;
+    align-items: end;
+    top: 8.5rem;
   }
   .logo {
     max-width: 50%;
     margin-top: 0.5rem;
   }
   .hover_underline_animation:after {
-    height: 5%;
-    bottom: 0.5rem;
+    height: .2rem;
+    bottom: 0.1rem;
   }
   .cta {
     height: auto;
     min-width: 30%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    max-height: 1.3rem;
   }
   .cta span {
     font-size: 1.2rem;
