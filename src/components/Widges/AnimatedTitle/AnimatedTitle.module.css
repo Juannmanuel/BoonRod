@@ -110,4 +110,7 @@
   .learnMore .buttonText {
     font-size: 1.3rem;
   }
+  .learnMore .circle {
+    height: 3rem;
+  }
 }
