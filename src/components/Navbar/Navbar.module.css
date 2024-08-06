@@ -86,15 +86,15 @@
   height: 10%;
   bottom: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #ffffffaf;
   transform-origin: bottom right;
-  transition: transform 1s ease-out;
+  transition: transform 1.5s ease-out;
   box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
 }
 
 .cta:hover .hover_underline_animation:after,
 .cta.active .hover_underline_animation:after {
-  color: white;
+  color: rgb(239, 15, 15);
 
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -190,6 +190,7 @@
   .logo {
     max-width: 35%;
   }
+
 }
 @media (max-width: 450px) {
   .navbar {
@@ -203,16 +204,14 @@
     justify-content: center;
     align-items: end;
     top: 10rem;
+    pointer-events: fill;
 
   }
   .logo {
     max-width: 50%;
     margin-top: 0.5rem;
   }
-  .hover_underline_animation:after {
-    height: .2rem;
-    bottom: 0.1rem;
-  }
+
   .cta {
     height: auto;
     min-width: 20%;
