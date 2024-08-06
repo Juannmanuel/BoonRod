@@ -22,19 +22,19 @@ import footer5 from "./assets/images/Categorias/footer/5.png"
 
 export const sections = [
   {
-      section: "Conócenos",
-      buttonText: "Contactanos",
+      section: "¿Quiénes Somos?",
+      buttonText: "Conócenos",
       images: [
         sobreNosotros1,
         sobreNosotros2,
         sobreNosotros3,
       ],
-      title: "Innovación desde nuestros inicios.",
-      description: "Somos más que moda, somos un estilo de vida. Conoce a fondo nuestra marca y nuestra propuesta."
+      title: "Nuestra historia, tu estilo.",
+      description: "Desde nuestros comienzos hasta hoy, conoce cómo nuestra dedicación define cada prenda."
   },
   {
-      section: "New",
-      buttonText: "Descubrí lo nuevo",
+      section: "Novedades",
+      buttonText: "Explorar",
       images: [
           newCollection1,
           newCollection2,
@@ -43,8 +43,8 @@ export const sections = [
           newCollection5,
           newCollection6,
       ],
-      title: "Nueva temporada, nuevos estilos.",
-      description: "Las últimas tendencias y novedades en moda urbana. ¡No te pierdas lo más reciente!"
+      title: "Nuevas colecciones disponibles.",
+      description: "Explora nuestras últimas colecciones y mantente al día con las tendencias urbanas más recientes."
   },
   {
       section: "Hot Sale",
@@ -56,12 +56,12 @@ export const sections = [
         hotSale4,
         hotSale5,
       ],
-      title: "Grandes descuentos, grandes estilos.",
-      description: "Ofertas que no puedes dejar pasar. Descuentos exclusivos en nuestra Hot Sale."
+      title: "Aprovecha nuestras ofertas exclusivas.",
+      description: "Aprovecha las mejores ofertas y actualiza tu guardarropa sin gastar de más."
   },
   {
-      section: "Accesorios",
-      buttonText: "Descubrílo",
+      section: "Catálogo",
+      buttonText: "Ver Catálogo",
       images: [
         footer1,
         footer2,
@@ -69,9 +69,34 @@ export const sections = [
         footer4,
         footer5,
       ],
-      title: "Todo para arriba!",
-      description: "El toque final para tu look. Encuentra los accesorios ideales para destacar."
+      title: "Toda nuestra colección en un solo lugar.",
+      description: "Revisa todas nuestras prendas y encuentra exactamente lo que buscas."
   },
-
+  {
+    section: "Lookbook",
+    buttonText: "Inspírate",
+    images: [
+      footer1,
+      footer2,
+      footer3,
+      footer4,
+      footer5,
+    ],
+    title: "Inspírate con nuestro Lookbook.",
+    description: "Encuentra las mejores combinaciones y estilos para llevar la moda urbana a otro nivel."
+},
+{
+  section: "Contacto",
+  buttonText: "Contactanos",
+  images: [
+    footer1,
+    footer2,
+    footer3,
+    footer4,
+    footer5,
+  ],
+  title: "Conecta con nosotros.",
+  description:  "Si necesitas ayuda o tienes alguna duda, estamos a tu disposición para ayudarte en lo que necesites."
+}
 ];
 
