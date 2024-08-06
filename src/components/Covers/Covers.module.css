@@ -61,6 +61,14 @@
     margin-bottom: 0;
     height: 68%;
   }
+  .container_cover h2 {
+    font-size: 6rem;
+  }
+  .container_cover p {
+    font-size: 1.5rem;
+    max-width: 50%;
+
+  }
 }
 
 @media (max-width: 1920px) {}
