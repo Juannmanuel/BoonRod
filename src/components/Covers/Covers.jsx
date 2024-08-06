@@ -27,11 +27,12 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
               <h2>{item.title}</h2>
               <p>{item.description}</p>
               <div className={style.containerButton}>
-                {/* <AnimatedTitle
+
+                <AnimatedTitle
                   title={item.buttonText}
                   currentSlide={currentSlide}
                   index={index}
-                /> */}
+                />
               </div>
             </div>
             <Sliders images={item.images} />
