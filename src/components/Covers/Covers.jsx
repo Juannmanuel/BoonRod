@@ -15,7 +15,7 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
         slidesPerView={1}
         spaceBetween={0}
         onSlideChange={(swiper) => handleSlideChange(swiper)}
-      modules={[Autoplay]}
+        modules={[Autoplay]}
         speed={1000}
       >
         {categories.map((item, index) => (
@@ -27,7 +27,6 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
               <h2>{item.title}</h2>
               <p>{item.description}</p>
               <div className={style.containerButton}>
-
                 <AnimatedTitle
                   title={item.buttonText}
                   currentSlide={currentSlide}

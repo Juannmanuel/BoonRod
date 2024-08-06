@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap");
+
 /* Main navbar container */
 .navbar {
   width: 100%;
@@ -12,6 +13,7 @@
   z-index: 5;
   pointer-events: none;
 }
+
 .logo {
   max-width: 20%;
   margin-top: 1rem;
@@ -31,6 +33,7 @@
   flex-flow: row nowrap;
   justify-content: space-around;
 }
+
 /*-----------BOTON-------------*/
 .cta {
   min-height: 10%;
@@ -67,14 +70,13 @@
   font-family: "Anaheim", sans-serif;
   font-optical-sizing: auto;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
-  font-style: normal;
 }
 
+/* Hover animation */
 .hover_underline_animation {
   position: relative;
   color: white;
   height: 10%;
-
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -95,13 +97,11 @@
 .cta:hover .hover_underline_animation:after,
 .cta.active .hover_underline_animation:after {
   color: rgb(239, 15, 15);
-
   transform: scaleX(1);
   transform-origin: bottom left;
-  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
 }
 
-/*------------------------------*/
+/* Responsive adjustments */
 @media (max-width: 2000px) {
   .link {
     top: 11rem;
@@ -128,6 +128,7 @@
     font-weight: 500;
   }
 }
+
 @media (max-width: 1440px) {
   .link {
     top: 55%;
@@ -137,6 +138,7 @@
     margin-top: 0.5rem;
   }
 }
+
 @media (max-width: 1024px) {
   .navbar {
     min-height: 35%;
@@ -147,51 +149,42 @@
   }
   .link {
     top: 55%;
-    width: 80%;
-  }
-  .cta span {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 800px) {
-  .navbar {
-    min-height: 30%;
-  }
-  .link {
     width: 90%;
-    left: 50%;
-    transform: translate(-50%);
     height: 20%;
-    top: 17rem;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 0.9rem;
-    letter-spacing: 0rem;
-  }
-  .btn {
-    min-width: 100%;
-  }
-  .logo {
-    max-width: 50%;
   }
   .cta span {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 780px) {
   .link {
-    top: 10rem;
-    height: 5rem;
     top: 13rem;
+    height: 5rem;
     display: flex;
     flex-flow: row nowrap;
   }
   .logo {
     max-width: 35%;
   }
-
+  .cta span {
+    font-size: 1rem;
+  }
 }
+
+@media (max-width: 712px) {
+  .cta span {
+    font-size: 1.3rem;
+  }
+  .link {
+    top: 13rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+}
+
 @media (max-width: 450px) {
   .navbar {
     height: auto;
@@ -205,21 +198,17 @@
     align-items: end;
     top: 10rem;
     pointer-events: fill;
-
   }
   .logo {
     max-width: 50%;
     margin-top: 0.5rem;
   }
-
   .cta {
     height: auto;
     min-width: 20%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-height: 1.3rem;
-
   }
   .cta span {
     font-size: 1rem;
@@ -228,6 +217,7 @@
     padding: 0;
   }
 }
+
 @media (max-width: 400px) {
   .link {
     top: 9rem;
