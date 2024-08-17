@@ -31,7 +31,7 @@
   align-items: start;
   pointer-events: none;
   margin-bottom: 3rem;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .container_cover h2 {
@@ -54,6 +54,7 @@
   font-family: "Roboto Slab", serif;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
   font-weight: 200;
+  max-width: 50%;
 }
 
 @media (max-width: 2000px) {

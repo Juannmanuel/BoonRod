@@ -15,7 +15,7 @@
 }
 
 .logo {
-  max-width: 20%;
+  max-width: 15%;
   margin-top: 1rem;
   filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));
 }
@@ -24,7 +24,7 @@
   width: 70%;
   max-width: 90%;
   position: absolute;
-  top: 85%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%);
   height: 20%;
@@ -49,7 +49,6 @@
   position: relative;
   border: none;
   pointer-events: all;
-  font-size: 1.5rem;
 }
 
 .cta span {
@@ -62,7 +61,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 700;
@@ -76,7 +75,7 @@
 .hover_underline_animation {
   position: relative;
   color: white;
-  height: 10%;
+  height: 5%;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -85,7 +84,7 @@
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 10%;
+  height: 6%;
   bottom: 0;
   left: 0;
   background-color: #ffffffaf;
@@ -105,6 +104,7 @@
 @media (max-width: 2000px) {
   .link {
     top: 11rem;
+
   }
   .logo {
     max-width: 17%;
@@ -114,10 +114,11 @@
 
 @media (max-width: 1920px) {
   .link {
-    top: 12rem;
+    top: 12em;
     width: 70%;
     max-width: none;
     font-size: 1rem;
+
   }
   .logo {
     max-width: 15%;
@@ -132,6 +133,7 @@
 @media (max-width: 1440px) {
   .link {
     top: 10.3rem;
+    
   }
   .logo {
     max-width: 18%;

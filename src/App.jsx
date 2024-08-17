@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../src/components/Navbar/Navbar";
 import Covers from "./components/Covers/Covers";
+import Detail from "./components/Detail/Detail";
 import { sections } from "./data"; // Importamos los datos de las secciones desde un archivo de datos
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
         handleSlideChange={handleSlideChange}
         currentSlide={currentSlide}
       />
+      {/* <Detail sections={sections} currentSlide={currentSlide}/> */}
     </div>
   );
 }
