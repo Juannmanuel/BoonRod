@@ -151,13 +151,13 @@
     justify-content: space-evenly;
   }
   .logo {
-    min-width: 35%;
+    min-width: 20%;
   }
   .cta {
     max-width: 25em;
   }
   .cta span {
-    font-size: 2rem;
+    font-size: 1.3em;
   }
 }
 @media (max-width: 900px) {
