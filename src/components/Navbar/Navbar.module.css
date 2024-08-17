@@ -77,6 +77,7 @@
   color: white;
   height: 5%;
   background-color: rgba(255, 255, 255, 0);
+  
 }
 
 .hover_underline_animation:after {
@@ -103,18 +104,18 @@
 /* Responsive adjustments */
 @media (max-width: 2000px) {
   .link {
-    top: 11rem;
+    top: 10em;
 
   }
   .logo {
-    max-width: 17%;
+    max-width: 20%;
     margin-top: 0.2rem;
   }
 }
 
 @media (max-width: 1920px) {
   .link {
-    top: 12em;
+    top: 14em;
     width: 70%;
     max-width: none;
     font-size: 1rem;
@@ -122,7 +123,7 @@
   }
   .logo {
     max-width: 15%;
-    margin-top: 0.2rem;
+    margin-top: 1em;
   }
   .cta span {
     font-size: 1.5rem;
