@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap');
-
 .categories_main {
   width: 100vw;
   height: 100vh;
   position: relative;
-}
-
-.container_slider {
-  width: 100vw;
-  height: 100vh;
 }
 
 .containerButton {
@@ -19,7 +13,7 @@
 
 .container_cover {
   width: 90%;
-  height: 70%;
+  height: calc(100vh - 35%);
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -27,7 +21,7 @@
   z-index: 4;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   pointer-events: none;
   margin-bottom: 3rem;
@@ -54,7 +48,7 @@
   font-family: "Roboto Slab", serif;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
   font-weight: 200;
-  max-width: 50%;
+  max-width: 70%;
 }
 
 @media (max-width: 2000px) {
@@ -65,34 +59,70 @@
   .container_cover h2 {
     font-size: 6rem;
   }
-  .container_cover p {
-    font-size: 1.5rem;
-    max-width: 50%;
 
-  }
 }
 
 @media (max-width: 1920px) {}
 
 @media (max-width: 1440px) {
   .container_cover h2 {
-    font-size: 9rem;
+    font-size: 10rem;
     min-width: 20%;
   }
   .container_cover {
     height: 65%;
     margin-bottom: 3rem;
+    gap: 1.5em;
+  }
+}
+@media (max-width: 1366px) {
+  .container_cover h2 {
+    font-size: 7em;
+  }
+  .container_cover {
+    height: 60%;
+    width: 95%;
+    margin-bottom: 1em;
+    gap: 1em;
+  }
+  .container_cover p {
+    font-size: 2em;
+
+
+  }
+}
+@media (max-width: 1024px) {
+  .container_cover h2 {
+    font-size: 7em;
+  }
+  .container_cover {
+    height: 60%;
+    margin-bottom: 3em;
+    gap: 1em;
+  }
+  .container_cover p {
+    font-size: 2em;
+
+
+  }
+
+}
+@media (max-width: 900px) {
+  .container_cover {
+    margin-bottom: 10em;
+    gap: 3em
+  }
+  .container_cover h2 {
+    font-size: 10em;
+  }
+  .container_cover p {
+    max-width: 20em;
+    font-size: 2.5em;
+
+
   }
 }
 
-@media (max-width: 1024px) {
-  .container_cover h2 {
-    font-size: 9.5rem;
-  }
-  .container_cover {
-    height: 71%;
-  }
-}
 
 @media (max-width: 800px) {
   .container_cover h2 {
@@ -108,10 +138,12 @@
 
 @media (max-width: 768px) {
   .container_cover h2 {
-    font-size: 8rem;
+    font-size: 7.5rem;
   }
   .container_cover {
-    height: 70%;
+    height: 60%;
+    margin-bottom: 2em;
+    gap: 1em
   }
   .containerButton {
     height: 2rem;
