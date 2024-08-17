@@ -129,16 +129,15 @@
     margin: auto;
   }
   .container_cover h2 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   .container_cover p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     max-width: 90%;
     font-weight: 300;
   }
   .containerButton {
     height: 2rem;
     width: 15rem;
-    font-size: 1rem;
   }
 }
