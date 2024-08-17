@@ -114,7 +114,7 @@
 
 @media (max-width: 1920px) {
   .link {
-    top: 8rem;
+    top: 12rem;
     width: 70%;
     max-width: none;
     font-size: 1rem;
@@ -124,17 +124,17 @@
     margin-top: 0.2rem;
   }
   .cta span {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
   }
 }
 
 @media (max-width: 1440px) {
   .link {
-    top: 55%;
+    top: 10.3rem;
   }
   .logo {
-    max-width: 20%;
+    max-width: 18%;
     margin-top: 0.5rem;
   }
 }
@@ -191,20 +191,21 @@
   }
   .link {
     height: auto;
-    max-height: 25%;
+    max-height: 20%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     top: 10rem;
     pointer-events: fill;
   }
   .logo {
-    max-width: 50%;
+    max-width: 55%;
     margin-top: 0.5rem;
   }
   .cta {
     height: auto;
+    max-height: 1.5rem;
     min-width: 20%;
     margin: 0;
     padding: 0;

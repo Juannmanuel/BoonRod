@@ -7,7 +7,7 @@ function Sliders({ images }) {
     <Swiper
       className={style.sliders_main}
       direction="horizontal"
-      speed={1000}
+      speed={500}
       loop={true}
       slidesPerView={1}
       spaceBetween={0}

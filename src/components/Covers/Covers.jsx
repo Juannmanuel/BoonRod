@@ -17,7 +17,7 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
         onSlideChange={(swiper) => handleSlideChange(swiper)}
         modules={[Autoplay, Mousewheel]}
         mousewheel={true}
-        speed={1000}
+        speed={500}
       >
         {categories.map((item, index) => (
           <SwiperSlide
