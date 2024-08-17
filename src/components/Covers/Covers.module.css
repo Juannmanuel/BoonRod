@@ -21,7 +21,7 @@
   z-index: 4;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   pointer-events: none;
   margin-bottom: 3rem;

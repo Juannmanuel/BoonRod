@@ -7,6 +7,8 @@ import AnimatedTitle from "../Widges/AnimatedTitle/AnimatedTitle";
 import { Autoplay, Mousewheel } from "swiper/modules";
 
 function Covers({ categories, handleSlideChange, currentSlide }) {
+  console.log(categories);
+  
   return (
     <section>
       <Swiper
