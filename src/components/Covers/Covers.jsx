@@ -6,8 +6,8 @@ import Sliders from "../Sliders/Sliders";
 import AnimatedTitle from "../Widges/AnimatedTitle/AnimatedTitle";
 import { Autoplay, Mousewheel } from "swiper/modules";
 
-function Covers({ categories, handleSlideChange, currentSlide }) {
-  console.log(categories);
+function Covers({ sections, handleSlideChange, currentSlide }) {
+  console.log(sections);
   
   return (
     <section>
@@ -21,7 +21,7 @@ function Covers({ categories, handleSlideChange, currentSlide }) {
         mousewheel={true}
         speed={500}
       >
-        {categories.map((item, index) => (
+        {sections.map((item, index) => (
           <SwiperSlide
             className={style.container_slider}
             key={`${currentSlide}-${index}`}

@@ -16,9 +16,7 @@ import sobreNosotros3 from "../src/assets/images/Categorias/sobreNosotros/3.jpg"
 import footer1 from "./assets/images/Categorias/footer/1.png"
 import footer2 from "./assets/images/Categorias/footer/2.png"
 import footer3 from "./assets/images/Categorias/footer/3.png"
-import footer4 from "./assets/images/Categorias/footer/4.png"
 import footer5 from "./assets/images/Categorias/footer/5.png"
-
 
 export const sections = [
   {
@@ -100,3 +98,14 @@ export const sections = [
 }
 ];
 
+// export const prenda = {
+//   nombre: "",
+//   precio: "",
+//   description: "",
+//   talles: "",
+//   descuento: [true, "20%"],
+//   imagenes: {
+//     modelo: [imagesModelo1,imagesModelo2,imagesModelo3,imagesModelo4],
+//     prendas: []
+//   }
+// }

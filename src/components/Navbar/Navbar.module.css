@@ -104,17 +104,11 @@
   .link {
     top: 10em;
   }
-  .logo {
-    max-width: 20%;
-  }
 }
 @media (max-width: 1366px) {
   .navbar {
     width: 95%;
     min-height: 20%;
-  }
-  .logo {
-    min-width: 25%;
   }
 }
 
@@ -171,7 +165,7 @@
 
   }
   .logo {
-    min-width: 35%;
+    min-width: 25%;
   }
   .cta {
     max-width: 25em;

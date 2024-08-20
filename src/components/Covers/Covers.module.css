@@ -207,3 +207,8 @@
     width: 15rem;
   }
 }
+@media (max-width: 360px) {
+  .container_cover {
+    bottom: 3rem;
+  }
+}
