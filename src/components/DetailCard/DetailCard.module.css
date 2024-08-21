@@ -1,0 +1,53 @@
+.detailCard_main {
+  width: 90%;
+  max-width: 95%;
+  height: 90%;
+  max-height: 95%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  border: 1px solid black;
+  gap: .5em;
+}
+.productName {
+  width: 80%;
+  height: 10%;
+  border: 1px solid red;
+}
+.productDescription {
+  width: 100%;
+  height: 30%;
+  border: 1px solid red;
+}
+.productPrice {
+  width: 100%;
+  height: 10%;
+  border: 1px solid red;
+}
+.productSizes {
+  width: 100%;
+  height: 40%;
+  border: 1px solid red;
+}
+.productActions {
+  width: 100%;
+  height: 10%;
+  border: 1px solid red;
+}
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 450px) {
+}

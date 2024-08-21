@@ -6,10 +6,14 @@ import Detail from "./pages/Detail/Detail";
 import { sections } from "./data"; // Importamos los datos de las secciones desde un archivo de datos
 import "./App.css";
 import Home from "./pages/Home/Home";
+import { useLocation } from "react-router-dom";
 
 function App() {
   // Estado para manejar el slide actual
   const [currentSlide, setCurrentSlide] = useState(0);
+  const location = useLocation();
+  const currentPath = location.pathname;
+  console.log(currentPath);
 
   // Función para manejar el cambio de slide
   const handleSlideChange = (swiper) => {
@@ -20,7 +24,13 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar sections={sections} currentSlide={currentSlide} />
+      {currentPath === "/detail" ? null : (
+        <Navbar
+          sections={sections}
+          currentSlide={currentSlide}
+          currentPath={currentPath}
+        />
+      )}
       <Routes>
         <Route
           path="/"
@@ -32,7 +42,10 @@ function App() {
             />
           }
         />
-        <Route path="/detail" element={<Detail  sections={sections}  currentSlide={currentSlide}/>}/>
+        <Route
+          path="/detail"
+          element={<Detail sections={sections} currentSlide={currentSlide} />}
+        />
       </Routes>
     </div>
   );

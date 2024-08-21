@@ -5,10 +5,11 @@ import "swiper/css"; // Importa los estilos de Swiper
 import Sliders from "../Sliders/Sliders";
 import AnimatedTitle from "../Widges/AnimatedTitle/AnimatedTitle";
 import { Autoplay, Mousewheel } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 function Covers({ sections, handleSlideChange, currentSlide }) {
   console.log(sections);
-  
+
   return (
     <section>
       <Swiper
@@ -30,11 +31,13 @@ function Covers({ sections, handleSlideChange, currentSlide }) {
               <h2>{item.title}</h2>
               <p>{item.description}</p>
               <div className={style.containerButton}>
-                <AnimatedTitle
-                  title={item.buttonText}
-                  currentSlide={currentSlide}
-                  index={index}
-                />
+                <Link to={"/detail"}>
+                  <AnimatedTitle
+                    title={item.buttonText}
+                    currentSlide={currentSlide}
+                    index={index}
+                  />
+                </Link>
               </div>
             </div>
             <Sliders images={item.images} />
