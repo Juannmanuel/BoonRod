@@ -52,7 +52,7 @@
 }
 @media (max-width: 1920px) {
   .container_cover {
-    height: 70vh;
+    height: 65vh;
     width: 95%;
     margin-bottom: 1em;
     gap: 1em;
@@ -68,7 +68,7 @@
 
 @media (max-width: 1440px) {
   .container_cover {
-    height: 60vh;
+    height: 55vh;
     margin-bottom: 3rem;
     gap: 1.5em;
   }
@@ -79,7 +79,7 @@
 
 @media (max-width: 1024px) {
   .container_cover {
-    height: 60vh;
+    height: 50vh;
     margin-bottom: 10em;
     gap: 2em;
   }
@@ -94,7 +94,7 @@
 
 @media (max-width: 768px) {
   .container_cover {
-    height: 65vh;
+    height: 60vh;
     margin-bottom: 4em;
     gap: 1.5em;
   }
