@@ -112,14 +112,15 @@
 }
 @media (max-width: 390px) {
   .container_cover {
-    gap: 1em;
-    margin-bottom: 1.5rem;
+    gap: 1.5em;
+    margin-bottom: 4rem;
+    width: 90%;
   }
   .container_cover h2 {
     font-size: 5rem;
   }
   .container_cover p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .containerButton {
     height: 2.5rem;

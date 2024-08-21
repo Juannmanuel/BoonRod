@@ -67,7 +67,7 @@ export const sections = [
         footer2,
         footer5,
       ],
-      title: "Toda nuestra colección en un solo lugar.",
+      title: "Nuestra colección en un solo lugar.",
       description: "Revisa todas nuestras prendas y encuentra exactamente lo que buscas."
   },
   {
