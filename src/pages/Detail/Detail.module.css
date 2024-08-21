@@ -38,8 +38,8 @@
   background-color: rgb(234, 206, 155);
 }
 .card {
-  width: 70%;
-  height: 75%;
+  width: 75%;
+  height: 85%;
   background-color: wheat;
 }
 .item {
@@ -75,7 +75,6 @@
     align-items: center;
     background-color: rgb(182, 150, 150);
     position: relative;
-    border-radius: 15px 15px;
   }
   .card {
     width: 90%;
