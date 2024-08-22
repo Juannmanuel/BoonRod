@@ -16,9 +16,19 @@
   gap: .5em;
 }
 .productName {
-  width: 80%;
+  width: 100%;
   height: 10%;
   border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+}
+.productName h3 span {
+  margin: 0;
+  padding: 0;
 }
 .productDescription {
   width: 100%;
