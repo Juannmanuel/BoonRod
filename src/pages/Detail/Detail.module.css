@@ -7,17 +7,15 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-
 }
+
 .container_detail {
   width: 60%;
   height: 70%;
   display: grid;
   grid-template-columns: 1.4fr .6fr;
-  border: 1px solid black;
-
-
 }
+
 .carrousel {
   position: relative;
   max-width: 100%;
@@ -26,23 +24,27 @@
   flex-flow: column nowrap;
   overflow-y: scroll;
   gap: 1rem;
-  border: 1px solid black;
 
 }
+
 .carrousel img {
   object-fit: contain;
 }
+
 .card {
   position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+
 }
+
 @media (max-width: 1440px) {
   .container_detail {
     width: 85%;
     height: 85%;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-  
   }
 }
 
@@ -50,15 +52,13 @@
   .container_detail {
     width: 90%;
     height: 80%;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-  
   }
   .card {
     max-width: none;
-
   }
 }
+
 @media (max-width: 768px) {
   .container_detail {
     width: 100vw;
@@ -71,33 +71,31 @@
   .carrousel {
     width: 100%;
     height: 75vh;
-    min-height: 100%; /* Ocupa el 75% del viewport height */
     max-width: 100%;
     margin-bottom: 10rem;
-
     overflow-y: scroll;
   }
+
   .carrousel img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
   }
+
   .card {
     height: auto;
-    min-height: 90vh;
-    max-height: 80vh;
     position: sticky;
-    top: 70vh; /* Se posiciona justo debajo del carrusel */
-    overflow-y: scroll; /* Permite el scroll para ver el resto de la tarjeta */
-    padding: auto 0;
-    border: 3px solid blue;
+    top: 75vh;
+    overflow-y: scroll; 
+    padding: 1rem;
+    min-height: 90vh;
   }
 }
+
 @media (max-width: 450px) {
-.card{
-  min-height: 90vh;
-  max-height: 100vh;
-  border: 5px solid rgb(39, 89, 171);
-  overflow: hidden;
-}
+  .card {
+    min-height: 90vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
 }
