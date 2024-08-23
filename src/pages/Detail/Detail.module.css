@@ -10,10 +10,10 @@
 
 }
 .container_detail {
-  width: 70%;
+  width: 60%;
   height: 70%;
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1.4fr .6fr;
   border: 1px solid black;
 
 
@@ -30,12 +30,11 @@
 
 }
 .carrousel img {
-  object-fit: cover;
+  object-fit: contain;
 }
 .card {
   position: relative;
   overflow: hidden;
-  margin-left: .5rem;
 }
 @media (max-width: 1440px) {
   .container_detail {
@@ -55,13 +54,17 @@
     grid-template-columns: 1fr 1fr;
   
   }
+  .card {
+    max-width: none;
+
+  }
 }
 @media (max-width: 768px) {
   .container_detail {
     width: 100vw;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 85vh 15vh; 
+    grid-template-rows: 80vh 20vh; 
     overflow-y: scroll;
   }
 
@@ -80,11 +83,21 @@
     object-fit: contain;
   }
   .card {
-    height: 80vh; /* La tarjeta ocupa toda la altura del viewport */
+    height: auto;
+    min-height: 90vh;
+    max-height: 80vh;
     position: sticky;
-    top: 75vh; /* Se posiciona justo debajo del carrusel */
+    top: 70vh; /* Se posiciona justo debajo del carrusel */
     overflow-y: scroll; /* Permite el scroll para ver el resto de la tarjeta */
+    padding: auto 0;
+    border: 3px solid blue;
   }
 }
 @media (max-width: 450px) {
+.card{
+  min-height: 90vh;
+  max-height: 100vh;
+  border: 5px solid rgb(39, 89, 171);
+  overflow: hidden;
+}
 }
