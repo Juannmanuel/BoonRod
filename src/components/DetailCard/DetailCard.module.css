@@ -1,54 +1,71 @@
 .detailCard_main {
-  width: 90%;
-  max-width: 95%;
-  height: 90%;
-  max-height: 95%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: aliceblue;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  overflow: hidden;
+}
+.productHeader {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
-  border: 1px solid black;
-  gap: .5em;
 }
+
 .productName {
-  width: 100%;
-  height: 10%;
-  border: 1px solid red;
+  font-size: 2rem;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: start;
-  align-items: center;
+  padding: 0 .5em;
+  min-width: 70%;
+
 }
-.productName h3 span {
-  margin: 0;
-  padding: 0;
-}
-.productDescription {
-  width: 100%;
-  height: 30%;
-  border: 1px solid red;
-}
+
 .productPrice {
-  width: 100%;
-  height: 10%;
-  border: 1px solid red;
+  font-size: 1.5rem;
+  color: #555;
+  padding: 0 .5em;
 }
+
+.productDescription {
+  font-size: 1.2rem;
+  max-width: 80%;
+  padding: 0 .5em;
+
+}
+
 .productSizes {
-  width: 100%;
-  height: 40%;
-  border: 1px solid red;
+  font-size: 1.2rem;
+  padding: 0 .5em;
+
+  color: #777;
 }
+
 .productActions {
-  width: 100%;
-  height: 10%;
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+}
+.recommendedProductos_container{
+  max-height: 50%;
+  overflow: hidden;
+}
+
+.productActions button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.productActions button:hover {
+  background-color: #555;
 }
 
 @media (max-width: 1440px) {
@@ -57,7 +74,6 @@
 
 }
 @media (max-width: 768px) {
-
 }
 @media (max-width: 450px) {
 }

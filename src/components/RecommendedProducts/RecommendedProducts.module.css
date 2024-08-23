@@ -1,0 +1,24 @@
+.RecommendedProducts_main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(5rem, 1fr));
+    grid-auto-rows: 10rem;
+    gap: .5rem;
+    padding: 0 1.5rem;
+    margin: 0;
+    overflow-y: auto; /* Habilita el scroll vertical si se excede la altura */
+    /* border: 1px solid black */
+}
+
+.item {
+    border: 1px solid black;
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 450px) {
+}
