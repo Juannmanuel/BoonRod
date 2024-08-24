@@ -81,11 +81,14 @@
 @media (max-width: 1440px) {
   .logo {
     width: 20vw;
-    max-width: 20%;
+    max-width: 18%;
   }
 
   .cta span {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  .link {
+    max-width: 57%;
   }
 }
 
@@ -98,16 +101,20 @@
   .cta span {
     font-size: 1rem;
   }
+  .link {
+    max-width: none;
+  }
 }
 
 @media (max-width: 768px) {
   .logo {
     width: 30vw;
     max-width: 40%;
+    margin-bottom: 0.5rem;
   }
 
   .cta span {
-    font-size: 1rem;
+    font-size: .8rem;
   }
   .link {
     justify-content: center;
