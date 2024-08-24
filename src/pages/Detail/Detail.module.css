@@ -37,6 +37,7 @@
   margin: 0 .5rem;
   padding: 0;
 
+
 }
 
 @media (max-width: 1440px) {
@@ -50,7 +51,7 @@
 @media (max-width: 1024px) {
   .container_detail {
     width: 90%;
-    height: 80%;
+    height: 90%;
     grid-template-columns: 1fr 1fr;
   }
   .container_card {
