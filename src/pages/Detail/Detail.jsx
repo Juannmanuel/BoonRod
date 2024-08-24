@@ -29,7 +29,7 @@ function Detail({ sections, currentSlide }) {
         <div className={style.carrousel}>
           {imagenes.map((item, index) => <img src={item}/>)}
         </div>
-        <div className={style.card}>
+        <div className={style.container_card}>
           <DetailCard />
         </div>
       </div>
