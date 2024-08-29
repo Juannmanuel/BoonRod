@@ -5,11 +5,11 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 1fr 1fr;
   margin: 0 auto;
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .detail_product {
@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .recommendedProductos_container {
@@ -170,6 +171,7 @@
 @media (max-width: 768px) {
   .detailCard_main {
     grid-template-rows: 1fr 1fr;
+    overflow-y: auto;
   }
   .detail_product {
     max-width: none;

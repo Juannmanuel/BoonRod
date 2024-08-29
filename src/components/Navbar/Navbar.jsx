@@ -11,10 +11,10 @@ const Navbar = ({ sections, currentSlide, currentPath }) => {
     <nav className={styles.navbar}>
       <img src={logoImage} alt="Logo de la tienda" className={styles.logo} />
       <div className={styles.link}>
-        { currentPath !== "/categories" ? sections.map((item, index) => (
+        { currentPath !== "/catalogo" ? sections.map((item, index) => (
           <button
             className={`${styles.cta} ${
-              currentSlide === index ? styles.active : ""
+              currentSlide === index ? styles.active : styles.inActive
             }`}
             key={index}
             id={index}

@@ -31,7 +31,7 @@ function Covers({ sections, handleSlideChange, currentSlide }) {
               <h2>{item.title}</h2>
               <p>{item.description}</p>
               <div className={style.containerButton}>
-                <Link to={"/detail"}>
+                <Link to={"/catalogo"}>
                   <AnimatedTitle
                     title={item.buttonText}
                     currentSlide={currentSlide}

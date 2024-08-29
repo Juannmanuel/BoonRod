@@ -1,0 +1,26 @@
+.CatalogGrid_main {
+  width: 100vw;
+  height: 250vh;
+  border: 5px solid red;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: black;
+  margin-top: 5rem
+
+}
+
+.section_up {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+
+  background-color: white;
+}
+.section_down {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: white;
+
+}
