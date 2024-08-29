@@ -113,7 +113,6 @@
 @media (max-width: 450px) {
   .container_cover {
     gap: 1.5em;
-    margin-bottom: 12rem;
     width: 90%;
     min-height: 40%;
     height: auto;
@@ -121,14 +120,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
 
   }
   .container_cover h2 {
     font-size: 5rem;
     max-width: 95%;
     letter-spacing: .1rem;
-    line-height: .9;
+    line-height: .8;
   }
   .container_cover p {
     font-size: 1.2rem;
