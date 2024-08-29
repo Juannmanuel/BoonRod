@@ -113,12 +113,15 @@
 @media (max-width: 450px) {
   .container_cover {
     gap: 1.5em;
-    margin-bottom: 7rem;
+    margin-bottom: 15rem;
     width: 90%;
+    min-height: 40%;
+    height: auto;
     margin-left: -.5rem;
+
   }
   .container_cover h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     max-width: 95%;
   }
   .container_cover p {
