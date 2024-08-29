@@ -44,7 +44,7 @@ export const sections = [
       hotSale4,
       hotSale5,
     ],
-    title: "Aprovecha nuestras ofertas exclusivas.",
+    title: "Nuestras ofertas exclusivas.",
     description: "Aprovecha las mejores ofertas y actualiza tu guardarropa sin gastar de más."
   },
   {
@@ -58,7 +58,7 @@ export const sections = [
       footer5,
     ],
     title: "Nuestra colección en un solo lugar.",
-    description: "Revisa todas nuestras prendas y encuentra exactamente lo que buscas."
+    description: "Revisa todos nuestros productos y encuentra exactamente lo que buscas."
   },
   {
     section: "Lookbook",
