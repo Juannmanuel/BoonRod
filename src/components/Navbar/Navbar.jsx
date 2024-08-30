@@ -4,24 +4,25 @@ import logoImage from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
 
 const Navbar = ({ sections, currentSlide, currentPath }) => {
-
-
-
   return (
     <nav className={styles.navbar}>
       <img src={logoImage} alt="Logo de la tienda" className={styles.logo} />
       <div className={styles.link}>
-        { currentPath !== "/catalogo" ? sections.map((item, index) => (
-          <button
-            className={`${styles.cta} ${
-              currentSlide === index ? styles.active : styles.inActive
-            }`}
-            key={index}
-            id={index}
-          >
-            <span className={styles.hover_underline_animation}>{item.section}</span>
-          </button>
-        )) : null}
+        {currentPath === "/catalogo" || currentPath === "/detalle"
+          ? null
+          : sections.map((item, index) => (
+              <button
+                className={`${styles.cta} ${
+                  currentSlide === index ? styles.active : styles.inActive
+                }`}
+                key={index}
+                id={index}
+              >
+                <span className={styles.hover_underline_animation}>
+                  {item.section}
+                </span>
+              </button>
+            ))}
       </div>
     </nav>
   );

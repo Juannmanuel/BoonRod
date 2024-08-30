@@ -1,57 +1,53 @@
 .RecommendedProducts_main {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 50%;
-  overflow-y: auto;
-  margin: auto;
+  grid-gap: 10px;
   padding: 0;
+  background-color: transparent;
 }
 
 .card {
-  scroll-snap-align: start;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 80% 20%;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
   border: 1px solid black;
 }
-.description_card{
-  border: 1px solid black;
-  background-color: rgb(255, 213, 0);
 
-}
-.image_card{
-  object-fit: contain;
+.image_card img {
   width: 100%;
-  height: 100%;
-  background-color: blue;
+  height: auto;
+  object-fit: cover;
 }
-@media (max-width: 1440px) {
-  .RecommendedProducts_main {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 50%;
-  }
+
+.description_card {
+  border-top: 1px solid black;
+  background-color: rgb(255, 213, 0);
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
 }
-@media (max-width: 1080px) {
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
   .RecommendedProducts_main {
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
   }
 }
 
-@media (max-width: 768px) {
+/* Estilos para pantallas medianas */
+@media (max-width: 1024px) and (min-width: 768px) {
   .RecommendedProducts_main {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 60%;
-
+    grid-auto-rows: auto;
   }
 }
 
-@media (max-width: 450px) {
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
   .RecommendedProducts_main {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 80%;
-
+    grid-template-columns: fr;
+    grid-auto-rows: auto;
   }
 }

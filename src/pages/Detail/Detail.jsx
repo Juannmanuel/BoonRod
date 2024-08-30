@@ -12,6 +12,8 @@ import imagenPrendas2 from "../../assets/images/Ropa/Producto_4_Pantalon/Prendas
 import imagenPrendas1 from "../../assets/images/Ropa/Producto_4_Pantalon/Prendas/Prenda_Principal.jpg";
 import DetailCard from "../../components/DetailCard/DetailCard";
 import HorizontalCarrousel from "../../components/Widges/HorizontalCarrousel/HorizontalCarrousel";
+import RecommendedProducts from "../../components/RecommendedProducts/RecommendedProducts";
+import Footer from "../../components/Footer/Footer";
 function Detail({ sections, currentSlide }) {
   let imagenes = [
     imagenModelo1,
@@ -22,17 +24,25 @@ function Detail({ sections, currentSlide }) {
     imagenPrendas2,
     imagenPrendas1,
   ];
-  {/* <HorizontalCarrousel imagenes={imagenes} /> */}
+  {
+    /* <HorizontalCarrousel imagenes={imagenes} /> */
+  }
   return (
     <section className={style.detai_main}>
       <div className={style.container_detail}>
         <div className={style.carrousel}>
-          {imagenes.map((item, index) => <img src={item} key={index}/>)}
+          {imagenes.map((item, index) => (
+            <img src={item} key={index} />
+          ))}
         </div>
         <div className={style.container_card}>
           <DetailCard />
         </div>
       </div>
+      <div className={style.container_recommendedProducts}>
+        <RecommendedProducts/>
+      </div>
+      <Footer/>
     </section>
   );
 }

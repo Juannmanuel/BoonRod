@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      {currentPath === "/detail" ? null : (
+      {currentPath === "/detalle" || currentPath === "/catalogo" ? null : (
         <Navbar
           sections={sections}
           currentSlide={currentSlide}

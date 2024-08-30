@@ -22,10 +22,9 @@ function DetailCard() {
           <button>Añadir al carrito</button>
           <button>Comprar ahora</button>
         </div>
-        <h4 className={style.recommended_text}>NUESTRAS RECOMENDACIONES</h4>
       </div>
       <div className={style.recommendedProductos_container}>
-        <RecommendedProducts />
+  {/* <RecommendedProducts/> */}
       </div>
     </section>
   );

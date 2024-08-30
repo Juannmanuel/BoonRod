@@ -2,14 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap');
 
 .detailCard_main {
-  height: 100%;
   display: grid;
+  width: 100%;
+  height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   margin: 0 auto;
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
   border: 1px solid black;
+  overflow: hidden;
+
 }
 
 .detail_product {
@@ -19,13 +22,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 
 }
 
 .recommendedProductos_container {
-  max-width: 95%;
+  width: 100%;
   margin-left: 1rem;
   position: relative;
+  pointer-events: none;
 }
 
 .productHeader {
