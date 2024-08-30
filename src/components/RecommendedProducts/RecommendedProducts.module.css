@@ -1,41 +1,57 @@
 .RecommendedProducts_main {
-  width: 100%;
-  height: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 50%;
   overflow-y: auto;
   margin: auto;
-  gap: 1rem;
   padding: 0;
-  scroll-snap-type: y mandatory;
-  margin-bottom: 1rem;
 }
 
-.item {
-  border: 1px solid black;
+.card {
   scroll-snap-align: start;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.209) 0%, rgba(0, 0, 0, 0) 20%);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  border: 1px solid black;
 }
+.description_card{
+  border: 1px solid black;
+  background-color: rgb(255, 213, 0);
 
+}
+.image_card{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+@media (max-width: 1440px) {
+  .RecommendedProducts_main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 50%;
+  }
+}
 @media (max-width: 1080px) {
   .RecommendedProducts_main {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .RecommendedProducts_main {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 60%;
+
   }
 }
 
 @media (max-width: 450px) {
   .RecommendedProducts_main {
     grid-template-columns: 1fr;
+    grid-auto-rows: 80%;
+
   }
 }
