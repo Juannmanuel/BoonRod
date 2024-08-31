@@ -39,11 +39,10 @@ function Detail({ sections, currentSlide }) {
           <DetailCard />
         </div>
       </div>
-      {/* <h2>Recomendados para tí</h2> */}
       <div className={style.container_recommendedProducts}>
-        <RecommendedProducts/>
+        <RecommendedProducts />
       </div>
-      <Footer/>
+      <Footer />
     </section>
   );
 }

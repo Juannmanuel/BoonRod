@@ -1,12 +1,13 @@
 .detai_main {
   height: auto;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: 100vh auto 30vh;
   gap: 1rem;
   background-color: #f4f6f7;
-  background-color: #f0f3f4;
+  overflow-x: hidden;
 }
 
 .container_detail {
@@ -15,16 +16,14 @@
   display: grid;
   margin: auto;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid black;
 }
 .container_recommendedProducts {
-  width: 85%;
+  width: 60%;
   height: auto;
   margin: auto;
   min-height: 70vh;
   overflow: hidden;
   border: 1px solid black;
-
 }
 
 .carrousel {
@@ -35,8 +34,6 @@
   flex-flow: column nowrap;
   overflow-y: scroll;
   gap: 1rem;
-  border: 1px solid black;
-
 }
 
 .carrousel img {
@@ -49,13 +46,11 @@
   margin: 0 0.5rem;
   padding: 0;
   width: auto;
+  height: auto;
   max-width: 90%;
-  height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
-  border: 1px solid black;
-
 }
 
 @media (max-width: 1440px) {
@@ -65,59 +60,42 @@
   }
   .container_recommendedProducts {
     width: 85%;
-
   }
 }
 @media (max-width: 1920px) {
   .container_detail {
-    width: 85%;
-    height: 85%;
+    width: 95%;
+    height: 90%;
+    max-width: none;
+  }
+  .container_recommendedProducts {
+    width: 95%;
   }
 }
 @media (max-width: 1024px) {
   .container_detail {
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 80%;
   }
   .container_card {
     max-width: none;
   }
-  .container_recommendedProducts {
-    width: 90%;
 
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 890px) {
+  .detai_main {
+    grid-template-rows: auto auto 30vh;
+  }
   .container_detail {
-    width: 100vw;
-    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    overflow-y: scroll;
-    gap: 0;
-  }
-
-  .carrousel {
-    width: 100%;
-    height: 80vh;
-    max-width: 100%;
-    overflow-y: scroll;
-  }
-
-  .carrousel img {
-    width: 100%;
+    grid-template-rows: 80vh auto;
+    width: 100vw;
     height: auto;
-    object-fit: contain;
   }
 
   .container_card {
-    height: auto;
-    position: sticky;
-    top: 80vh;
-    overflow-y: scroll;
-    min-height: 90vh;
-    max-height: 100vh;
+    max-height: 80vh;
   }
 }
 
@@ -125,5 +103,6 @@
   .container_card {
     overflow: hidden;
     margin-left: 0;
+    height: auto;
   }
 }

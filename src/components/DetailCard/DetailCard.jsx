@@ -2,12 +2,22 @@ import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import style from "./DetailCard.module.css";
 
 function DetailCard() {
+  const discountedPrice = 8500
+  const price = 10000
+  const discount = 1
   return (
     <section className={style.detailCard_main}>
       <div className={style.detail_product}>
         <div className={style.productHeader}>
           <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES</h2>
-          <span className={style.productPrice}>$15.000</span>
+          <div className={style.priceContainer}>
+            {discount > 0 && (
+              <span className={style.productPriceOriginal}>${price}</span>
+            )}
+            <span className={style.productPriceDiscounted}>
+              ${discount > 0 ? discountedPrice : price}
+            </span>
+          </div>
         </div>
         <p className={style.productDescription}>
           Pantalón regular fit confeccionado en tejido de algodón con
@@ -16,15 +26,22 @@ function DetailCard() {
           cremallera y botón.
         </p>
         <div className={style.productSizes}>
-          <span>Talles disponibles: S, M, L, XL</span>
+          <span>Talles disponibles:</span>
+          <div className={style.sizes}>
+            <span className={style.size}>S</span>
+            <span className={style.size}>M</span>
+            <span className={style.size}>L</span>
+            <span className={style.size}>XL</span>
+          </div>
         </div>
+        <div className={style.cash_media}></div>
         <div className={style.productActions_btn}>
           <button>Añadir al carrito</button>
           <button>Comprar ahora</button>
         </div>
       </div>
       <div className={style.recommendedProductos_container}>
-  {/* <RecommendedProducts/> */}
+        {/* <RecommendedProducts/> */}
       </div>
     </section>
   );

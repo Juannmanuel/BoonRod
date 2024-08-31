@@ -71,8 +71,8 @@ function RecommendedProducts() {
         <div className={style.card} key={index}>
           <div >
             {/*  */}
-            <Swiper className={style.image_card}>
-              {item.imagenes.map((item, index) => { return <SwiperSlide key={index}><img src={item} alt={`Modelo ${index + 1}`} /></SwiperSlide>})}
+            <Swiper className={style.image_card} key={index}>
+              {item.imagenes.map((item, index) => { return <SwiperSlide  key={index}><img src={item} alt={`Modelo ${index + 1}`} /></SwiperSlide>})}
             </Swiper>
           </div>
           <div className={style.description_card}>

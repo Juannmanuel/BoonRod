@@ -1,28 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap");
 
 .detailCard_main {
   display: grid;
-  width: 100%;
+  width: auto;
   height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
   margin: 0 auto;
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
   overflow: hidden;
-
+  gap: 1rem;
 }
 
 .detail_product {
   max-width: 95%;
   height: 100%;
-  margin-left: 1rem;
   display: flex;
+  margin: auto;
   flex-direction: column;
   justify-content: space-between;
-  
-
 }
 
 .recommendedProductos_container {
@@ -37,6 +33,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+  min-height: 10rem;
 }
 
 .productName {
@@ -45,24 +42,69 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
-.productPrice {
+.priceContainer {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem;
+  align-items: center;
+}
+
+.productPriceOriginal {
   font-size: 2rem;
   font-family: "Bebas Neue", sans-serif;
+  text-decoration: line-through;
+  color: #999; /* Color gris para resaltar que es el precio anterior */
+}
+
+.productPriceDiscounted {
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ff0000; /* Color rojo para destacar el precio con descuento */
 }
 
 .productDescription {
   font-size: 1.2rem;
   font-family: "Roboto Slab", serif;
   margin: 0;
+  padding: .5rem;
+  min-height: 10rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .productSizes {
   font-size: 1.2rem;
   font-family: "Roboto Slab", serif;
-  text-decoration: underline;
-  margin: 0.2rem;
+  min-height: 10rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sizes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
 }
 
+.size {
+  padding: 1rem;
+  min-width: 30px;
+  border: 3px solid black;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+}
+.cash_media{
+  font-size: 1.2rem;
+  font-family: "Roboto Slab", serif;
+  text-decoration: underline;
+  min-height: 10rem;
+}
 .productActions_btn {
   display: flex;
   justify-content: space-evenly;
@@ -98,7 +140,6 @@
 @media (max-width: 1920px) {
   .productName {
     font-size: 3rem;
-    border: none;
   }
   .productDescription {
     font-size: 1.5rem;
@@ -152,8 +193,6 @@
 
 @media (max-width: 1024px) {
   .detailCard_main {
-    border: none;
-
   }
   .productName {
     font-size: 2.5rem;
@@ -189,15 +228,19 @@
   }
   .productName {
     font-size: 2.5rem;
+    padding: 0 0.5rem;
   }
   .productPrice {
     font-size: 2rem;
+    padding: 0 0.5rem;
   }
   .productDescription {
     font-size: 1.3rem;
+    padding: 0 0.5rem;
   }
   .productSizes {
     font-size: 1.3rem;
+    padding: 0 0.5rem;
   }
   .productActions_btn {
     flex-direction: column;
@@ -215,7 +258,6 @@
   .detail_product {
     max-width: 100%;
     margin-left: 0;
-    height: 100%;
   }
   .recommendedProductos_container {
     max-width: 100%;
@@ -238,5 +280,8 @@
   }
   .recommended_text {
     font-size: 1rem;
+  }
+  .size {
+    min-width: 25px;
   }
 }
