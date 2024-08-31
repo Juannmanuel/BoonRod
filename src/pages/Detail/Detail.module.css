@@ -1,9 +1,7 @@
 .detai_main {
-  width: 100vw;
   height: auto;
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
   display: grid;
   grid-template-rows: 100vh auto 30vh;
   gap: 1rem;
@@ -17,6 +15,7 @@
   display: grid;
   margin: auto;
   grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
 }
 .container_recommendedProducts {
   width: 85%;
@@ -24,6 +23,8 @@
   margin: auto;
   min-height: 70vh;
   overflow: hidden;
+  border: 1px solid black;
+
 }
 
 .carrousel {
@@ -34,6 +35,8 @@
   flex-flow: column nowrap;
   overflow-y: scroll;
   gap: 1rem;
+  border: 1px solid black;
+
 }
 
 .carrousel img {
@@ -45,11 +48,14 @@
   overflow: hidden;
   margin: 0 0.5rem;
   padding: 0;
-  width: 100%;
+  width: auto;
+  max-width: 90%;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
+  border: 1px solid black;
+
 }
 
 @media (max-width: 1440px) {

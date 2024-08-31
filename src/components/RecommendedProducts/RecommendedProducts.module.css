@@ -5,13 +5,13 @@
   grid-gap: 10px;
   padding: 0;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   min-width: 150px;
-  border: 1px solid black;
 }
 
 .image_card img {
@@ -47,7 +47,7 @@
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
   .RecommendedProducts_main {
-    grid-template-columns: fr;
+    grid-template-columns: 1fr;
     grid-auto-rows: auto;
   }
 }
