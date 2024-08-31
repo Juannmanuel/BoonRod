@@ -43,6 +43,9 @@
   text-align: center;
   border: none;
   pointer-events: all;
+  color: white;
+  text-decoration: none;
+
 }
 
 .cta span {
@@ -52,11 +55,15 @@
   letter-spacing: 0.1rem;
   font-family: "Anaheim", sans-serif;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
+  color: white;
+
 }
 
 .hover_underline_animation {
   position: relative;
+  text-decoration: none;
   color: white;
+
 }
 
 .hover_underline_animation:after {
@@ -71,15 +78,20 @@
   transform-origin: bottom right;
   transition: transform 1.5s ease-out;
   box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
+  color: white;
+
 }
 
 .cta:hover .hover_underline_animation:after,
 .cta.active .hover_underline_animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  color: white;
+
 }
 .inActive {
   content: "";
+
 }
 
 /* Responsive adjustments */

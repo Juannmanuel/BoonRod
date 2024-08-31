@@ -3,9 +3,17 @@ import imagenModelo1 from "../../assets/images/Ropa/Producto_1_Camisa/Modelo/Mod
 import imagenModelo2 from "../../assets/images/Ropa/Producto_1_Camisa/Modelo/Modelo_2.jpg";
 import imagenModelo3 from "../../assets/images/Ropa/Producto_1_Camisa/Modelo/Modelo_3.jpg";
 import { SwiperSlide, Swiper } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 function RecommendedProducts() {
-  const images = [imagenModelo1, imagenModelo2, imagenModelo3,imagenModelo1, imagenModelo2, imagenModelo3];
+  const images = [
+    imagenModelo1,
+    imagenModelo2,
+    imagenModelo3,
+    imagenModelo1,
+    imagenModelo2,
+    imagenModelo3,
+  ];
   const productos = [
     {
       id: 1,
@@ -63,16 +71,31 @@ function RecommendedProducts() {
       talles: ["S", "M"],
       precio: 24.99,
     },
-    
   ];
   return (
     <section className={style.RecommendedProducts_main}>
       {productos.map((item, index) => (
         <div className={style.card} key={index}>
-          <div >
+          <div>
             {/*  */}
-            <Swiper className={style.image_card} key={index}>
-              {item.imagenes.map((item, index) => { return <SwiperSlide  key={index}><img src={item} alt={`Modelo ${index + 1}`} /></SwiperSlide>})}
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              speed={500}
+              loop={true}
+              className={style.image_card}
+              key={index}
+            >
+              {item.imagenes.map((item, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <img src={item} alt={`Modelo ${index + 1}`} />
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
           <div className={style.description_card}>
