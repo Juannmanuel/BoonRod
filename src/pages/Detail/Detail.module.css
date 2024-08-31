@@ -101,8 +101,6 @@
 
 @media (max-width: 450px) {
   .container_card {
-    overflow: hidden;
-    margin-left: 0;
-    height: auto;
+    min-height: 100vh;
   }
 }
