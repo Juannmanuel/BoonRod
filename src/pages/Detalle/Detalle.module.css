@@ -1,0 +1,58 @@
+.detalle_main {
+  width: 100vw;
+  height: 100.4vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100vw; /* Cambiado de 100vh a 100vw para que coincida con el ancho del contenedor */
+  background-color: rgb(40, 79, 114);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 80vh;
+  height: auto;
+  min-height: 80vh;
+  overflow: hidden; /* Oculta el scroll en el carrusel */
+  overflow-y: scroll;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product_info {
+  width: 100vw; /* Cambiado de 100vh a 100vw para que coincida con el ancho del contenedor */
+  transition:  2s ease; /* Cambiado a 0.3s para una transición más rápida */
+  height: auto;
+  min-height: 80vh;
+  overflow: scroll;
+  background-color: #ac2121;
+  position: absolute;
+  top: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+overflow: auto;
+}
+
+.product_info_expanded {
+  min-height: 100vh;
+  height: auto;
+  transition: 2s ease;
+  overflow: auto;
+
+  top: 10vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  overflow-x: scroll;
+
+}

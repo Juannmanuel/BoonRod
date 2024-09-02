@@ -9,7 +9,7 @@ import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
 import CatalogGrid from "./pages/CatalogGrid/CatalogGrid";
 import Catalogo from "./components/Catalogo/Catalogo";
-
+import Detalle from "./pages/Detalle/Detalle";
 function App() {
   // Estado para manejar el slide actual
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,7 +46,7 @@ function App() {
         />
         <Route
           path="/detalle"
-          element={<Detail sections={sections} currentSlide={currentSlide} />}
+          element={<Detalle sections={sections} currentSlide={currentSlide} />}
         />
         <Route
           path="/catalogo"
