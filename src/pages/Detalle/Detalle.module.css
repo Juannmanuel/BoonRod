@@ -1,6 +1,6 @@
 .detalle_main {
   width: 100vw;
-  height: 100.4vh;
+  height: 100vh;
   border: 1px solid black;
   display: grid;
   grid-template-rows: auto;
@@ -30,7 +30,7 @@
 
 .product_info {
   width: 100vw; /* Cambiado de 100vh a 100vw para que coincida con el ancho del contenedor */
-  transition:  2s ease; /* Cambiado a 0.3s para una transición más rápida */
+  transition:  1s ease; /* Cambiado a 0.3s para una transición más rápida */
   height: auto;
   min-height: 80vh;
   overflow: scroll;
@@ -46,7 +46,7 @@ overflow: auto;
 .product_info_expanded {
   min-height: 100vh;
   height: auto;
-  transition: 2s ease;
+  transition: 1s ease;
   overflow: auto;
 
   top: 10vh;
