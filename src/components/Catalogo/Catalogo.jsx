@@ -4,6 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import logoImage from "../../assets/images/logo/logo_boonrod_claro.png";
 import Footer from "../Footer/Footer";
+import Card from "../Card/Card";
 
 function Catalogo() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -29,7 +30,11 @@ function Catalogo() {
   ];
   return (
     <section className={style.catalogo_main}>
-      <nav className={`${style.navbar} ${navbarVisible ? style.visible : style.hidden}`}>
+      <nav
+        className={`${style.navbar} ${
+          navbarVisible ? style.visible : style.hidden
+        }`}
+      >
         <section className={style.navbar_menu}>
           <IoMenu className={style.menu_icon} />
           <img src={logoImage} alt="Logo de la tienda" className={style.logo} />
@@ -45,12 +50,11 @@ function Catalogo() {
       </nav>
       {/*Catalogo Grid*/}
       <section className={style.catalogo}>
-        <div className={style.item}></div>
-        <div className={style.item}></div>
-        <div className={style.item}></div>
-        <div className={style.item}></div>
-        <div className={style.item}></div>
-        <div className={style.item}></div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </section>
       <Footer />
     </section>
