@@ -14,6 +14,7 @@
   position: fixed;
   transition: opacity 1s ease-out;
   z-index: 2;
+  background-color:rgba(245, 245, 245, 0.752);
 }
 .navbar.hidden {
   opacity: 0.02;
