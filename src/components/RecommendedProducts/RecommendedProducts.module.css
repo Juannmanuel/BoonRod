@@ -31,6 +31,12 @@
 /*============== Scren 770=============*/
 @media (max-width: 768px) {
   .RecommendedProducts_main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 25rem;
+  }
+}
+@media (max-width: 500px) {
+  .RecommendedProducts_main {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 25rem;
   }

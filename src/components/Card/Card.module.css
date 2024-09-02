@@ -19,12 +19,12 @@
 .icon {
   position: absolute;
   left: 50%;
-  top: 65%;
+  top: 68%;
   transform: translate(-50%);
-  color: black;
+  color: rgba(0, 0, 0, 0.798);
   background-color: rgba(255, 255, 255, 0.533);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .title {
   overflow: hidden;
