@@ -1,23 +1,26 @@
 .card_main{
     width: 100%;
     height: 100%;
-    border: 1px solid black;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: space-evenly;
+    justify-content: start;
 
 }
 .image {
     width: auto;
-    height: 75%;
+    height: 70%;
 }
 .icon {
     position: absolute;
     left: 50%;
-    top: 65%;
+    top: 60%;
     transform: translate(-50%);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: white;
+}
+.title{
+    text-overflow: ellipsis;
+    padding: .1rem;
 }

@@ -8,7 +8,9 @@ function Card ({}) {
         <div className={style.card_main}>
         <img className={style.image} src={imagen} alt="" />
         <IoAddCircleOutline className={style.icon} />
-        <span>Pantalon marron como para calsa </span>
+        
+        <span className={style.title}>Pantalon marron como para calsa </span>
+        <span className={style.title}>$70</span>
         </div>
     )
 }
