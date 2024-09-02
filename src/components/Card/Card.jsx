@@ -1,5 +1,5 @@
 import style from "./Card.module.css"
-import imagen from "../../assets/images/Categorias/footer/1.png"
+import imagen from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg"
 import { IoAddCircleOutline } from "react-icons/io5";
 function Card ({}) {
 
@@ -9,7 +9,7 @@ function Card ({}) {
         <img className={style.image} src={imagen} alt="" />
         <IoAddCircleOutline className={style.icon} />
         
-        <span className={style.title}>Pantalon marron como para calsa </span>
+        <span className={style.title}>Remera clasica exportman</span>
         <span className={style.title}>$70</span>
         </div>
     )

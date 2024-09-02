@@ -6,11 +6,13 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    text-transform: uppercase;
 
 }
 .image {
-    width: auto;
+    width: 100%;
     height: 70%;
+    object-fit: cover;
 }
 .icon {
     position: absolute;
@@ -18,9 +20,11 @@
     top: 60%;
     transform: translate(-50%);
     font-size: 1.5rem;
-    color: white;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
 }
 .title{
     text-overflow: ellipsis;
-    padding: .1rem;
+    padding: .3rem;
 }
