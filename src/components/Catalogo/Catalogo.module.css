@@ -51,7 +51,7 @@
 }
 .logo {
   object-fit: contain;
-  max-width: 7rem;
+  max-width: 10rem;
   overflow: hidden;
 }
 /*Segunda fila navbar*/
@@ -94,7 +94,6 @@
 }
 .catalogo {
   width: auto;
-  max-width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -105,8 +104,4 @@
   margin-bottom: 1rem;
   overflow: hidden;
 }
-.item {
-  border: 3px solid black;
-  width: auto;
-  max-width: 100%;
-}
+

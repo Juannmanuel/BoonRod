@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import logoImage from "../../assets/images/logo/logo_boonrod_claro.png";
 import Footer from "../Footer/Footer";
 import Card from "../Card/Card";
+import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 
 function Catalogo() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -48,28 +49,7 @@ function Catalogo() {
           ))}
         </section>
       </nav>
-      {/*Catalogo Grid*/}
-      <section className={style.catalogo}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </section>
+      <RecommendedProducts />
       <Footer />
     </section>
   );
