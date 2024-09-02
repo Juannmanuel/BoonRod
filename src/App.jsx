@@ -8,6 +8,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
 import CatalogGrid from "./pages/CatalogGrid/CatalogGrid";
+import Catalogo from "./components/Catalogo/Catalogo";
 
 function App() {
   // Estado para manejar el slide actual
@@ -49,7 +50,7 @@ function App() {
         />
         <Route
           path="/catalogo"
-          element={<CatalogGrid/>}
+          element={<Catalogo/>}
         />
       </Routes>
     </div>
