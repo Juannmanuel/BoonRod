@@ -89,6 +89,7 @@
 }
 .catalogo {
   width: auto;
+  max-width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -97,8 +98,10 @@
   padding: 0rem 0.5rem;
   margin-top: 20vh;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 .item {
-  border: 1px solid black;
+  border: 3px solid black;
   width: auto;
+  max-width: 100%;
 }
