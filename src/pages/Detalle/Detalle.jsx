@@ -20,6 +20,9 @@ function Detalle(){
           />
         ))}
       </div>
+      <div className={style.detail}>
+
+      </div>
       <ExpandingSection/>
     </section>
   )

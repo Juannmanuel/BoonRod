@@ -17,10 +17,12 @@ function ExpandingSection() {
 
   const handleTouchEnd = () => {
     const deltaY = startTouchY - currentTouchY;
-    if (deltaY > 50 && !expanded) { // Threshold to expand
-      setExpanded(true);
-    } else if (deltaY < -50 && expanded) { // Threshold to contract
-      setExpanded(false);
+    if (Math.abs(deltaY) > 50) {
+      if (deltaY > 0 && !expanded) { // Expand
+        setExpanded(true);
+      } else if (deltaY < 0 && expanded) { // Contract
+        setExpanded(false);
+      }
     }
   };
 
@@ -35,7 +37,7 @@ function ExpandingSection() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-<h1>lore</h1>
+      <h1>lore</h1>
     </div>
   );
 }

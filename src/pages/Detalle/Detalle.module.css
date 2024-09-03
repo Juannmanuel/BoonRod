@@ -9,3 +9,8 @@
   border: 1px solid black;
   overflow: scroll;
 }
+.detail{
+  width: 100vw;
+  height: 20vh;
+  
+}
