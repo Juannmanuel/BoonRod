@@ -29,13 +29,13 @@ function ExpandingSection() {
       ref={sectionRef}
       className={style.expandingSection}
       style={{
-        height: expanded ? "90vh" : "20vh",
+        height: expanded ? "80vh" : "20vh",
       }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-
+<h1>lore</h1>
     </div>
   );
 }
