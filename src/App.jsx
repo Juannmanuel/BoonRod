@@ -15,7 +15,7 @@ function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const location = useLocation();
   const currentPath = location.pathname;
-  console.log(currentPath);
+  console.log(currentPath, "app");
 
   // Función para manejar el cambio de slide
   const handleSlideChange = (swiper) => {
@@ -48,10 +48,7 @@ function App() {
           path="/detalle"
           element={<Detalle sections={sections} currentSlide={currentSlide} />}
         />
-        <Route
-          path="/catalogo"
-          element={<Catalogo/>}
-        />
+        <Route path="/catalogo" element={<Catalogo />} />
       </Routes>
     </div>
   );

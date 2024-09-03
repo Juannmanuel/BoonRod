@@ -1,0 +1,14 @@
+.expandingSection {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow: scroll;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    transition: height 0.5s ease, transform 0.5s ease;
+  }
+  
