@@ -1,16 +1,29 @@
-.detail_main{
-  width: 100vw;
+.detail_main {
   height: 100vh;
-  background-color: azure;
+  overflow: hidden;
+  position: relative;
 }
-.carrousel {
-  width: 100vw;
+
+.carousel {
   height: 80vh;
-  border: 1px solid black;
-  overflow: scroll;
+  background: lightgray; /* Para visualización */
+  overflow: hidden;
 }
-.detail{
-  width: 100vw;
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.detail {
   height: 20vh;
-  
+  background: white; /* Para visualización */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.expanded {
+  transform: translateY(-60vh); /* Ajusta según el espacio que quieras ocupar */
 }
