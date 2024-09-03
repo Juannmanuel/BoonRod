@@ -30,7 +30,6 @@ function ExpandingSection() {
       className={style.expandingSection}
       style={{
         height: expanded ? "90vh" : "20vh",
-        transform: expanded ? `translateY(-${currentTouchY - startTouchY}px)` : "translateY(0)",
       }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
