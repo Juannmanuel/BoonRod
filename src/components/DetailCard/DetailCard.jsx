@@ -1,15 +1,20 @@
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
-import { CiCircleChevUp, CiCircleChevDown  } from "react-icons/ci";
+import { CiCircleChevUp, CiCircleChevDown } from "react-icons/ci";
 import style from "./DetailCard.module.css";
+import Footer from "../Footer/Footer";
 
-function DetailCard({expanded}) {
+function DetailCard({ expanded }) {
   const discountedPrice = 8500;
   const price = 10000;
   const discount = 1;
-  const abierto = false
+  const abierto = false;
   return (
     <section className={style.detailCard_main}>
-      <div className={expanded ? style.detail_product_expanding : style.detailCard_main}>
+      <div
+        className={
+          expanded ? style.detail_product_expanding : style.detailCard_main
+        }
+      >
         <div className={style.productHeader}>
           <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES </h2>
           <div className={style.priceContainer}>
@@ -43,6 +48,9 @@ function DetailCard({expanded}) {
             <span className={style.size}>XL</span>
           </div>
         </div>
+        <div className={style.cash_media}></div>
+        <div className={style.cash_media}></div>
+        <div className={style.cash_media}></div>
         <div className={style.cash_media}></div>
         <div className={style.cash_media}></div>
         <div className={style.cash_media}></div>
