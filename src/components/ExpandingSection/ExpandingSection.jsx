@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import style from "./ExpandingSection.module.css";
 
 function ExpandingSection() {
@@ -7,18 +7,27 @@ function ExpandingSection() {
   const [expanded, setExpanded] = useState(false);
   const sectionRef = useRef(null);
 
+  useEffect(() => {
+    const handleTouchMove = (e) => {
+      e.preventDefault(); // Previene el scroll por defecto
+      setCurrentTouchY(e.touches[0].clientY);
+    };
+
+    const section = sectionRef.current;
+    if (section) {
+      section.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+      return () => {
+        section.removeEventListener("touchmove", handleTouchMove);
+      };
+    }
+  }, []);
+
   const handleTouchStart = (e) => {
-    e.preventDefault(); // Evita el comportamiento predeterminado
     setStartTouchY(e.touches[0].clientY);
   };
 
-  const handleTouchMove = (e) => {
-    e.preventDefault(); // Evita el comportamiento predeterminado
-    setCurrentTouchY(e.touches[0].clientY);
-  };
-
-  const handleTouchEnd = (e) => {
-    e.preventDefault(); // Evita el comportamiento predeterminado
+  const handleTouchEnd = () => {
     const deltaY = startTouchY - currentTouchY;
     if (Math.abs(deltaY) > 30) {
       if (deltaY > 0 && !expanded) {
@@ -36,9 +45,8 @@ function ExpandingSection() {
       style={{
         height: expanded ? "80vh" : "20vh",
       }}
-      onTouchStart={(e) => handleTouchStart(e)}
-      onTouchMove={(e) => handleTouchMove(e)}
-      onTouchEnd={(e) => handleTouchEnd(e)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <h1>lore</h1>
     </div>

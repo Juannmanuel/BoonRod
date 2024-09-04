@@ -10,18 +10,18 @@ function Detalle() {
   const detailMainRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (detailMainRef.current) {
-        // Prevenir el scroll en la dirección no deseada
-        if (detailMainRef.current.scrollTop <= 0) {
-          detailMainRef.current.scrollTop = 1;
-        }
+    const handleScroll = (e) => {
+      // Solo bloquea el scroll hacia arriba
+      if (detailMainRef.current.scrollTop <= 0) {
+        detailMainRef.current.scrollTop = 1;
+        e.preventDefault(); // No se puede usar en eventos pasivos
       }
     };
 
     const detailMain = detailMainRef.current;
     if (detailMain) {
-      detailMain.addEventListener("scroll", handleScroll, { passive: true });
+      // Configura el listener sin opción pasiva
+      detailMain.addEventListener("scroll", handleScroll, { passive: false });
 
       // Cleanup event listener on component unmount
       return () => {
