@@ -35,9 +35,6 @@ function Detalle() {
           />
         ))}
       </div>
-      <div className={`${style.detail} ${isExpanded ? style.expanded : ''}`}>
-        {/* Aquí va el contenido de la tarjeta */}
-      </div>
       <ExpandingSection/>
     </section>
   );

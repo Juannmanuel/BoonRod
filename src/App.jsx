@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import CatalogGrid from "./pages/CatalogGrid/CatalogGrid";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Detalle from "./pages/Detalle/Detalle";
+import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
 function App() {
   // Estado para manejar el slide actual
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,7 +49,7 @@ function App() {
           path="/detalle"
           element={<Detalle sections={sections} currentSlide={currentSlide} />}
         />
-        <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/catalogo" element={<TarjetaDetalle />} />
       </Routes>
     </div>
   );
