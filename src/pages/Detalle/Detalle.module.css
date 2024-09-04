@@ -3,6 +3,7 @@
   overflow: hidden;
   position: relative;
   background-color: aqua;
+  overscroll-behavior: contain;
 }
 
 .carousel {
