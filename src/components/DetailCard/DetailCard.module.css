@@ -8,6 +8,8 @@
   margin: 0 auto;
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
+  border: 1px solid black;
+  margin-top: 2rem;
 }
 
 .detail_product {
@@ -25,7 +27,7 @@
 .productHeader {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
   min-height: 20vh;
 }
