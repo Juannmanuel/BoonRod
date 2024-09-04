@@ -10,7 +10,7 @@ function ExpandingSection() {
 
   useEffect(() => {
     const handleTouchMove = (e) => {
-      e.preventDefault(); // Previene el scroll por defecto
+   
       setCurrentTouchY(e.touches[0].clientY);
     };
 

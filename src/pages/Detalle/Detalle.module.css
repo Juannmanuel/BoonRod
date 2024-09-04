@@ -1,6 +1,5 @@
 .detail_main {
   min-height: 100vh;
-  overflow: hidden;
   position: relative;
   background-color: aqua;
   overscroll-behavior: contain;
@@ -26,6 +25,3 @@
   transition: transform 0.3s ease;
 }
 
-.expanded {
-  transform: translateY(-60vh); /* Ajusta según el espacio que quieras ocupar */
-}
