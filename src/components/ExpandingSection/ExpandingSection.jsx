@@ -17,7 +17,7 @@ function ExpandingSection() {
     setCurrentTouchY(e.touches[0].clientY);
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e) => {
     e.preventDefault(); // Evita el comportamiento predeterminado
     const deltaY = startTouchY - currentTouchY;
     if (Math.abs(deltaY) > 30) {
@@ -36,9 +36,9 @@ function ExpandingSection() {
       style={{
         height: expanded ? "80vh" : "20vh",
       }}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
+      onTouchStart={(e) => handleTouchStart(e)}
+      onTouchMove={(e) => handleTouchMove(e)}
+      onTouchEnd={(e) => handleTouchEnd(e)}
     >
       <h1>lore</h1>
     </div>

@@ -10,7 +10,7 @@ function Detalle() {
   const detailMainRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = (e) => {
+    const handleScroll = () => {
       if (detailMainRef.current) {
         // Prevenir el scroll en la dirección no deseada
         if (detailMainRef.current.scrollTop <= 0) {
