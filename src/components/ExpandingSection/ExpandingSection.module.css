@@ -3,6 +3,8 @@
   bottom: 0;
   left: 0;
   width: 100vw;
+  min-height: 20vh;
+  max-height: 80vh;
   overflow: hidden;
   transition: height 0.5s ease, transform 0.5s ease;
   border: 1px solid black;

@@ -9,26 +9,6 @@ import imagenModelo4 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/M
 function Detalle() {
   const detailMainRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = (e) => {
-      // Solo bloquea el scroll hacia arriba
-      if (detailMainRef.current.scrollTop <= 0) {
-        detailMainRef.current.scrollTop = 1;
-        e.preventDefault(); // No se puede usar en eventos pasivos
-      }
-    };
-
-    const detailMain = detailMainRef.current;
-    if (detailMain) {
-      // Configura el listener sin opción pasiva
-      detailMain.addEventListener("scroll", handleScroll, { passive: false });
-
-      // Cleanup event listener on component unmount
-      return () => {
-        detailMain.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, []);
 
   return (
     <section ref={detailMainRef} className={style.detail_main}>

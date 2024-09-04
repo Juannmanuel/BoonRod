@@ -2,14 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap");
 
 .detailCard_main {
-  width: auto;
+  width: 100%;
   height: 100%;
-  overflow: auto;
   margin: 0 auto;
+  overflow: scroll;
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
   border: 1px solid black;
-  margin-top: 2rem;
 }
 
 .detail_product {
@@ -22,6 +21,8 @@
   justify-content: start;
   overflow: scroll;
   gap: .5rem;
+  margin-bottom: 5rem;
+
 }
 
 .productHeader {
