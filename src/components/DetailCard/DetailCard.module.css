@@ -35,9 +35,10 @@
 .productHeader {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  min-height: 20vh;
+  justify-content: start;
+  min-height: 30vh;
   height: auto;
+  border: 1px solid black;
 }
 
 .productName {

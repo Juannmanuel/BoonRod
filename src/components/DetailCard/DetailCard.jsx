@@ -30,6 +30,7 @@ function DetailCard({ expanded }) {
               elasticidad. Cintura con detalle de pliegues frontales. Bolsillos
               en delantero y detalle de bolsillos traseros de vivo. Cierre
               frontal con cremallera y botón.
+              
             </p>
         </div>
         <div className={style.productSizes}>
