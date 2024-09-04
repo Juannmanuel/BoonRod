@@ -49,7 +49,7 @@ function ExpandingSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-    {/* <DetailCard/> */}
+    <DetailCard/>
     </div>
   );
 }
