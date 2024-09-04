@@ -25,16 +25,7 @@ function Detalle() {
 
   return (
     <section className={style.detail_main}>
-      <div className={`${style.carousel} ${isExpanded ? style.expanded : ''}`}>
-        {imagenes.map((item, index) => (
-          <img
-            key={index}
-            className={style.image}
-            src={item}
-            alt={`Modelo ${index + 1}`}
-          />
-        ))}
-      </div>
+
       <ExpandingSection/>
     </section>
   );
