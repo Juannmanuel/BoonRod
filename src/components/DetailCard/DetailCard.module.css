@@ -5,23 +5,32 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  overflow-y: scroll;
-
+  overflow: hidden;
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
   border: 1px solid black;
-  margin-top: 2rem;
 }
-
+/*contenedor del detalle scroll hidden*/
 .detail_product {
   max-width: 30rem;
   height: 100%;
   width: 95%;
   display: flex;
-  margin: auto;
   flex-direction: column;
   justify-content: start;
-  overflow-y: scroll;
+  overflow: hidden;
+  gap: .5rem;
+  position: relative;
+
+}
+.detail_product_expanding {
+  max-width: 30rem;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: auto;
   gap: .5rem;
   position: relative;
 

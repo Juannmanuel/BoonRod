@@ -9,8 +9,7 @@ function DetailCard({expanded}) {
   const abierto = false
   return (
     <section className={style.detailCard_main}>
-      {expanded ? <CiCircleChevDown className={style.iconUp} /> : <CiCircleChevUp className={style.iconUp} />}
-      <div className={style.detail_product}>
+      <div className={expanded ? style.detail_product_expanding : style.detailCard_main}>
         <div className={style.productHeader}>
           <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES </h2>
           <div className={style.priceContainer}>
