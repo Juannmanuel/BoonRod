@@ -1,4 +1,5 @@
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
+import { CiBookmark } from "react-icons/ci";
 import style from "./DetailCard.module.css";
 
 function DetailCard() {
@@ -9,7 +10,7 @@ function DetailCard() {
     <section className={style.detailCard_main}>
       <div className={style.detail_product}>
         <div className={style.productHeader}>
-          <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES</h2>
+          <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES </h2>
           <div className={style.priceContainer}>
             {discount > 0 && (
               <span className={style.productPriceOriginal}>${price}</span>
@@ -23,8 +24,7 @@ function DetailCard() {
           Pantalón regular fit confeccionado en tejido de algodón con
           elasticidad. Cintura con detalle de pliegues frontales. Bolsillos en
           delantero y detalle de bolsillos traseros de vivo. Cierre frontal con
-          cremallera y botón.
-          
+          cremallera y botón.       
         </p>
         <div className={style.productSizes}>
           <span style={{textDecoration: "underline"}}>Talles disponibles:</span>
@@ -33,11 +33,22 @@ function DetailCard() {
             <span className={style.size}>M</span>
             <span className={style.size}>L</span>
             <span className={style.size}>XL</span>
+            <span className={style.size}>XL</span>
+            <span className={style.size}>XL</span>
+            <span className={style.size}>XL</span>
+            <span className={style.size}>XL</span>
+            <span className={style.size}>XL</span>
           </div>
         </div>
         <div className={style.cash_media}>
           
         </div>
+        <div className={style.cash_media}>
+          
+          </div>
+          <div className={style.cash_media}>
+          
+          </div>
         <div className={style.productActions_btn}>
           <button>Añadir al carrito</button>
           <button>Comprar ahora</button>

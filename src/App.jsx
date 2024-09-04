@@ -11,6 +11,7 @@ import CatalogGrid from "./pages/CatalogGrid/CatalogGrid";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Detalle from "./pages/Detalle/Detalle";
 import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
+import DetailCard from "./components/DetailCard/DetailCard";
 function App() {
   // Estado para manejar el slide actual
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,9 +48,9 @@ function App() {
         />
         <Route
           path="/detalle"
-          element={<Detalle sections={sections} currentSlide={currentSlide} />}
+          element={<TarjetaDetalle sections={sections} currentSlide={currentSlide} />}
         />
-        <Route path="/catalogo" element={<TarjetaDetalle />} />
+        <Route path="/catalogo" element={<Detalle />} />
       </Routes>
     </div>
   );

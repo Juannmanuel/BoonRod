@@ -1,6 +1,49 @@
-.tarjeta_main{
-    width: 500px;
-    height: 70vh;
+.tarjeta_main {
+  height: 100vh;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  overflow-y: auto;
+}
+/*Primera fila*/
+.productInfoContainer {
+  border: 1px solid black;
+  width: 90%;
+  min-height: 20vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  gap: 0.5rem;
+}
+.productName {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.productPrice {
+  font-size: 1.5rem;
+}
+/*Segunda fila*/
+.descriptionProduct {
+  width: 90%;
+  border: 1px solid black;
+  max-height: 15rem;
+  font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*Tercera fila*/
+.careInstructions{
+    width: 90%;
+    min-height: 10rem;
     border: 1px solid black;
-    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }

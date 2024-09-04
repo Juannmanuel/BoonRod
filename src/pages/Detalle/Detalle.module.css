@@ -1,5 +1,5 @@
 .detail_main {
-  height: 60vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   background-color: aqua;

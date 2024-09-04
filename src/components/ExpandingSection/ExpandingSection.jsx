@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import style from "./ExpandingSection.module.css";
+import DetailCard from "../DetailCard/DetailCard";
 
 function ExpandingSection() {
   const [startTouchY, setStartTouchY] = useState(0);
@@ -9,7 +10,17 @@ function ExpandingSection() {
 
   useEffect(() => {
     const handleTouchMove = (e) => {
-      e.preventDefault(); // Previene el scroll por defecto
+      const detailCard = sectionRef.current.querySelector(`.${style.detailCard_main}`);
+      const scrollTop = detailCard.scrollTop;
+      const scrollHeight = detailCard.scrollHeight;
+      const offsetHeight = detailCard.offsetHeight;
+
+      if (
+        (scrollTop === 0 && e.touches[0].clientY > startTouchY) || // Evita el scroll hacia abajo en el límite superior
+        (scrollTop + offsetHeight >= scrollHeight && e.touches[0].clientY < startTouchY) // Evita el scroll hacia arriba en el límite inferior
+      ) {
+        e.preventDefault(); // Solo previene el scroll si está en un límite
+      }
       setCurrentTouchY(e.touches[0].clientY);
     };
 
@@ -21,7 +32,7 @@ function ExpandingSection() {
         section.removeEventListener("touchmove", handleTouchMove);
       };
     }
-  }, []);
+  }, [startTouchY]);
 
   const handleTouchStart = (e) => {
     setStartTouchY(e.touches[0].clientY);
@@ -48,7 +59,7 @@ function ExpandingSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <h1>lore</h1>
+      <DetailCard />
     </div>
   );
 }
