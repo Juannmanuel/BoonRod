@@ -25,13 +25,13 @@ function DetailCard({ expanded }) {
               ${discount > 0 ? discountedPrice : price}
             </span>
           </div>
+            <p className={style.productDescription}>
+            Pantalón regular fit confeccionado en tejido de algodón con
+              elasticidad. Cintura con detalle de pliegues frontales. Bolsillos
+              en delantero y detalle de bolsillos traseros de vivo. Cierre
+              frontal con cremallera y botón.
+            </p>
         </div>
-        <p className={style.productDescription}>
-          Pantalón regular fit confeccionado en tejido de algodón con
-          elasticidad. Cintura con detalle de pliegues frontales. Bolsillos en
-          delantero y detalle de bolsillos traseros de vivo. Cierre frontal con
-          cremallera y botón.
-        </p>
         <div className={style.productSizes}>
           <span style={{ textDecoration: "underline" }}>
             Talles disponibles:

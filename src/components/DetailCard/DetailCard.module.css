@@ -20,7 +20,6 @@
   overflow: hidden;
   gap: 0.5rem;
   position: relative;
-
 }
 .detail_product_expanding {
   max-width: 30rem;
@@ -28,57 +27,49 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   overflow: scroll;
   gap: 0.5rem;
   position: relative;
-
-  
 }
 .productHeader {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
   min-height: 20vh;
-  margin-left: .5rem;
+  height: auto;
 }
 
 .productName {
-  font-size: 2rem;
-  margin: 0.5rem 0;
+  font-size: 1.5rem;
   font-family: "Bebas Neue", sans-serif;
+  padding: 0 .3rem;
 }
 
-.priceContainer {
-  display: flex;
-  gap: 1rem;
-  margin: 0.5rem;
-  align-items: center;
-  font-size: 2rem;
-}
 
 .productPriceOriginal {
   font-size: 1.5rem;
+  padding: 0 .3rem;
+
   font-family: "Bebas Neue", sans-serif;
   text-decoration: line-through;
   color: #999; /* Color gris para resaltar que es el precio anterior */
 }
 
 .productPriceDiscounted {
-  font-size: 2rem;
+  font-size: 1.7rem;
 
   font-family: "Bebas Neue", sans-serif;
   color: #0cb53e; /* Color rojo para destacar el precio con descuento */
 }
 
 .productDescription {
-  font-size: 1rem;
+  font-size: .9rem;
   font-family: "Roboto Slab", serif;
   margin: 0;
   padding: 0.5rem;
   height: auto;
-  min-height: 10rem;
+  min-height: 5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
