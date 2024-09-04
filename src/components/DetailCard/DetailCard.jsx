@@ -1,13 +1,15 @@
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
-import { CiBookmark } from "react-icons/ci";
+import { CiCircleChevUp, CiCircleChevDown  } from "react-icons/ci";
 import style from "./DetailCard.module.css";
 
-function DetailCard() {
-  const discountedPrice = 8500
-  const price = 10000
-  const discount = 1
+function DetailCard({expanded}) {
+  const discountedPrice = 8500;
+  const price = 10000;
+  const discount = 1;
+  const abierto = false
   return (
     <section className={style.detailCard_main}>
+      {expanded ? <CiCircleChevDown className={style.iconUp} /> : <CiCircleChevUp className={style.iconUp} />}
       <div className={style.detail_product}>
         <div className={style.productHeader}>
           <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES </h2>
@@ -24,10 +26,12 @@ function DetailCard() {
           Pantalón regular fit confeccionado en tejido de algodón con
           elasticidad. Cintura con detalle de pliegues frontales. Bolsillos en
           delantero y detalle de bolsillos traseros de vivo. Cierre frontal con
-          cremallera y botón.       
+          cremallera y botón.
         </p>
         <div className={style.productSizes}>
-          <span style={{textDecoration: "underline"}}>Talles disponibles:</span>
+          <span style={{ textDecoration: "underline" }}>
+            Talles disponibles:
+          </span>
           <div className={style.sizes}>
             <span className={style.size}>S</span>
             <span className={style.size}>M</span>
@@ -40,15 +44,9 @@ function DetailCard() {
             <span className={style.size}>XL</span>
           </div>
         </div>
-        <div className={style.cash_media}>
-          
-        </div>
-        <div className={style.cash_media}>
-          
-          </div>
-          <div className={style.cash_media}>
-          
-          </div>
+        <div className={style.cash_media}></div>
+        <div className={style.cash_media}></div>
+        <div className={style.cash_media}></div>
         <div className={style.productActions_btn}>
           <button>Añadir al carrito</button>
           <button>Comprar ahora</button>

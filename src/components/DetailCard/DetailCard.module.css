@@ -5,12 +5,12 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  overflow: scroll;
+  overflow-y: scroll;
+
   font-family: "Roboto Slab", serif;
   background-color: #f0f3f4;
   border: 1px solid black;
-  z-index: 2;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .detail_product {
@@ -21,18 +21,28 @@
   margin: auto;
   flex-direction: column;
   justify-content: start;
-  overflow: scroll;
+  overflow-y: scroll;
   gap: .5rem;
+  position: relative;
 
 }
-
+.iconUp{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 2rem;
+  background-color: #f0f3f4;
+  border-radius: 50%;
+  border: 1px solid black;
+}
 .productHeader {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
   min-height: 20vh;
-  pointer-events: none;
+  position: static;
 }
 
 .productName {
