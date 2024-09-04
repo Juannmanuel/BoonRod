@@ -10,17 +10,7 @@ function ExpandingSection() {
 
   useEffect(() => {
     const handleTouchMove = (e) => {
-      const detailCard = sectionRef.current.querySelector(`.${style.detailCard_main}`);
-      const scrollTop = detailCard.scrollTop;
-      const scrollHeight = detailCard.scrollHeight;
-      const offsetHeight = detailCard.offsetHeight;
-
-      if (
-        (scrollTop === 0 && e.touches[0].clientY > startTouchY) || // Evita el scroll hacia abajo en el límite superior
-        (scrollTop + offsetHeight >= scrollHeight && e.touches[0].clientY < startTouchY) // Evita el scroll hacia arriba en el límite inferior
-      ) {
-        e.preventDefault(); // Solo previene el scroll si está en un límite
-      }
+      e.preventDefault(); // Previene el scroll por defecto
       setCurrentTouchY(e.touches[0].clientY);
     };
 
@@ -32,7 +22,7 @@ function ExpandingSection() {
         section.removeEventListener("touchmove", handleTouchMove);
       };
     }
-  }, [startTouchY]);
+  }, []);
 
   const handleTouchStart = (e) => {
     setStartTouchY(e.touches[0].clientY);
@@ -59,7 +49,7 @@ function ExpandingSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <DetailCard />
+    {/* <DetailCard/> */}
     </div>
   );
 }
