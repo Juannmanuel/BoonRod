@@ -17,9 +17,7 @@ function ExpandingSection() {
 
   const handleTouchEnd = () => {
     const deltaY = startTouchY - currentTouchY;
-
     if (Math.abs(deltaY) > 30) {
-      // Sensibilidad aumentada
       if (deltaY > 0 && !expanded) {
         setExpanded(true);
       } else if (deltaY < 0 && expanded) {

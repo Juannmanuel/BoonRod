@@ -7,20 +7,19 @@ import imagenModelo3 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/M
 import imagenModelo4 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_4.jpg";
 
 function Detalle() {
-  const imagenes = [imagenModelo1, imagenModelo2, imagenModelo3, imagenModelo4];
   const detailMainRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (event) => {
+      // Evita el scroll hacia arriba
       if (detailMainRef.current.scrollTop <= 0) {
-        detailMainRef.current.scrollTop = 1; // Bloquea el scroll hacia arriba
+        detailMainRef.current.scrollTop = 1;
       }
     };
 
     const detailMain = detailMainRef.current;
     detailMain.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listener on component unmount
     return () => {
       detailMain.removeEventListener("scroll", handleScroll);
     };
