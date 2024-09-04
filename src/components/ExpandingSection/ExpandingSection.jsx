@@ -8,14 +8,17 @@ function ExpandingSection() {
   const sectionRef = useRef(null);
 
   const handleTouchStart = (e) => {
+    e.preventDefault(); // Evita el comportamiento predeterminado
     setStartTouchY(e.touches[0].clientY);
   };
 
   const handleTouchMove = (e) => {
+    e.preventDefault(); // Evita el comportamiento predeterminado
     setCurrentTouchY(e.touches[0].clientY);
   };
 
   const handleTouchEnd = () => {
+    e.preventDefault(); // Evita el comportamiento predeterminado
     const deltaY = startTouchY - currentTouchY;
     if (Math.abs(deltaY) > 30) {
       if (deltaY > 0 && !expanded) {

@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  overflow: hidden; /* Cambiado a hidden para evitar scroll no deseado */
+  overflow: hidden; /* Previene el scroll en el contenedor de expansión */
   background-color: #3498db;
   color: white;
   display: flex;
