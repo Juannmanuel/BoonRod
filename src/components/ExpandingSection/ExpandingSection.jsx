@@ -20,7 +20,7 @@ function ExpandingSection() {
     if (Math.abs(deltaY) > 50) {
       if (deltaY > 0 && !expanded) { // Expand
         setExpanded(true);
-      } else if (deltaY < 0 && expanded) { // Contract
+      } else if (deltaY < 10 && expanded) { // Contract
         setExpanded(false);
       }
     }
