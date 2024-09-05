@@ -7,11 +7,8 @@ import imagenModelo3 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/M
 import imagenModelo4 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_4.jpg";
 
 function Detalle() {
-  const detailMainRef = useRef(null);
-
-
   return (
-    <section ref={detailMainRef} className={style.detail_main}>
+    <section className={style.detail_main}>
       <ExpandingSection />
     </section>
   );

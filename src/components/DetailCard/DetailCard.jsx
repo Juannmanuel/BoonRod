@@ -1,15 +1,23 @@
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import { CiCircleChevUp, CiCircleChevDown } from "react-icons/ci";
 import style from "./DetailCard.module.css";
+import { useEffect, useRef } from "react";
+
 import Footer from "../Footer/Footer";
 
 function DetailCard({ expanded }) {
+  const cardRef = useRef(null);
+  useEffect(() => {
+    if (!expanded && cardRef.current) {
+      // Cuando el componente se contrae, ajusta el scroll hacia la parte superior
+      cardRef.current.scrollTop = 0;
+    }
+  }, [expanded]);
   const discountedPrice = 8500;
   const price = 10000;
   const discount = 1;
-  const abierto = false;
   return (
-    <section className={style.detailCard_main}>
+    <section ref={cardRef} className={style.detailCard_main}>
       <div
         className={
           expanded ? style.detail_product_expanding : style.detailCard_main
@@ -31,6 +39,7 @@ function DetailCard({ expanded }) {
               en delantero y detalle de bolsillos traseros de vivo. Cierre
               frontal con cremallera y botón.
               
+              
             </p>
         </div>
         <div className={style.productSizes}>
@@ -43,16 +52,8 @@ function DetailCard({ expanded }) {
             <span className={style.size}>L</span>
             <span className={style.size}>XL</span>
             <span className={style.size}>XL</span>
-            <span className={style.size}>XL</span>
-            <span className={style.size}>XL</span>
-            <span className={style.size}>XL</span>
-            <span className={style.size}>XL</span>
           </div>
         </div>
-        <div className={style.cash_media}></div>
-        <div className={style.cash_media}></div>
-        <div className={style.cash_media}></div>
-        <div className={style.cash_media}></div>
         <div className={style.cash_media}></div>
         <div className={style.cash_media}></div>
         <div className={style.productActions_btn}>
@@ -60,6 +61,8 @@ function DetailCard({ expanded }) {
           <button>Comprar ahora</button>
         </div>
       </div>
+      <div className={style.cash_media}></div>
+      
     </section>
   );
 }

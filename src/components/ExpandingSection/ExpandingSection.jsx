@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import style from "./ExpandingSection.module.css";
 import DetailCard from "../DetailCard/DetailCard";
+import TarjetaDetalle from "../TarjetaDetalle/TarjetaDetalle";
 
 function ExpandingSection() {
   const [startTouchY, setStartTouchY] = useState(0);
@@ -49,7 +50,7 @@ function ExpandingSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-    <DetailCard expanded={expanded}/>
+    <TarjetaDetalle expanded={expanded}/>
     </div>
   );
 }
