@@ -11,6 +11,7 @@
   justify-content: start;
   text-transform: uppercase;
   text-decoration: none;
+  background-color: white;
 
 }
 .image {
@@ -40,10 +41,13 @@
   height: auto;
   color: black;
   width: 10rem;
+  margin-left: .5rem;
   
 }
 .price {
   color: green;
   font-size: .8rem;
   padding: 0.1rem;
+  margin-left: .5rem;
+
 }
