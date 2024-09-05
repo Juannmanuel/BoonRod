@@ -5,6 +5,8 @@ import imgTC2 from "../../assets/images/Tarjetas/mcredito.png";
 import imgTC3 from "../../assets/images/Tarjetas/mp.png";
 import imgTC4 from "../../assets/images/Tarjetas/visa.png";
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
+import Footer from "../Footer/Footer";
+
 
 function TarjetaDetalle({ expanded }) {
   const tarjetaRef = useRef(null);
@@ -47,7 +49,7 @@ function TarjetaDetalle({ expanded }) {
           <span className={style.size}>M</span>
           <span className={style.size}>L</span>
           <span className={style.size}>XL</span>
-          <span className={style.size}>XL</span>
+          <span className={style.size}>XXL</span>
         </div>
       </div>
       <div className={style.cash_media}>
@@ -66,6 +68,7 @@ function TarjetaDetalle({ expanded }) {
         <span style={{ margin: "0" }}>NUESTRAS RECOMENDACIONES</span>
         <RecommendedProducts />
       </div>
+      <Footer/>
     </section>
   );
 }

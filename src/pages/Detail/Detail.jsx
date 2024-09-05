@@ -1,48 +1,42 @@
-import Navbar from "../../components/Navbar/Navbar";
+
+import ExpandingSection from "../../components/ExpandingSection/ExpandingSection";
 import style from "./Detail.module.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
 import imagenModelo1 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_1.jpg";
 import imagenModelo2 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_2.jpg";
 import imagenModelo3 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_3.jpg";
 import imagenModelo4 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_4.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import imagenPrendas3 from "../../assets/images/Ropa/Producto_4_Pantalon/Prendas/Prenda_2.jpg";
-import imagenPrendas2 from "../../assets/images/Ropa/Producto_4_Pantalon/Prendas/Prenda_1.jpg";
-import imagenPrendas1 from "../../assets/images/Ropa/Producto_4_Pantalon/Prendas/Prenda_Principal.jpg";
-import DetailCard from "../../components/DetailCard/DetailCard";
-import HorizontalCarrousel from "../../components/Widges/HorizontalCarrousel/HorizontalCarrousel";
-import RecommendedProducts from "../../components/RecommendedProducts/RecommendedProducts";
-import Footer from "../../components/Footer/Footer";
-function Detail({ sections, currentSlide }) {
-  let imagenes = [
-    imagenModelo1,
-    imagenModelo2,
-    imagenModelo3,
-    imagenModelo4,
-    imagenPrendas3,
-    imagenPrendas2,
-    imagenPrendas1,
-  ];
-  {
-    /* <HorizontalCarrousel imagenes={imagenes} /> */
-  }
+function Detail() {
+  let imagenes = [imagenModelo1, imagenModelo2, imagenModelo3, imagenModelo4];
   return (
-    <section className={style.detai_main}>
-      <div className={style.container_detail}>
-        <div className={style.carrousel}>
-          {imagenes.map((item, index) => (
-            <img src={item} key={index} />
+    <section className={style.detail_main}>
+        <Swiper
+          className={style.carousel}
+          direction="vertical"
+          speed={500}
+          loop={true}
+          slidesPerView={1}
+          spaceBetween={0}
+          breakpoints={{
+            600: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+            1366: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {imagenes?.map((item, index) => (
+            <SwiperSlide key={index}>
+              <img src={item} alt="" className={style.image} />
+            </SwiperSlide>
           ))}
-        </div>
-        <div className={style.container_card}>
-          <DetailCard />
-        </div>
-      </div>
-      <div className={style.container_recommendedProducts}>
-        <RecommendedProducts />
-      </div>
-      <Footer />
+        </Swiper>
+      <ExpandingSection />
     </section>
   );
 }

@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router";
 import Navbar from "../src/components/Navbar/Navbar";
-import Covers from "./components/Covers/Covers";
 import Detail from "./pages/Detail/Detail";
 import { sections } from "./data"; // Importamos los datos de las secciones desde un archivo de datos
 import "./App.css";
 import Home from "./pages/Home/Home";
-import RecommendedProducts from "./components/RecommendedProducts/RecommendedProducts";
 import { useLocation } from "react-router-dom";
-import CatalogGrid from "./pages/CatalogGrid/CatalogGrid";
-import Catalogo from "./components/Catalogo/Catalogo";
-import Detalle from "./pages/Detalle/Detalle";
 import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
-import DetailCard from "./components/DetailCard/DetailCard";
+
+
 function App() {
   // Estado para manejar el slide actual
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -51,7 +47,7 @@ function App() {
           path="/detalle"
           element={<TarjetaDetalle sections={sections} currentSlide={currentSlide} />}
         />
-        <Route path="/catalogo" element={<Detalle />} />
+        <Route path="/catalogo" element={<Detail />} />
       </Routes>
     </div>
   );
