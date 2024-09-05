@@ -50,7 +50,7 @@ function ExpandingSection() {
       ref={sectionRef}
       className={style.expandingSection}
       style={{
-        height: expanded ? "94vh" : "20vh",
+        height: expanded ? "85vh" : "20vh",
       }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
