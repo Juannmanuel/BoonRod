@@ -40,15 +40,14 @@ function NavbarMovile({}) {
         <img src={logoImage} alt="Logo de la tienda" className={style.logo} />
         <CiSearch className={style.search_icon} />
       </section>
-      {currentPath !== "/detalle" ? null : (
-        <section className={style.navbar_options}>
-          {categorias.map((item, index) => (
-            <div key={index} className={style.category_item}>
-              <span>{item}</span>
-            </div>
-          ))}
-        </section>
-      )}
+
+      <section className={style.navbar_options}>
+        {categorias.map((item, index) => (
+          <div key={index} className={style.category_item}>
+            <span>{item}</span>
+          </div>
+        ))}
+      </section>
     </nav>
   );
 }

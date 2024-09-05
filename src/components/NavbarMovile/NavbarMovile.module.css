@@ -7,6 +7,7 @@
     transition: opacity 1s ease-out;
     z-index: 2;
     background-color:rgba(245, 245, 245, 0.752);
+    border: 1px solid black;
   
     
   }
@@ -53,7 +54,7 @@
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     gap: 0.5rem;
     padding: 0 0.2rem;
   }
