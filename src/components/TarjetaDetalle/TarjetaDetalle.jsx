@@ -43,7 +43,7 @@ function TarjetaDetalle({ expanded }) {
         </p>
       </div>
       <div className={style.productSizes}>
-        <span style={{ textDecoration: "underline" }}>TALLES DISPONIBLES</span>
+        <span>TALLES DISPONIBLES</span>
         <div className={style.sizes}>
           <span className={style.size}>S</span>
           <span className={style.size}>M</span>

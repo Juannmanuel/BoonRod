@@ -1,10 +1,10 @@
 import style from "./RecommendedProducts.module.css";
 import Card from "../Card/Card";
 
-function RecommendedProducts({}) {
+function RecommendedProducts({section}) {
 
   return (
-    <section className={style.RecommendedProducts_main}>
+    <section className={section == "catalogo" ? style.RecommendedProducts_main_white_navbar : style.RecommendedProducts_main}>
     <Card/>
     <Card/>
     <Card/>

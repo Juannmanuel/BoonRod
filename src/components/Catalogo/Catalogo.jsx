@@ -14,7 +14,7 @@ function Catalogo({currentPath}) {
   return (
     <section className={style.catalogo_main}>
       <NavbarMovile/>
-      <RecommendedProducts />
+      <RecommendedProducts section={"catalogo"} />
       <Footer />
     </section>
   );

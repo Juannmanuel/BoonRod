@@ -3,22 +3,10 @@
 
 .catalogo_main {
   width: 100vw;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
   position: relative;
+
 }
 
-
-.catalogo {
-  width: auto;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 20rem;
-  grid-gap: 0.5rem;
-  padding: 0rem 0.5rem;
-  margin-top: 21vh;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
 

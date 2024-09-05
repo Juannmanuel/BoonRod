@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
 import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
+import Catalogo from "./components/Catalogo/Catalogo";
 
 
 function App() {
@@ -25,13 +26,6 @@ function App() {
 
   return (
     <div className="App">
-      {currentPath === "/detalle" || currentPath === "/catalogo" ? null : (
-        <Navbar
-          sections={sections}
-          currentSlide={currentSlide}
-          currentPath={currentPath}
-        />
-      )}
       <Routes>
         <Route
           path="/"
@@ -45,7 +39,7 @@ function App() {
         />
         <Route
           path="/detalle"
-          element={<TarjetaDetalle sections={sections} currentSlide={currentSlide} />}
+          element={<Catalogo sections={sections} currentSlide={currentSlide} />}
         />
         <Route path="/catalogo" element={<Detail />} />
       </Routes>

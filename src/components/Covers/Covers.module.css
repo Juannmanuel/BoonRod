@@ -6,17 +6,15 @@
   position: relative;
 }
 
-.containerButton {
-  height: 5rem;
-  width: 25rem;
-}
 
 .container_cover {
   width: 90%;
-  height: calc(100vh - 35%);
+  height: auto;
+  max-height: 50rem;
   position: absolute;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   bottom: 1rem;
   z-index: 4;
   display: flex;
@@ -24,8 +22,9 @@
   justify-content: start;
   align-items: start;
   pointer-events: none;
-  margin-bottom: 3rem;
-  gap: 3rem;
+  gap: 1rem;
+
+  
 }
 
 .container_cover h2 {
@@ -36,21 +35,28 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(241, 241, 241);
-  font-size: 8rem;
+  font-size: 5rem;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
+
 }
 
 .container_cover p {
   margin: 0;
   padding: 0;
   color: rgb(241, 241, 241);
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-family: "Roboto Slab", serif;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
-  font-weight: 200;
-  max-width: 70%;
+  font-weight: 400;
+
 }
-@media (max-width: 1920px) {
+.containerButton{
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+/* @media (max-width: 1920px) {
   .container_cover {
     height: 65vh;
     width: 95%;
@@ -137,4 +143,4 @@
     width: 15rem;
     font-size: 1rem;
   }
-}
+} */

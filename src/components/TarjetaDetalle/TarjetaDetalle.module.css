@@ -29,11 +29,11 @@
   margin: 0;
 }
 .productPriceOriginal {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Bebas Neue", sans-serif;
   text-decoration: line-through;
   color: #999;
-  margin: 0;
+  margin: 0 0.5rem;
 }
 .productPriceDiscounted {
   font-size: 1.7rem;
