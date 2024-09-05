@@ -4,6 +4,7 @@
   position: relative;
   overflow: auto;
   transition: 1s ease;
+
 }
 .tarjeta_main {
   height: 100%;
@@ -20,6 +21,7 @@
   width: 90%;
   margin: auto;
   margin-top: 1.5rem;
+
 }
 .productName {
   font-family: "Bebas Neue", sans-serif;
