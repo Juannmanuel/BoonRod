@@ -40,7 +40,7 @@ function TarjetaDetalle() {
         </div>
       </div>
       <div className={style.cash_media}>
-        <h3 style={{margin: "0"}}>MEDIOS DE PAGO</h3>
+        <span style={{margin: "0"}}>MEDIOS DE PAGO</span>
         <div className={style.cash_media_container_img}>
           {imgCards.map((item, index) => (
             <img className={style.imgCard} key={index} src={item} />
