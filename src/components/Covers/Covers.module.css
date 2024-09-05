@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap");
 .categories_main {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-
 
 .container_cover {
   width: 90%;
@@ -23,21 +22,18 @@
   align-items: start;
   pointer-events: none;
   gap: 1rem;
-
-  
 }
 
 .container_cover h2 {
   margin: 0;
   padding: 0;
-  line-height: .8;
+  line-height: 0.8;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: rgb(241, 241, 241);
   font-size: 4rem;
-  text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
-
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
 }
 
 .container_cover p {
@@ -46,101 +42,88 @@
   color: rgb(241, 241, 241);
   font-size: 1rem;
   font-family: "Roboto Slab", serif;
-  text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
   font-weight: 400;
-
+  min-height: 5rem;
 }
-.containerButton{
+.containerButton {
   width: 70%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 }
-/* @media (max-width: 1920px) {
+@media (max-width: 2560px) {
   .container_cover {
-    height: 65vh;
-    width: 95%;
-    margin-bottom: 1em;
-    gap: 1em;
+    gap: 2rem;
+
   }
   .container_cover h2 {
-    font-size: 12rem;
+    font-size: 10rem;
+
   }
   .container_cover p {
     font-size: 2rem;
-    max-width: 30em;
+    max-width: 60%;
+
+  }
+  .containerButton {
+    height: 2rem;
+    width: 25rem;
+
   }
 }
 
 @media (max-width: 1440px) {
   .container_cover {
-    height: 55vh;
-    margin-bottom: 3rem;
-    gap: 1.5em;
+    gap: 2rem;
   }
   .container_cover h2 {
-    font-size: 7rem;
+    font-size: 8.5rem;
+  }
+  .container_cover p {
+    font-size: 2rem;
+    max-width: none;
+  }
+  .containerButton {
+    height: 2rem;
+    width: 25rem;
   }
 }
 
 @media (max-width: 1024px) {
   .container_cover {
-    height: 50vh;
-    margin-bottom: 10em;
-    gap: 2em;
+    gap: 2rem;
   }
   .container_cover h2 {
-    font-size: 8rem;
+    font-size: 6.5rem;
   }
   .container_cover p {
-    font-size: 1.8rem;
-    max-width: 35rem;
+    font-size: 1.5rem;
+  }
+  .containerButton {
+    height: 2rem;
+    width: 20rem;
   }
 }
 
 @media (max-width: 768px) {
-  .container_cover {
-    height: 60vh;
-    margin-bottom: 4em;
-    gap: 1.5em;
-  }
   .container_cover h2 {
-    font-size: 7rem;
-  }
-  .container_cover p {
-    font-size: 1.6rem;
-  }
-  .containerButton {
-    height: 2.5rem;
-    width: 20rem;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 450px) {
-  .container_cover {
-    gap: 1.5em;
-    width: 90%;
-    min-height: 40%;
-    height: auto;
-    margin-left: -.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-
-  }
-  .container_cover h2 {
-    font-size: 5rem;
-    max-width: 95%;
-    letter-spacing: .1rem;
-    line-height: .8;
+    font-size: 5.5rem;
   }
   .container_cover p {
     font-size: 1.2rem;
   }
   .containerButton {
-    height: 2.5rem;
+    height: 2rem;
     width: 15rem;
     font-size: 1rem;
   }
-} */
+}
+@media (max-width: 450px) {
+  .container_cover h2 {
+    font-size: 5rem;
+  }
+  .container_cover p {
+    font-size: 1rem;
+  }
+}

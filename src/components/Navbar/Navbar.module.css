@@ -15,14 +15,16 @@
   justify-content: space-between;
   align-items: center;
 
+
 }
 .image_and_categories_container {
-  height: 30vh;
+  height: 25vh;
   width: 80%;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%);
+
 
 }
 .menu_button {
@@ -58,7 +60,7 @@
 }
 .image {
   width: auto;
-  max-width: 12rem;
+  max-width: 14rem;
   height: auto;
   position: absolute;
   left: 50%;

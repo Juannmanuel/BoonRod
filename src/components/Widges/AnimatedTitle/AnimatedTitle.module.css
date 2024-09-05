@@ -105,6 +105,9 @@
   .learnMore .buttonText {
     font-size: 2rem;
   }
+  .learnMore .circle {
+    height: 3.5rem;
+  }
 }
 @media (max-width: 480px) {
   .learnMore .buttonText {
