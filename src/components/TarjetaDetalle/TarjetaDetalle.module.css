@@ -1,14 +1,12 @@
 .tarjeta_main_expanding {
   height: 100%;
   width: 100%;
-  border: 3px solid black;
   position: relative;
   overflow: auto;
 }
 .tarjeta_main {
   height: 100%;
   width: 100%;
-  border: 3px solid black;
   position: relative;
   overflow: hidden;
 }
