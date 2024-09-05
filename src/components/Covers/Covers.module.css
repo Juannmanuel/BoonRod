@@ -11,7 +11,7 @@
   height: auto;
   max-height: 50rem;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 1rem;
@@ -107,6 +107,10 @@
 }
 
 @media (max-width: 768px) {
+  .container_cover {
+    gap: .5rem;
+    border: 1px solid white;
+  }
   .container_cover h2 {
     font-size: 5.5rem;
   }
@@ -120,8 +124,9 @@
   }
 }
 @media (max-width: 450px) {
+
   .container_cover h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .container_cover p {
     font-size: 1rem;
