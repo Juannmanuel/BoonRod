@@ -5,34 +5,16 @@ import { IoMenu } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import logoImage from "../../assets/images/logo/logo_boonrod_claro.png";
 
-function NavbarMovile({}) {
+function NavbarMovile({isScrollingUp}) {
   const location = useLocation();
   const currentPath = location.pathname;
   console.log(currentPath, "nav");
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [navbarVisible, setNavbarVisible] = useState(true);
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    setNavbarVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-    setPrevScrollPos(currentScrollPos);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
-  const categorias = [
-    "pantalones cortos",
-    "remeras",
-    "pantalones largos",
-    "zapatillas",
-    "accesorios",
-    "camperas",
-  ];
+  const categorias = ["pantalones","remeras","buzos","camperas","zapatillas","accesorios"]
 
   return (
     <nav
       className={`${style.navbar} ${
-        navbarVisible ? style.visible : style.hidden
+        isScrollingUp ? style.visible : style.hidden
       }`}
     >
       <section className={style.navbar_menu}>
