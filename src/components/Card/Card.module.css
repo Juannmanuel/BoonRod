@@ -10,6 +10,8 @@
   align-items: start;
   justify-content: start;
   text-transform: uppercase;
+  text-decoration: none;
+
 }
 .image {
   width: 100%;
@@ -36,7 +38,7 @@
   font-weight: 400;
   font-style: normal;
   height: auto;
-
+  color: black;
   width: 10rem;
   
 }

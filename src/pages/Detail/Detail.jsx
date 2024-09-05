@@ -1,15 +1,18 @@
 import ExpandingSection from "../../components/ExpandingSection/ExpandingSection";
 import style from "./Detail.module.css";
-import imagenModelo1 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_1.jpg";
-import imagenModelo2 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_2.jpg";
-import imagenModelo3 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_3.jpg";
-import imagenModelo4 from "../../assets/images/Ropa/Producto_4_Pantalon/Modelo/Modelo_4.jpg";
+import imagenModelo1 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_1.jpg";
+import imagenModelo2 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg";
+import imagenModelo3 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_3.jpg";
+import imagenModelo4 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_4.jpg";
+import imagenPrenda1 from "../../assets/images/Ropa/Producto_5_Remera/Prendas/Prenda_1.jpg"
+import imagenPrenda2 from "../../assets/images/Ropa/Producto_5_Remera/Prendas/Prenda_2.jpg"
+import imagenPrenda3 from "../../assets/images/Ropa/Producto_5_Remera/Prendas/Prenda_Principal.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoMenu } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import logo from "../../assets/images/logo/logo_tipografia_boonrod_claro.png"
 function Detail() {
-  let imagenes = [imagenModelo1, imagenModelo2, imagenModelo3, imagenModelo4];
+  let imagenes = [imagenModelo1, imagenModelo2, imagenModelo3, imagenModelo4,imagenPrenda1,,imagenPrenda2,imagenPrenda3];
   return (
     <section className={style.detail_main}>
       <nav className={style.navbar}>
