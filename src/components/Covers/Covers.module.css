@@ -35,7 +35,7 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(241, 241, 241);
-  font-size: 5rem;
+  font-size: 4rem;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
 
 }
@@ -44,14 +44,14 @@
   margin: 0;
   padding: 0;
   color: rgb(241, 241, 241);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Slab", serif;
   text-shadow: 3px 2px 3px rgba(0,0,0,0.46);
   font-weight: 400;
 
 }
 .containerButton{
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
