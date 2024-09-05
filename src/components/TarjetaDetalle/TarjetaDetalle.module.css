@@ -83,7 +83,7 @@ transition: 1s ease;
   align-items: center;
 }
 .cash_media {
-  min-height: 5rem;
+  min-height: 8rem;
   font-family: "Roboto Slab", serif;
   font-size: 0.8rem;
   width: 90%;
@@ -102,7 +102,7 @@ transition: 1s ease;
   align-items: center;
 }
 .imgCard {
-  max-width: 3rem;
+  max-width: 4rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
