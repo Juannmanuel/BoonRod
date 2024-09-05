@@ -1,9 +1,16 @@
-.tarjeta_main {
+.tarjeta_main_expanding {
   height: 100%;
   width: 100%;
   border: 3px solid black;
   position: relative;
   overflow: auto;
+}
+.tarjeta_main {
+  height: 100%;
+  width: 100%;
+  border: 3px solid black;
+  position: relative;
+  overflow: hidden;
 }
 .productHeader {
   display: flex;
@@ -129,4 +136,10 @@
 .productActions_btn button:hover {
   background-color: #000000;
   color: white;
+}
+.reccomended{
+  width: 90%;
+  margin: auto;
+  border: 1px solid black;
+  height: 30rem;
 }

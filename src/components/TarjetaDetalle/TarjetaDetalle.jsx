@@ -1,17 +1,28 @@
 import style from "./TarjetaDetalle.module.css";
+import { useEffect, useRef } from "react";
 import imgTC1 from "../../assets/images/Tarjetas/mastercard.png";
 import imgTC2 from "../../assets/images/Tarjetas/mcredito.png";
 import imgTC3 from "../../assets/images/Tarjetas/mp.png";
 import imgTC4 from "../../assets/images/Tarjetas/visa.png";
+import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 
-function TarjetaDetalle() {
+function TarjetaDetalle({ expanded }) {
+  const tarjetaRef = useRef(null);
+  useEffect(() => {
+    if (!expanded && tarjetaRef.current) {
+      tarjetaRef.current.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [expanded]);
   const discountedPrice = 8500;
   const price = 10000;
   const discount = 1;
   const imgCards = [imgTC1, imgTC2, imgTC3, imgTC4];
 
   return (
-    <section className={style.tarjeta_main}>
+    <section
+      ref={tarjetaRef}
+      className={expanded ? style.tarjeta_main_expanding : style.tarjeta_main}
+    >
       <div className={style.productHeader}>
         <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES </h2>
         <div className={style.priceContainer}>
@@ -40,7 +51,7 @@ function TarjetaDetalle() {
         </div>
       </div>
       <div className={style.cash_media}>
-        <span style={{margin: "0"}}>MEDIOS DE PAGO</span>
+        <span style={{ margin: "0" }}>MEDIOS DE PAGO</span>
         <div className={style.cash_media_container_img}>
           {imgCards.map((item, index) => (
             <img className={style.imgCard} key={index} src={item} />
@@ -51,6 +62,10 @@ function TarjetaDetalle() {
         <button>Añadir al carrito</button>
         <button>Comprar ahora</button>
       </div>
+      <div className={style.reccomended}>
+          <RecommendedProducts/>
+      </div>
+
     </section>
   );
 }
