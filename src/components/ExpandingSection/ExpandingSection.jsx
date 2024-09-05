@@ -6,18 +6,23 @@ import TarjetaDetalle from "../TarjetaDetalle/TarjetaDetalle";
 function ExpandingSection() {
   const [startTouchY, setStartTouchY] = useState(0);
   const [currentTouchY, setCurrentTouchY] = useState(0);
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    /*Esta funcion es para que la carta se deslice hacia abajo cuando carga*/
+    setTimeout(() => {
+     setExpanded(false)
+    }, 250);
     const handleTouchMove = (e) => {
-   
       setCurrentTouchY(e.touches[0].clientY);
     };
 
     const section = sectionRef.current;
     if (section) {
-      section.addEventListener("touchmove", handleTouchMove, { passive: false });
+      section.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
 
       return () => {
         section.removeEventListener("touchmove", handleTouchMove);
@@ -50,7 +55,7 @@ function ExpandingSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-    <TarjetaDetalle expanded={expanded}/>
+      <TarjetaDetalle expanded={expanded} />
     </div>
   );
 }
