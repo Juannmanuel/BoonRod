@@ -65,8 +65,8 @@
 
 .size {
   padding: 0.5rem;
-  min-width: 4rem;
-  max-height: .8rem;
+  min-width: 5rem;
+  max-height: 1rem;
   font-size: 0.8rem;
   font-family: "Roboto Slab", serif;
   border: 1px solid black;
