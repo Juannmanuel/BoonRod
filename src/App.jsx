@@ -6,6 +6,7 @@ import Detail from "./pages/Detail/Detail";
 import { sections } from "./data"; // Importamos los datos de las secciones desde un archivo de datos
 import "./App.css";
 import Home from "./pages/Home/Home";
+import RecommendedProducts from "./components/RecommendedProducts/RecommendedProducts";
 import { useLocation } from "react-router-dom";
 import CatalogGrid from "./pages/CatalogGrid/CatalogGrid";
 import Catalogo from "./components/Catalogo/Catalogo";

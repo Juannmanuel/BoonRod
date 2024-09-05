@@ -63,9 +63,9 @@ function TarjetaDetalle({ expanded }) {
         <button>Comprar ahora</button>
       </div>
       <div className={style.reccomended}>
-          <RecommendedProducts/>
+        <span style={{ margin: "0" }}>NUESTRAS RECOMENDACIONES</span>
+        <RecommendedProducts />
       </div>
-
     </section>
   );
 }

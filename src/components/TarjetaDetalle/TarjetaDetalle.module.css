@@ -137,8 +137,15 @@ transition: 1s ease;
   color: white;
 }
 .reccomended{
-  width: 90%;
-  margin: auto;
-  border: 1px solid black;
-  height: 30rem;
+  width: 95%;
+  margin: 1.5rem auto;
+  height: auto;
+  min-height: 10rem;
+  font-size: .8rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+
 }
