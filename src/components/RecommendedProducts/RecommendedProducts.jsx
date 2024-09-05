@@ -1,20 +1,26 @@
 import style from "./RecommendedProducts.module.css";
 import Card from "../Card/Card";
+import { Link } from "react-router-dom";
 
-function RecommendedProducts({section}) {
+function RecommendedProducts({ section }) {
+  let tarjetas = [
+    1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12,
+    13,
+  ];
 
   return (
-    <section className={section == "catalogo" ? style.RecommendedProducts_main_white_navbar : style.RecommendedProducts_main}>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
+    <section
+      className={
+        section == "catalogo"
+          ? style.RecommendedProducts_main_white_navbar
+          : style.RecommendedProducts_main
+      }
+    >
+      {tarjetas.map((item, index) => (
+        <Link key={index} to={"/detalle"}>
+          <Card />
+        </Link>
+      ))}
     </section>
   );
 }

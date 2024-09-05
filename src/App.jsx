@@ -38,10 +38,10 @@ function App() {
           }
         />
         <Route
-          path="/detalle"
+          path="/catalogo"
           element={<Catalogo sections={sections} currentSlide={currentSlide} />}
         />
-        <Route path="/catalogo" element={<Detail />} />
+        <Route path="/detalle" element={<Detail />} />
       </Routes>
     </div>
   );
