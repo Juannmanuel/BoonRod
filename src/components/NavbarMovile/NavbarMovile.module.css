@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: 2fr 1fr;
     position: fixed;
-    transition: opacity 1s ease-out;
+    transition: opacity .5s ease-out;
     z-index: 2;
     background-color:rgba(245, 245, 245, 0.752);
     border: 1px solid black;
@@ -12,7 +12,7 @@
     
   }
   .navbar.hidden {
-    opacity: 0.02;
+    opacity: 0;
     pointer-events: none; /* Opcional: para desactivar la interacción cuando está oculta */
   }
   
