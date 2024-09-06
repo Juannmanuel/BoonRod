@@ -31,6 +31,7 @@ function TarjetaDetalle({ expanded, name, price, description, sizes }) {
       ref={tarjetaRef}
       className={expanded ? style.tarjeta_main_expanding : style.tarjeta_main}
     >
+      <div className={style.shadow}></div>
       <div className={style.productHeader}>
         <h2 className={style.productName}>{name}</h2>
         <div className={style.priceContainer}>
@@ -57,20 +58,18 @@ function TarjetaDetalle({ expanded, name, price, description, sizes }) {
       <div className={style.line}></div>
 
       <div className={style.cash_media}>
-        <span style={{ margin: "0" }}>MEDIOS DE PAGO</span>
+        <span style={{ margin: "0" }}>Medios de pago</span>
         <div className={style.cash_media_container_img}>
           {imgCards.map((item, index) => (
             <img className={style.imgCard} key={index} src={item} />
           ))}
         </div>
       </div>
-      <div className={style.line}></div>
 
       <div className={style.productActions_btn}>
         <button>Añadir al carrito</button>
         <button>Comprar ahora</button>
       </div>
-      <div className={style.line}></div>
 
       <div className={style.reccomended}>
         <span style={{ margin: "0" }}>NUESTRAS RECOMENDACIONES</span>
