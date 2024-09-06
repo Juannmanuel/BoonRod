@@ -1,7 +1,7 @@
 import ExpandingSection from "../../components/ExpandingSection/ExpandingSection";
 import style from "./Detail.module.css";
 import { useParams } from 'react-router-dom';
-
+import { useEffect } from "react";
 import imagenModelo1 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_1.jpg";
 import imagenModelo2 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg";
 import imagenModelo3 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_3.jpg";
@@ -17,6 +17,7 @@ import { products } from "../../data.js"
 import logo from "../../assets/images/logo/logo_tipografia_boonrod_claro.png"
 function Detail() {
   const { id } = useParams();
+  useEffect(()=>{},[id])
   const product = products.filter((item) => item.id == id)
   console.log(product[0].name, "detalle");
   let imagenes = [imagenModelo1, imagenModelo2, imagenModelo3, imagenModelo4,imagenPrenda1,,imagenPrenda2,imagenPrenda3];
