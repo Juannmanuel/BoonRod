@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
 import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
 import Catalogo from "./components/Catalogo/Catalogo";
+import Louder from "./components/Louder/Louder";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           element={<Catalogo sections={sections} currentSlide={currentSlide} />}
         />
         <Route path="/detalle/:id" element={<Detail />} />
+        <Route path="/louder" element={<Louder />} />
       </Routes>
     </div>
   );

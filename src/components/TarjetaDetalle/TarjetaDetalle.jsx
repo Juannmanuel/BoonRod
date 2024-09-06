@@ -8,6 +8,7 @@ import imgTC3 from "../../assets/images/Tarjetas/mp.png";
 import imgTC4 from "../../assets/images/Tarjetas/visa.png";
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import Footer from "../Footer/Footer";
+import Louder from "../Louder/Louder.jsx";
 
 function TarjetaDetalle({ expanded, name, price, description, sizes }) {
   const { id } = useParams();

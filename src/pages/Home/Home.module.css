@@ -6,4 +6,5 @@
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
+    position: relative;
 }

@@ -34,8 +34,10 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
+  margin-left: .5rem;
+
 
 }
 .cart_button {
@@ -45,8 +47,9 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
+  margin-right: .5rem;
 
 }
 .cart_button span {
