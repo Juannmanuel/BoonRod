@@ -41,7 +41,7 @@ function App() {
           path="/catalogo"
           element={<Catalogo sections={sections} currentSlide={currentSlide} />}
         />
-        <Route path="/detalle" element={<Detail />} />
+        <Route path="/detalle/:id" element={<Detail />} />
       </Routes>
     </div>
   );

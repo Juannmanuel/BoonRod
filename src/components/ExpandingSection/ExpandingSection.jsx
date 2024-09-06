@@ -3,7 +3,9 @@ import style from "./ExpandingSection.module.css";
 import DetailCard from "../DetailCard/DetailCard";
 import TarjetaDetalle from "../TarjetaDetalle/TarjetaDetalle";
 
-function ExpandingSection() {
+function ExpandingSection({name, price, description, sizes}) {
+  console.log(name,price,description,sizes,"expanding");
+  
   const [startTouchY, setStartTouchY] = useState(0);
   const [currentTouchY, setCurrentTouchY] = useState(0);
   const [expanded, setExpanded] = useState(true);
@@ -55,7 +57,7 @@ function ExpandingSection() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <TarjetaDetalle expanded={expanded} />
+      <TarjetaDetalle name={name} price={price} description={description} sizes={sizes} expanded={expanded} />
     </div>
   );
 }

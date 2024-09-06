@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import Footer from "../Footer/Footer";
 
 function DetailCard({ expanded }) {
+  
   const cardRef = useRef(null);
   useEffect(() => {
     if (!expanded && cardRef.current) {

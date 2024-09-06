@@ -1,5 +1,7 @@
 import ExpandingSection from "../../components/ExpandingSection/ExpandingSection";
 import style from "./Detail.module.css";
+import { useParams } from 'react-router-dom';
+
 import imagenModelo1 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_1.jpg";
 import imagenModelo2 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg";
 import imagenModelo3 from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_3.jpg";
@@ -10,8 +12,13 @@ import imagenPrenda3 from "../../assets/images/Ropa/Producto_5_Remera/Prendas/Pr
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoMenu } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
+import { products } from "../../data.js"
+
 import logo from "../../assets/images/logo/logo_tipografia_boonrod_claro.png"
 function Detail() {
+  const { id } = useParams();
+  const product = products.filter((item) => item.id == id)
+  console.log(product[0].name, "detalle");
   let imagenes = [imagenModelo1, imagenModelo2, imagenModelo3, imagenModelo4,imagenPrenda1,,imagenPrenda2,imagenPrenda3];
   return (
     <section className={style.detail_main}>
@@ -39,13 +46,13 @@ function Detail() {
           },
         }}
       >
-        {imagenes?.map((item, index) => (
+        {product[0].images[0].models?.map((item, index) => (
           <SwiperSlide key={index}>
             <img src={item} alt="" className={style.image} />
           </SwiperSlide>
         ))}
       </Swiper>
-      <ExpandingSection />
+      <ExpandingSection name={product[0].name} price={product[0].price} description={product[0].description} sizes={product[0].sizes} />
     </section>
   );
 }

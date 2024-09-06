@@ -1,5 +1,7 @@
 import style from "./TarjetaDetalle.module.css";
 import { useEffect, useRef } from "react";
+import { useParams } from 'react-router-dom';
+import { products } from "../../data.js"
 import imgTC1 from "../../assets/images/Tarjetas/mastercard.png";
 import imgTC2 from "../../assets/images/Tarjetas/mcredito.png";
 import imgTC3 from "../../assets/images/Tarjetas/mp.png";
@@ -8,7 +10,13 @@ import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import Footer from "../Footer/Footer";
 
 
-function TarjetaDetalle({ expanded }) {
+function TarjetaDetalle({ expanded, name, price, description, sizes  }) {
+  const { id } = useParams();
+  const product = products.filter((item) => item.id == id)
+  console.log(product[0].name);
+  
+  console.log(product[0].images[0].models);
+  
   const tarjetaRef = useRef(null);
   useEffect(() => {
     if (!expanded && tarjetaRef.current) {
@@ -16,7 +24,6 @@ function TarjetaDetalle({ expanded }) {
     }
   }, [expanded]);
   const discountedPrice = 8500;
-  const price = 10000;
   const discount = 1;
   const imgCards = [imgTC1, imgTC2, imgTC3, imgTC4];
 
@@ -26,7 +33,7 @@ function TarjetaDetalle({ expanded }) {
       className={expanded ? style.tarjeta_main_expanding : style.tarjeta_main}
     >
       <div className={style.productHeader}>
-        <h2 className={style.productName}>PANTALÓN CHINO PLIEGUES </h2>
+        <h2 className={style.productName}>{name}</h2>
         <div className={style.priceContainer}>
           {discount > 0 && (
             <span className={style.productPriceOriginal}>${price}</span>
@@ -36,20 +43,14 @@ function TarjetaDetalle({ expanded }) {
           </span>
         </div>
         <p className={style.productDescription}>
-          Pantalón regular fit confeccionado en tejido de algodón con
-          elasticidad. Cintura con detalle de pliegues frontales. Bolsillos en
-          delantero y detalle de bolsillos traseros de vivo. Cierre frontal con
-          cremallera y botón.
+          {description}
         </p>
       </div>
       <div className={style.productSizes}>
         <span>TALLES DISPONIBLES</span>
         <div className={style.sizes}>
-          <span className={style.size}>S</span>
-          <span className={style.size}>M</span>
-          <span className={style.size}>L</span>
-          <span className={style.size}>XL</span>
-          <span className={style.size}>XXL</span>
+          
+         {sizes.map((item, index) =><span key={index} className={style.size}>{item}</span>)}
         </div>
       </div>
       <div className={style.cash_media}>
