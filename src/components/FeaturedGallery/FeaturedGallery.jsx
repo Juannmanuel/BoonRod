@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import style from "./FeaturedGallery.module.css";
 
 function FeaturedGallery({ images, section, buttonText, description }) {
@@ -12,8 +13,9 @@ function FeaturedGallery({ images, section, buttonText, description }) {
       >
         <div className={style.card}>
           <h2 className={style.title}>{section}</h2>
+
           <p className={style.description}>{description}</p>
-         <button className={style.btnAction}> <Link style={{color: "white", textDecoration: "none"}} to={"/catalogo"}>{buttonText}</Link></button>
+         <button className={style.btnAction}> <Link style={{color: "white", textDecoration: "none"}} to={"/asd"}>{buttonText}</Link></button>
         </div>
       </div>
       <div className={style.twoColumnsContainer}>
