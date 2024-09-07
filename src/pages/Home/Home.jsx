@@ -40,7 +40,7 @@ function Home({ handleSlideChange, currentSlide }) {
     {
       section: "HOT SALE",
       buttonText: "Hasta 30% OFF",
-      images: [imgD1, imgD2, imgD3, imgD4, imgD5],
+      images: [imgD1, imgD2, imgD3, imgD4, imgD5,imgD6],
       title: "Nuestras ofertas exclusivas.",
       description:
         "Aprovecha las mejores ofertas y actualiza tu guardarropa sin gastar de más.",
@@ -76,16 +76,6 @@ function Home({ handleSlideChange, currentSlide }) {
           key={index}
         />
       ))}
-
-      {/* {isLouding ? (
-        <Louder />
-      ) : (
-        <Covers
-          sections={sections}
-          handleSlideChange={handleSlideChange}
-          currentSlide={currentSlide}
-        />
-      )} */}
     </section>
   );
 }
