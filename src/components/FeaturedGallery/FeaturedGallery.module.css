@@ -7,6 +7,7 @@
   display: flex;
   flex-flow: column nowrap;
   z-index: 2;
+  scroll-behavior: smooth;
 }
 .home_container img {
   width: 100%;
@@ -28,9 +29,10 @@
   overflow: hidden;
 }
 .card {
-  width: 30rem;
+  width: 100vw;
   height: auto;
   margin-top: 10rem;
+  margin-left: .8rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -46,14 +48,14 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(241, 241, 241);
-  font-size: 6rem;
+  font-size: 5rem;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
 }
 .description{
   margin: 0;
   padding: 0;
   color: rgb(241, 241, 241);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Slab", serif;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
   font-weight: 300;
@@ -61,12 +63,12 @@
 }
 .btnAction{
   width: 50%;
-  height: 3.2rem;
+  height: 3rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto Slab", serif;
   border: 1px solid white;
   border-radius: 5px;
