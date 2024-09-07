@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router";
-import Navbar from "../src/components/Navbar/Navbar";
 import Detail from "./pages/Detail/Detail";
 import { sections } from "./data"; // Importamos los datos de las secciones desde un archivo de datos
 import "./App.css";
 import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
-import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Louder from "./components/Louder/Louder";
 

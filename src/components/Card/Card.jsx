@@ -1,7 +1,7 @@
 import style from "./Card.module.css";
 import imagen from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg";
 import { IoAddCircleOutline } from "react-icons/io5";
-function Card({images, title, price}) {
+function Card({images, title, price, section}) {
   console.log(images.models[0],"card");
   
   return (

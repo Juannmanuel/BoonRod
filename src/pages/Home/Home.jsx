@@ -3,8 +3,34 @@ import Covers from "../../components/Covers/Covers";
 import Navbar from "../../components/Navbar/Navbar";
 import Louder from "../../components/Louder/Louder";
 import { useState } from "react";
+import RecommendedProducts from "../../components/RecommendedProducts/RecommendedProducts";
+/*footer*/
+import imgF1 from "../../assets/images/Categorias/footer/1.jpg";
+import imgF2 from "../../assets/images/Categorias/footer/2.jpg";
+import imgF3 from "../../assets/images/Categorias/footer/3.jpg";
+import imgF4 from "../../assets/images/Categorias/footer/4.jpg";
+import imgF5 from "../../assets/images/Categorias/footer/5.jpg";
+import imgF6 from "../../assets/images/Categorias/footer/6.jpg";
+/*hotsale*/
+import imgD1 from "../../assets/images/Categorias/hotSale/1.jpg";
+import imgD2 from "../../assets/images/Categorias/hotSale/2.jpg";
+import imgD3 from "../../assets/images/Categorias/hotSale/3.jpg";
+import imgD4 from "../../assets/images/Categorias/hotSale/4.jpg";
+import imgD5 from "../../assets/images/Categorias/hotSale/5.jpg";
+import imgD6 from "../../assets/images/Categorias/hotSale/6.jpg";
+/*hotsale*/
+import imgC1 from "../../assets/images/Categorias/newCollection/1.jpg";
+import imgC2 from "../../assets/images/Categorias/newCollection/2.jpg";
+import imgC3 from "../../assets/images/Categorias/newCollection/3.jpg";
+import imgC4 from "../../assets/images/Categorias/newCollection/4.jpg";
+import imgC5 from "../../assets/images/Categorias/newCollection/5.jpg";
+import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
 
-function Home({ sections, handleSlideChange, currentSlide }) {
+import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
+function Home({ handleSlideChange, currentSlide }) {
+
+  
+  const sections = [[imgF1,imgF2,imgF3,imgF4,imgF5,imgF6], [imgD1,imgD2,imgD3,imgD4,imgD5,imgD6],  [imgC1,imgC2,imgC3,imgC4,imgC5,imgC6]]
   const [isLouding, setIsLouding] = useState(true);
   setTimeout(() => {
     setIsLouding(false);
@@ -16,7 +42,9 @@ function Home({ sections, handleSlideChange, currentSlide }) {
         handleSlideChange={handleSlideChange}
         currentSlide={currentSlide}
       />
-      {isLouding ? (
+      {sections.map((item, index) => <FeaturedGallery images={item} key={index}/>)}
+
+      {/* {isLouding ? (
         <Louder />
       ) : (
         <Covers
@@ -24,7 +52,7 @@ function Home({ sections, handleSlideChange, currentSlide }) {
           handleSlideChange={handleSlideChange}
           currentSlide={currentSlide}
         />
-      )}
+      )} */}
     </section>
   );
 }
