@@ -15,7 +15,7 @@
 }
 .header {
   width: 100vw;
-  height: 90vh;
+  height: 75vh;
   position: sticky;
   top: 0;
   left: 0;
@@ -38,7 +38,11 @@
   justify-content: center;
   gap: 1.2rem;
   padding: 1rem;
-  align-items: start;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.365);
+  backdrop-filter: blur(2px);
+  z-index: 2;
 }
 .title {
   margin: 0;
@@ -47,19 +51,21 @@
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgb(241, 241, 241);
+  color: rgb(0, 0, 0);
   font-size: 5rem;
-  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
+
+  z-index: 4;
 }
 .description{
   margin: 0;
   padding: 0;
-  color: rgb(241, 241, 241);
+  color: rgb(0, 0, 0);
   font-size: 1rem;
   font-family: "Roboto Slab", serif;
-  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
-  font-weight: 300;
-  max-width: 80%;
+  font-weight: 400;
+  max-width: 90%;
+  z-index: 4;
+
 }
 .btnAction{
   width: 50%;
@@ -72,7 +78,7 @@
   font-family: "Roboto Slab", serif;
   border: 1px solid white;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.512);
+  background-color: rgba(0, 0, 0, 0.791);
   color: white;
   overflow: hidden;
 
