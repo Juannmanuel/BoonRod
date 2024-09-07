@@ -7,7 +7,7 @@ function FeaturedGallery({images}){
     return (
         <div className={style.home_container}>
         <div className={style.header}>
-          <img src={images[0]} alt="" />
+          <img loading="lazy" src={images[0]} alt="" />
         </div>
         <div className={style.twoColumnsContainer}>
           <img src={images[1]} alt="" />
