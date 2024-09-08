@@ -27,6 +27,7 @@ import imgC5 from "../../assets/images/Categorias/newCollection/5.jpg";
 import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
 
 import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
+import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 function Home({ handleSlideChange, currentSlide }) {
   const sections = [
     {
@@ -40,7 +41,7 @@ function Home({ handleSlideChange, currentSlide }) {
     {
       section: "HOT SALE",
       buttonText: "Hasta 30% OFF",
-      images: [imgD1, imgD2, imgD3, imgD4, imgD5,imgD6],
+      images: [imgD1, imgD2, imgD3, imgD4, imgD5, imgD6],
       title: "Nuestras ofertas exclusivas.",
       description:
         "Aprovecha las mejores ofertas y actualiza tu guardarropa sin gastar de más.",
@@ -67,15 +68,19 @@ function Home({ handleSlideChange, currentSlide }) {
         handleSlideChange={handleSlideChange}
         currentSlide={currentSlide}
       />
-      {sections.map((item, index) => (
-        <FeaturedGallery
-          images={item.images}
-          section={item.section}
-          buttonText={item.buttonText}
-          description={item.description}
-          key={index}
-        />
-      ))}
+      <FeaturedGallery
+        images={sections[0].images}
+        section={sections[0].section}
+        buttonText={sections[0].buttonText}
+        description={sections[0].description}
+      />
+      <FeatureBlock />
+      <FeaturedGallery
+        images={sections[0].images}
+        section={sections[0].section}
+        buttonText={sections[0].buttonText}
+        description={sections[0].description}
+      />
     </section>
   );
 }

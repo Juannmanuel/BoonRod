@@ -10,8 +10,10 @@
   scroll-behavior: smooth;
 }
 .home_container img {
-  width: 100%;
+  object-fit: cover;
   height: 100%;
+  width: 100%;
+  border-radius: 2px;
 }
 .header {
   width: 100vw;
@@ -32,7 +34,7 @@
   width: 100vw;
   height: auto;
   margin-top: 10rem;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -56,7 +58,7 @@
 
   z-index: 4;
 }
-.description{
+.description {
   margin: 0;
   padding: 0;
   color: rgb(0, 0, 0);
@@ -65,9 +67,8 @@
   font-weight: 400;
   max-width: 90%;
   z-index: 4;
-
 }
-.btnAction{
+.btnAction {
   width: 50%;
   height: 3rem;
   display: flex;
@@ -81,27 +82,63 @@
   background-color: rgba(0, 0, 0, 0.791);
   color: white;
   overflow: hidden;
-
 }
 
 .twoColumnsContainer {
   height: 40vh;
-  width: 100vw;
+  width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: rgb(63, 109, 109);
   overflow: hidden;
-
-
-  /* otras propiedades si es necesario */
+  position: relative;
+  background-color: aliceblue;
+  gap: 5px;
+  padding: 5px;
+  -webkit-box-shadow: 0px -8px 8px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -8px 8px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px -8px 8px -3px rgba(0,0,0,0.75);  /* otras propiedades si es necesario */
 }
+
 .singleRowContainer {
   height: 60vh;
   width: 100vw;
   display: flex;
-  background-color: rgb(98, 163, 163);
+  background-color: aliceblue;
   overflow: hidden;
+  position: relative;
 
 
   /* otras propiedades si es necesario */
+}
+.icon {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%);
+  color: rgba(0, 0, 0, 0.798);
+  background-color: rgba(255, 255, 255, 0.533);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .header {
+    height: 90vh;
+  }
+  .twoColumnsContainer {
+    height: 65vh;
+  }
+  .singleRowContainer {
+    height: 85vh;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    height: 75vh;
+  }
+  .twoColumnsContainer {
+    height: 40vh;
+  }
+  .singleRowContainer {
+    height: 60vh;
+  }
 }

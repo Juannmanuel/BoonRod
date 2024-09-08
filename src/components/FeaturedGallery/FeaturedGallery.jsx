@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 import style from "./FeaturedGallery.module.css";
+import FeatureBlock from "../FeatureBlock/FeatureBlock";
 
 function FeaturedGallery({ images, section, buttonText, description }) {
 
@@ -20,14 +22,19 @@ function FeaturedGallery({ images, section, buttonText, description }) {
       </div>
       <div className={style.twoColumnsContainer}>
         <img src={images[1]} alt="" />
+        {/* <IoAddCircleOutline className={style.icon} /> */}
         <img src={images[2]} alt="" />
+        {/* <IoAddCircleOutline className={style.icon} /> */}
       </div>
       <div className={style.singleRowContainer}>
         <img src={images[3]} alt="" />
+        {/* <IoAddCircleOutline className={style.icon} /> */}
       </div>
       <div className={style.twoColumnsContainer}>
         <img src={images[4]} alt="" />
+        {/* <IoAddCircleOutline className={style.icon} /> */}
         <img src={images[5]} alt="" />
+        {/* <IoAddCircleOutline className={style.icon} /> */}
       </div>
     </div>
   );
