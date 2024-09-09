@@ -16,7 +16,7 @@ function FeaturedGallery({ images, section, buttonText, description }) {
 
           <p className={style.description}>{description}</p>
           <Link
-            to={`/categoria`}
+            to={`/catalogo`}
             style={{ color: "white", textDecoration: "none" }}
             className={style.btnAction}
           >

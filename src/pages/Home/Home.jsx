@@ -30,51 +30,10 @@ import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
 import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
+import Footer from "../../components/Footer/Footer";
 
-function Home({ handleSlideChange, currentSlide }) {
-  const sectionRef = useRef(null);
-  const [isScrollingUp, setIsScrollingUp] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [currentSection, setCurrentSection] = useState("NEW COLLECTION"); // Nueva variable para la sección actual
+function Home({ sectionRef, isScrollingUp, currentSection }) {
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
-
-      if (currentScrollTop < lastScrollTop) {
-        setIsScrollingUp(true); // Scroll hacia arriba
-      } else {
-        setIsScrollingUp(false); // Scroll hacia abajo
-      }
-
-      // Actualizar la posición del scroll anterior
-      setLastScrollTop(currentScrollTop);
-
-      // Detectar la sección actual en pantalla
-      const sections = document.querySelectorAll("section"); // Seleccionamos todas las secciones
-      let foundSection = "NEW COLLECTION"; // Valor predeterminado
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
-        }
-      });
-      setCurrentSection(foundSection); // Actualizar la sección actual
-    };
-
-    const sectionEl = sectionRef.current;
-
-    if (sectionEl) {
-      sectionEl.addEventListener("scroll", handleScroll); // Escuchar evento de scroll
-    }
-
-    // Cleanup: remover el evento cuando el componente se desmonte
-    return () => {
-      if (sectionEl) {
-        sectionEl.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [lastScrollTop]);
 
   const sections = [
     {
@@ -120,9 +79,7 @@ function Home({ handleSlideChange, currentSlide }) {
         />
       </section>
       <section data-section="NUESTRO CATALOGO">
-        <FeatureBlock
-        section={"NUESTRO CATALOGO"}
-        />
+        <FeatureBlock section={"NUESTRO CATALOGO"} />
       </section>
       <section data-section="HOT SALE">
         <FeaturedGallery
@@ -133,18 +90,12 @@ function Home({ handleSlideChange, currentSlide }) {
         />
       </section>
       <section data-section="CONTACTANOS">
-      <FeatureBlock
-        section={"CONTACTANOS"}
-        />
+        <FeatureBlock section={"CONTACTANOS"} />
       </section>
-      <section data-section="LOOKBOCK">
-        <FeaturedGallery
-          images={sections[2].images}
-          section={sections[2].section}
-          buttonText={sections[2].buttonText}
-          description={sections[2].description}
-        />
+      <section data-section="FOOTER">
+        <FeatureBlock section={"FOOTER"} />
       </section>
+      <Footer />
     </section>
   );
 }
