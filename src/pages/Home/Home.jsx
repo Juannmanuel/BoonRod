@@ -31,6 +31,7 @@ import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 import Footer from "../../components/Footer/Footer";
+import About from "../About/About";
 
 function Home({ sectionRef, isScrollingUp, currentSection }) {
 
@@ -89,6 +90,10 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
           description={sections[2].description}
         />
       </section>
+      <section data-section="SOBRE NOSOTROS">
+        <About section={"SOBRE NOSOTROS"} />
+      </section>
+      
       <section data-section="CONTACTANOS">
         <FeatureBlock section={"CONTACTANOS"} />
       </section>

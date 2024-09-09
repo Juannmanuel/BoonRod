@@ -17,33 +17,32 @@
 .header {
   width: 100vw;
   height: 75vh;
-
   top: 0;
   left: 0;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   overflow: hidden;
+
 }
 .card {
-  width: 85vw;
+  width: 100vw;
+  min-height: 50vh;
   height: auto;
   border-radius: 5px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  gap: 1.2rem;
+  justify-content: start;
+  align-items: start;
   padding: 1rem;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(2px);
+  gap: 1rem;
   z-index: 2;
-
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.765) 0%, rgba(0, 0, 0, 0.77) 60%, transparent 100%);
 }
+
 .title {
   margin: 0;
   padding: 0;
@@ -51,37 +50,42 @@
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgb(0, 0, 0);
+  color: rgb(244, 240, 240);
   font-size: 4rem;
-
   z-index: 4;
+  margin-left: 1rem;
 }
 .description {
   margin: 0;
   padding: 0;
-  color: rgb(0, 0, 0);
-  font-size: .9rem;
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   max-width: 90%;
   z-index: 4;
+  margin-left: 1rem;
+
+
 }
 .btnAction {
-  width: 50%;
-  height: 3rem;
+  width: 20rem;
+  height: 2.7rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 1rem;
   font-family: "Roboto Slab", serif;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.791);
-  color: white;
+  background-color: rgb(238, 238, 238);
+  color: rgb(0, 0, 0);
   overflow: hidden;
   pointer-events: all;
   z-index: 5;
+  margin-left: 1rem;
+
+  
 }
 
 .twoColumnsContainer {
