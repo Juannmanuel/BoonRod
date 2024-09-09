@@ -1,7 +1,7 @@
 .featureBlock_main {
   width: 100vw;
   height: auto;
-  min-height: 100vh;
+  min-height: 120vh;
   overflow: hidden;
 }
 .container {
@@ -65,8 +65,6 @@
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   overflow: hidden;
-  pointer-events: all;
-  z-index: 5;
-  margin-left: 1rem;
   max-width: 50%;
+  margin: auto;
 }
