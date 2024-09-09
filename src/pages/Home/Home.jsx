@@ -3,9 +3,9 @@ import style from "./Home.module.css";
 import Covers from "../../components/Covers/Covers";
 import Navbar from "../../components/Navbar/Navbar";
 import Louder from "../../components/Louder/Louder";
-
 import RecommendedProducts from "../../components/RecommendedProducts/RecommendedProducts";
-/*footer*/
+
+/* Imágenes */
 import imgF1 from "../../assets/images/Categorias/footer/1.jpg";
 import imgF2 from "../../assets/images/Categorias/footer/2.jpg";
 import imgF3 from "../../assets/images/Categorias/footer/3.jpg";
@@ -19,7 +19,7 @@ import imgD3 from "../../assets/images/Categorias/hotSale/3.jpg";
 import imgD4 from "../../assets/images/Categorias/hotSale/4.jpg";
 import imgD5 from "../../assets/images/Categorias/hotSale/5.jpg";
 import imgD6 from "../../assets/images/Categorias/hotSale/6.jpg";
-/*hotsale*/
+/*new collection*/
 import imgC1 from "../../assets/images/Categorias/newCollection/1.jpg";
 import imgC2 from "../../assets/images/Categorias/newCollection/2.jpg";
 import imgC3 from "../../assets/images/Categorias/newCollection/3.jpg";
@@ -30,24 +30,36 @@ import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
 import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
+
 function Home({ handleSlideChange, currentSlide }) {
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [currentSection, setCurrentSection] = useState("NEW COLLECTION"); // Nueva variable para la sección actual
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
 
       if (currentScrollTop < lastScrollTop) {
-        // Scroll hacia arriba
-        setIsScrollingUp(true);
+        setIsScrollingUp(true); // Scroll hacia arriba
       } else {
-        // Scroll hacia abajo
-        setIsScrollingUp(false);
+        setIsScrollingUp(false); // Scroll hacia abajo
       }
 
-      setLastScrollTop(currentScrollTop); // Actualizar la posición del scroll anterior
+      // Actualizar la posición del scroll anterior
+      setLastScrollTop(currentScrollTop);
+
+      // Detectar la sección actual en pantalla
+      const sections = document.querySelectorAll("section"); // Seleccionamos todas las secciones
+      let foundSection = "NEW COLLECTION"; // Valor predeterminado
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
+        }
+      });
+      setCurrentSection(foundSection); // Actualizar la sección actual
     };
 
     const sectionEl = sectionRef.current;
@@ -63,6 +75,7 @@ function Home({ handleSlideChange, currentSlide }) {
       }
     };
   }, [lastScrollTop]);
+
   const sections = [
     {
       section: "NEW COLLECTION",
@@ -81,9 +94,9 @@ function Home({ handleSlideChange, currentSlide }) {
         "Aprovecha las mejores ofertas y actualiza tu guardarropa sin gastar de más.",
     },
     {
-      section: "Lookbook",
+      section: "LOOKBOOK",
       buttonText: "Inspírate",
-      images: [imgF1, imgF2, imgF3, , imgF4, , imgF5, imgF6],
+      images: [imgF1, imgF2, imgF3, imgF4, imgF5, imgF6],
       title: "Inspírate con nuestro Lookbook.",
       description:
         "Encuentra las mejores combinaciones y estilos para llevar la moda urbana a otro nivel.",
@@ -95,23 +108,43 @@ function Home({ handleSlideChange, currentSlide }) {
     setIsLouding(false);
   }, 4000);
 
-  
   return (
     <section ref={sectionRef} className={style.home_main}>
-      <Navbar isScrollingUp={isScrollingUp} sections={sections} />
-      <FeaturedGallery
-        images={sections[0].images}
-        section={sections[0].section}
-        buttonText={sections[0].buttonText}
-        description={sections[0].description}
-      />
-      <FeatureBlock />
-      <FeaturedGallery
-        images={sections[1].images}
-        section={sections[1].section}
-        buttonText={sections[1].buttonText}
-        description={sections[1].description}
-      />
+      <Navbar isScrollingUp={isScrollingUp} currentSection={currentSection} />
+      <section data-section="NEW COLLECTION">
+        <FeaturedGallery
+          images={sections[0].images}
+          section={sections[0].section}
+          buttonText={sections[0].buttonText}
+          description={sections[0].description}
+        />
+      </section>
+      <section data-section="NUESTRO CATALOGO">
+        <FeatureBlock
+        section={"NUESTRO CATALOGO"}
+        />
+      </section>
+      <section data-section="HOT SALE">
+        <FeaturedGallery
+          images={sections[0].images}
+          section={sections[0].section}
+          buttonText={sections[0].buttonText}
+          description={sections[0].description}
+        />
+      </section>
+      <section data-section="CONTACTANOS">
+      <FeatureBlock
+        section={"CONTACTANOS"}
+        />
+      </section>
+      <section data-section="LOOKBOCK">
+        <FeaturedGallery
+          images={sections[0].images}
+          section={sections[0].section}
+          buttonText={sections[0].buttonText}
+          description={sections[0].description}
+        />
+      </section>
     </section>
   );
 }
