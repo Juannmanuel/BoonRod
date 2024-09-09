@@ -34,8 +34,6 @@ import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
 
 function Home({ sectionRef, isScrollingUp, currentSection }) {
-
-
   const sections = [
     {
       section: "NEW COLLECTION",
@@ -70,7 +68,11 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
 
   return (
     <section ref={sectionRef} className={style.home_main}>
-      <Navbar sectionRef={sectionRef} isScrollingUp={isScrollingUp} currentSection={currentSection} />
+      <Navbar
+        sectionRef={sectionRef}
+        isScrollingUp={isScrollingUp}
+        currentSection={currentSection}
+      />
       <section data-section="NEW COLLECTION">
         <FeaturedGallery
           images={sections[0].images}
@@ -90,10 +92,6 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
           description={sections[2].description}
         />
       </section>
-      <section data-section="SOBRE NOSOTROS">
-        <About section={"SOBRE NOSOTROS"} />
-      </section>
-      
       <section data-section="CONTACTANOS">
         <FeatureBlock section={"CONTACTANOS"} />
       </section>

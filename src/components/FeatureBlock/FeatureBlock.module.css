@@ -14,7 +14,6 @@
   position: relative;
   margin-top: 5rem;
   gap: 1rem;
-  overflow: hidden;
 }
 .heading {
   padding: 0;
@@ -39,7 +38,7 @@
 }
 .carousel {
   width: auto;
-  min-width: 95vw;
+  width: 95vw;
   overflow: scroll;
   height: 70%;
   display: flex;
@@ -48,6 +47,7 @@
   align-items: center;
   padding: 1rem;
   gap: 1rem;
+  overflow: scroll;
 }
 .btnAction {
     min-width: 20rem;
