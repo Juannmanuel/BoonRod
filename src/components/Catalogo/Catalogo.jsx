@@ -12,7 +12,7 @@ function Catalogo({ currentPath , isScrollingUp, sectionRef }) {
  
   return (
     <section ref={sectionRef} className={style.catalogo_main}>
-      <NavbarMovile isScrollingUp={isScrollingUp} />
+      <NavbarMovile sectionRef={sectionRef} isScrollingUp={isScrollingUp} />
       <RecommendedProducts section={"catalogo"} />
       <Footer />
     </section>

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import Detail from "./pages/Detail/Detail";
-import { sections } from "./data"; // Importamos los datos de las secciones desde un archivo de datos
+import { sections } from "./data";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
@@ -44,6 +44,7 @@ function App() {
           foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
         }
       });
+      console.log('Current Section in App:', foundSection);
       setCurrentSection(foundSection); // Actualizar la sección actual
     };
 
@@ -81,12 +82,13 @@ function App() {
               sectionRef={sectionRef}
               isScrollingUp={isScrollingUp}
               currentSection={currentSection}
+
             />
           }
         />
         <Route
           path="/catalogo"
-          element={<Catalogo isScrollingUp={isScrollingUp} sections={sections} currentSlide={currentSlide} />}
+          element={<Catalogo sectionRef={sectionRef}  isScrollingUp={isScrollingUp} sections={sections} currentSlide={currentSlide} />}
         />
         <Route path="/detalle/:id" element={<Detail />} />
         <Route path="/louder" element={<Louder />} />

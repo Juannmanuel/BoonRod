@@ -6,14 +6,14 @@ import { CiSearch } from "react-icons/ci";
 import logoImage from "../../assets/images/logo/logo_boonrod_claro.png";
 import { Link } from "react-router-dom";
 
-function NavbarMovile({isScrollingUp}) {
-  const location = useLocation();
-  const currentPath = location.pathname;
-  console.log(currentPath, "nav");
+function NavbarMovile({isScrollingUp, sectionRef}) {
+  console.log(isScrollingUp, "nav");
+  
   const categorias = ["pantalones","remeras","buzos","camperas","zapatillas","accesorios"]
 
   return (
     <nav
+      ref={sectionRef}
       className={`${style.navbar} ${
         isScrollingUp ? style.visible : style.hidden
       }`}

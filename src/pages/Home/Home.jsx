@@ -69,7 +69,7 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
 
   return (
     <section ref={sectionRef} className={style.home_main}>
-      <Navbar isScrollingUp={isScrollingUp} currentSection={currentSection} />
+      <Navbar sectionRef={sectionRef} isScrollingUp={isScrollingUp} currentSection={currentSection} />
       <section data-section="NEW COLLECTION">
         <FeaturedGallery
           images={sections[0].images}
@@ -83,10 +83,10 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
       </section>
       <section data-section="HOT SALE">
         <FeaturedGallery
-          images={sections[1].images}
-          section={sections[1].section}
-          buttonText={sections[1].buttonText}
-          description={sections[1].description}
+          images={sections[2].images}
+          section={sections[2].section}
+          buttonText={sections[2].buttonText}
+          description={sections[2].description}
         />
       </section>
       <section data-section="CONTACTANOS">
