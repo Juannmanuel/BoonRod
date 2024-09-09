@@ -37,15 +37,13 @@
   flex-flow: column nowrap;
   justify-content: start;
   align-items: start;
-  padding: 1rem;
-  gap: 1rem;
   z-index: 2;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.765) 0%, rgba(0, 0, 0, 0.77) 60%, transparent 100%);
 }
 
 .title {
-  margin: 0;
   padding: 0;
+  margin: 0;
   line-height: 0.8;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -54,10 +52,9 @@
   font-size: 4rem;
   z-index: 4;
   margin-left: 1rem;
+  max-width: 90%;
 }
 .description {
-  margin: 0;
-  padding: 0;
   color: rgb(243, 243, 243);
   font-size: 1rem;
   font-family: "Roboto Slab", serif;
@@ -65,11 +62,13 @@
   max-width: 90%;
   z-index: 4;
   margin-left: 1rem;
+  max-width: 90%;
+
 
 
 }
 .btnAction {
-  width: 20rem;
+  min-width: 20rem;
   height: 2.7rem;
   display: flex;
   flex-flow: column nowrap;
@@ -84,6 +83,8 @@
   pointer-events: all;
   z-index: 5;
   margin-left: 1rem;
+  max-width: 50%;
+
 
   
 }
