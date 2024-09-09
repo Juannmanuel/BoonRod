@@ -5,10 +5,8 @@ import style from "./FeaturedGallery.module.css";
 import FeatureBlock from "../FeatureBlock/FeatureBlock";
 
 function FeaturedGallery({ images, section, buttonText, description }) {
-
-
   return (
-    <div className={style.home_container}>
+    <div className={style.home_container} id={section.section}>
       <div
         className={style.header}
         style={{ backgroundImage: `url(${images[0]})` }}
@@ -17,7 +15,13 @@ function FeaturedGallery({ images, section, buttonText, description }) {
           <h2 className={style.title}>{section}</h2>
 
           <p className={style.description}>{description}</p>
-         <button className={style.btnAction}> <Link style={{color: "white", textDecoration: "none"}} to={"/asd"}>{buttonText}</Link></button>
+          <Link
+            to={`/categoria`}
+            style={{ color: "white", textDecoration: "none" }}
+            className={style.btnAction}
+          >
+            {buttonText}
+          </Link>
         </div>
       </div>
       <div className={style.twoColumnsContainer}>

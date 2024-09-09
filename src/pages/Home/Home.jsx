@@ -1,8 +1,9 @@
+import { useState, useRef, useEffect } from "react";
 import style from "./Home.module.css";
 import Covers from "../../components/Covers/Covers";
 import Navbar from "../../components/Navbar/Navbar";
 import Louder from "../../components/Louder/Louder";
-import { useState } from "react";
+
 import RecommendedProducts from "../../components/RecommendedProducts/RecommendedProducts";
 /*footer*/
 import imgF1 from "../../assets/images/Categorias/footer/1.jpg";
@@ -28,7 +29,40 @@ import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
 
 import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
+import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 function Home({ handleSlideChange, currentSlide }) {
+  const sectionRef = useRef(null);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
+
+      if (currentScrollTop < lastScrollTop) {
+        // Scroll hacia arriba
+        setIsScrollingUp(true);
+      } else {
+        // Scroll hacia abajo
+        setIsScrollingUp(false);
+      }
+
+      setLastScrollTop(currentScrollTop); // Actualizar la posición del scroll anterior
+    };
+
+    const sectionEl = sectionRef.current;
+
+    if (sectionEl) {
+      sectionEl.addEventListener("scroll", handleScroll); // Escuchar evento de scroll
+    }
+
+    // Cleanup: remover el evento cuando el componente se desmonte
+    return () => {
+      if (sectionEl) {
+        sectionEl.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, [lastScrollTop]);
   const sections = [
     {
       section: "NEW COLLECTION",
@@ -56,18 +90,15 @@ function Home({ handleSlideChange, currentSlide }) {
     },
   ];
 
-  // const sections = [[imgF1,imgF2,imgF3,imgF4,imgF5,imgF6], [imgD1,imgD2,imgD3,imgD4,imgD5,imgD6],  [imgC1,imgC2,imgC3,imgC4,imgC5,imgC6]]
   const [isLouding, setIsLouding] = useState(true);
   setTimeout(() => {
     setIsLouding(false);
   }, 4000);
+
+  
   return (
-    <section className={style.home_main}>
-      <Navbar
-        sections={sections}
-        handleSlideChange={handleSlideChange}
-        currentSlide={currentSlide}
-      />
+    <section ref={sectionRef} className={style.home_main}>
+      <Navbar isScrollingUp={isScrollingUp} sections={sections} />
       <FeaturedGallery
         images={sections[0].images}
         section={sections[0].section}
@@ -76,10 +107,10 @@ function Home({ handleSlideChange, currentSlide }) {
       />
       <FeatureBlock />
       <FeaturedGallery
-        images={sections[0].images}
-        section={sections[0].section}
-        buttonText={sections[0].buttonText}
-        description={sections[0].description}
+        images={sections[1].images}
+        section={sections[1].section}
+        buttonText={sections[1].buttonText}
+        description={sections[1].description}
       />
     </section>
   );

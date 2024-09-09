@@ -26,6 +26,16 @@
   transform: translate(-50%);
 
 
+
+}
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 .menu_button {
   width: 10%;
@@ -59,6 +69,18 @@
   width: 100%;
   height: 80%;
   position: relative;
+  color: white;
+
+
+}
+.title_secion{
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  font-family: "Barlow Condensed", sans-serif;
+
+
+  font-size: 2rem;
 
 }
 .image {
@@ -70,7 +92,10 @@
   top: 0;
   transform: translate(-50%);
   margin-top: 1rem;
+  transition: opacity 0.5s ease-out;
+
 }
+
 .categories_carousel {
   display: none;
 
@@ -130,101 +155,7 @@
   transform-origin: bottom left;
   color: white;
 }
-/* .navbar {
-  width: 100vw;
-  min-height: 20vh;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-  border: 1px solid white;
-  gap: 1rem;
-}
 
-.logo {
-  width: 12rem;
-  filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));
-  border: 1px solid white;
-  margin-top: 1rem;
-
-}
-
-.link {
-  width: 100%;
-  height: 25%;
-  gap: 0.5rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  border: 1px solid white;
-
-}
-
-.cta {
-  background: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: none;
-  pointer-events: all;
-  color: white;
-  text-decoration: none;
-
-}
-
-.cta span {
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: 100;
-  letter-spacing: 0.1rem;
-  font-family: "Anaheim", sans-serif;
-  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
-  color: white;
-
-}
-
-.hover_underline_animation {
-  position: relative;
-  text-decoration: none;
-  color: white;
-
-}
-
-.hover_underline_animation:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 6%;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffffaf;
-  transform-origin: bottom right;
-  transition: transform 1.5s ease-out;
-  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.46);
-  color: white;
-
-}
-
-.cta:hover .hover_underline_animation:after,
-.cta.active .hover_underline_animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  color: white;
-
-}
-.inActive {
-  content: "";
-
-} */
 
 /* Responsive adjustments
 @media (max-width: 1440px) {
