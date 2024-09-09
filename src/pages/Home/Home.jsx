@@ -126,10 +126,10 @@ function Home({ handleSlideChange, currentSlide }) {
       </section>
       <section data-section="HOT SALE">
         <FeaturedGallery
-          images={sections[0].images}
-          section={sections[0].section}
-          buttonText={sections[0].buttonText}
-          description={sections[0].description}
+          images={sections[1].images}
+          section={sections[1].section}
+          buttonText={sections[1].buttonText}
+          description={sections[1].description}
         />
       </section>
       <section data-section="CONTACTANOS">
@@ -139,10 +139,10 @@ function Home({ handleSlideChange, currentSlide }) {
       </section>
       <section data-section="LOOKBOCK">
         <FeaturedGallery
-          images={sections[0].images}
-          section={sections[0].section}
-          buttonText={sections[0].buttonText}
-          description={sections[0].description}
+          images={sections[2].images}
+          section={sections[2].section}
+          buttonText={sections[2].buttonText}
+          description={sections[2].description}
         />
       </section>
     </section>

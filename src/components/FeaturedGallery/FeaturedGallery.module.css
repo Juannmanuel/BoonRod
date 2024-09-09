@@ -33,7 +33,6 @@
 .card {
   width: 100vw;
   height: auto;
-  margin-top: 10rem;
   margin-left: 0.8rem;
   display: flex;
   flex-flow: column nowrap;
@@ -42,7 +41,7 @@
   padding: 1rem;
   align-items: center;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.365);
+  background-color: rgba(255, 255, 255, 0.541);
   backdrop-filter: blur(2px);
   z-index: 2;
 }
@@ -93,9 +92,6 @@
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   position: relative;
-  background-color: rgb(255, 255, 255);
-  gap: 5px;
-  padding: 5px;
 }
 
 .singleRowContainer {
