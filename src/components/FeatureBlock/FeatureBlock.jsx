@@ -16,7 +16,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
           {sectionProducs.map((item, index) => (
             <Card
               key={index}
-              title={item.title}
+              title={item.name}
               price={item.price}
               description={item.description}
               images={item.images[0]}
