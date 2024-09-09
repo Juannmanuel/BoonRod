@@ -7,7 +7,6 @@ import { IoMenu } from "react-icons/io5";
 import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = ({isScrollingUp, currentSection, sectionRef }) => {
-  console.log('Current Section in Navbar:', currentSection);
   return (
     <nav ref={sectionRef} className={styles.nav_main_container}>
       <div className={styles.nav_actions_container}>

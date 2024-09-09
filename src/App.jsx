@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import Detail from "./pages/Detail/Detail";
-import { sections } from "./data";
+import { products } from "./data";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import { useLocation } from "react-router-dom";
@@ -33,9 +33,9 @@ function App() {
       setLastScrollTop(currentScrollTop);
 
       // Detectar la sección actual en pantalla
-      const sections = document.querySelectorAll("section"); // Seleccionamos todas las secciones
+      const sectionsRef = document.querySelectorAll("section"); // Seleccionamos todas las secciones
       let foundSection = "NEW COLLECTION"; // Valor predeterminado
-      sections.forEach((section) => {
+      sectionsRef.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (
           rect.top <= window.innerHeight / 2 &&
@@ -44,7 +44,6 @@ function App() {
           foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
         }
       });
-      console.log('Current Section in App:', foundSection);
       setCurrentSection(foundSection); // Actualizar la sección actual
     };
 
@@ -62,13 +61,6 @@ function App() {
     };
   }, [lastScrollTop]);
 
-  // Función para manejar el cambio de slide
-  const handleSlideChange = (swiper) => {
-    const slideName = sections[swiper.activeIndex].section;
-    console.log(`Estás en el slider "${slideName}"`);
-    setCurrentSlide(swiper.activeIndex);
-  };
-
   return (
     <div className="App">
       <Routes>
@@ -76,19 +68,23 @@ function App() {
           path="/"
           element={
             <Home
-              sections={sections}
-              handleSlideChange={handleSlideChange}
+              products={products}
               currentSlide={currentSlide}
               sectionRef={sectionRef}
               isScrollingUp={isScrollingUp}
               currentSection={currentSection}
-
             />
           }
         />
         <Route
           path="/catalogo"
-          element={<Catalogo sectionRef={sectionRef}  isScrollingUp={isScrollingUp} sections={sections} currentSlide={currentSlide} />}
+          element={
+            <Catalogo
+              sectionRef={sectionRef}
+              isScrollingUp={isScrollingUp}
+              currentSlide={currentSlide}
+            />
+          }
         />
         <Route path="/detalle/:id" element={<Detail />} />
         <Route path="/louder" element={<Louder />} />

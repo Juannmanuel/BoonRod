@@ -1,17 +1,18 @@
 import style from "./Card.module.css";
 import imagen from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg";
 import { IoAddCircleOutline } from "react-icons/io5";
-function Card({ images, title, price, section }) {
+function Card({ images, title, price, description }) {
+  const {models} = images
+  console.log(models, "models");
+  
+  
   return (
     <div className={style.card_main}>
-      <img className={style.image} src={images} alt="" />
+      <img className={style.image} src={models[0]} alt="" />
       <IoAddCircleOutline className={style.icon} />
       <span className={style.title}>{title}</span>
       <span className={style.description}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptatum
-        nesciunt ab dolores dicta sit, soluta harum libero nulla ipsum in
-        pariatur accusamus doloremque suscipit tempora quasi sunt laboriosam
-        omnis.
+        {description}
       </span>
       <span className={style.price}>{price}EUR</span>
     </div>

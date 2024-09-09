@@ -4,7 +4,6 @@ import DetailCard from "../DetailCard/DetailCard";
 import TarjetaDetalle from "../TarjetaDetalle/TarjetaDetalle";
 
 function ExpandingSection({name, price, description, sizes}) {
-  console.log(name,price,description,sizes,"expanding");
   
   const [startTouchY, setStartTouchY] = useState(0);
   const [currentTouchY, setCurrentTouchY] = useState(0);

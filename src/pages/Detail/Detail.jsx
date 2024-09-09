@@ -19,7 +19,6 @@ function Detail() {
   const { id } = useParams();
   useEffect(() => {}, [id]);
   const product = products.filter((item) => item.id == id);
-  console.log(product[0].name, "detalle");
   let imagenes = [
     imagenModelo1,
     imagenModelo2,

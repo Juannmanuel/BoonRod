@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 function HorizontalCarrousel({ imagenes }) {
-    console.log(imagenes);
     
   return (
     <Swiper

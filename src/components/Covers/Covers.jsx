@@ -8,7 +8,6 @@ import { Autoplay, Mousewheel } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 function Covers({ sections, handleSlideChange, currentSlide }) {
-  console.log(sections);
 
   return (
     <section>

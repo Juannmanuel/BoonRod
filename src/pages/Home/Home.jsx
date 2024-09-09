@@ -26,7 +26,7 @@ import imgC3 from "../../assets/images/Categorias/newCollection/3.jpg";
 import imgC4 from "../../assets/images/Categorias/newCollection/4.jpg";
 import imgC5 from "../../assets/images/Categorias/newCollection/5.jpg";
 import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
-
+import { products } from "../../data";
 import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
@@ -34,7 +34,12 @@ import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
 
 function Home({ sectionRef, isScrollingUp, currentSection }) {
-  const sections = [
+  let outfitUp = products.filter((item) => item.type == "Remera" || item.type == "Campera" || item.type == "Buzo");
+
+
+  let outfitDown = products.filter((item) => item.type == "Pantalon" || item.type == "Zapatillas")
+  console.log(outfitDown , outfitUp, "prod");
+  const sectionsObj = [
     {
       section: "NEW COLLECTION",
       buttonText: "Explorar",
@@ -61,10 +66,10 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
     },
   ];
 
-  const [isLouding, setIsLouding] = useState(true);
-  setTimeout(() => {
-    setIsLouding(false);
-  }, 4000);
+  // const [isLouding, setIsLouding] = useState(true);
+  // setTimeout(() => {
+  //   setIsLouding(false);
+  // }, 4000);
 
   return (
     <section ref={sectionRef} className={style.home_main}>
@@ -75,25 +80,40 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
       />
       <section data-section="NEW COLLECTION">
         <FeaturedGallery
-          images={sections[0].images}
-          section={sections[0].section}
-          buttonText={sections[0].buttonText}
-          description={sections[0].description}
+          images={sectionsObj[0].images}
+          section={sectionsObj[0].section}
+          buttonText={sectionsObj[0].buttonText}
+          description={sectionsObj[0].description}
         />
       </section>
       <section data-section="NUESTRO CATALOGO">
-        <FeatureBlock section={"NUESTRO CATALOGO"} />
+        <FeatureBlock
+          title={"Outfits de la Parte Superior"}
+          description={
+            "Prendas cómodas y con estilo, diseñadas para destacar en cualquier ocasión."
+          }
+          sectionProducs={outfitUp}
+
+          section={"NUESTRO CATALOGO"}
+        />
       </section>
       <section data-section="LOOKBOOK">
         <FeaturedGallery
-          images={sections[2].images}
-          section={sections[2].section}
-          buttonText={sections[2].buttonText}
-          description={sections[2].description}
+          images={sectionsObj[2].images}
+          section={sectionsObj[2].section}
+          buttonText={sectionsObj[2].buttonText}
+          description={sectionsObj[2].description}
         />
       </section>
       <section data-section="CONTACTANOS">
-        <FeatureBlock section={"CONTACTANOS"} />
+        <FeatureBlock
+          section={"CONTACTANOS"}
+          title={"Outfits de la Parte Inferior"}
+          description={
+            "Elige los mejores complementos para tu look urbano con nuestra selección de ropa y calzado."
+          }
+          sectionProducs={outfitDown}
+        />
       </section>
       <Footer />
     </section>
