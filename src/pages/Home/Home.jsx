@@ -84,7 +84,7 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
       <section data-section="NUESTRO CATALOGO">
         <FeatureBlock section={"NUESTRO CATALOGO"} />
       </section>
-      <section data-section="HOT SALE">
+      <section data-section="LOOKBOOK">
         <FeaturedGallery
           images={sections[2].images}
           section={sections[2].section}
@@ -94,9 +94,6 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
       </section>
       <section data-section="CONTACTANOS">
         <FeatureBlock section={"CONTACTANOS"} />
-      </section>
-      <section data-section="FOOTER">
-        <FeatureBlock section={"FOOTER"} />
       </section>
       <Footer />
     </section>

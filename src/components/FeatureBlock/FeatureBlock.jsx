@@ -6,10 +6,10 @@ import image from "../../assets/images/imagesProductsAndModels/product-2/models/
 function FeatureBlock({ section }) {
   const itemsRopa = [
     { images: image, title: "CAMISETA BOXY FIT", price: "1500" },
-    { images:  image, title: "CAMISETA BOXY FIT", price: "1500" },
-    { images:  image, title: "CAMISETA BOXY FIT", price: "1500" },
-    { images:  image, title: "CAMISETA BOXY FIT", price: "1500" },
-    { images:  image, title: "CAMISETA BOXY FIT", price: "1500" },
+    { images: image, title: "CAMISETA BOXY FIT", price: "1500" },
+    { images: image, title: "CAMISETA BOXY FIT", price: "1500" },
+    { images: image, title: "CAMISETA BOXY FIT", price: "1500" },
+    { images: image, title: "CAMISETA BOXY FIT", price: "1500" },
   ];
   return (
     <section className={style.featureBlock_main} data-section={section}>
@@ -21,12 +21,16 @@ function FeatureBlock({ section }) {
         </div>
         <div className={style.carousel}>
           {itemsRopa.map((item, index) => (
-            <Card images={item.images} title={item.title}price={item.price} />
+            <div className={style.carousel_item}>
+              <Card
+                images={item.images}
+                title={item.title}
+                price={item.price}
+              />
+            </div>
           ))}
         </div>
-        <div className={style.btnAction}>
-            Ver catalogo
-        </div>
+        <div className={style.btnAction}>Ver catalogo</div>
       </div>
     </section>
   );

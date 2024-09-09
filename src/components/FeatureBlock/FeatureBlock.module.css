@@ -42,6 +42,7 @@
   overflow: scroll;
   height: 70%;
   display: flex;
+  flex: 30vh 10vh 10vh;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
@@ -49,24 +50,25 @@
   gap: 1rem;
   overflow: scroll;
 }
+.carousel_item {
+  flex: 0 0 70vw; /* Esto asegura que cada ítem ocupe el 20% del viewport width */
+  height: 100%;
+}
 .btnAction {
-    min-width: 20rem;
-    height: 2.7rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    font-family: "Roboto Slab", serif;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    overflow: hidden;
-    pointer-events: all;
-    z-index: 5;
-    margin-left: 1rem;
-    max-width: 50%;
-  
-  
-    
-  }
+  min-width: 20rem;
+  height: 2.7rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  pointer-events: all;
+  z-index: 5;
+  margin-left: 1rem;
+  max-width: 50%;
+}
