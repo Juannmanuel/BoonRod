@@ -24,6 +24,9 @@ function FeatureBlock({ section }) {
             <Card images={item.images} title={item.title}price={item.price} />
           ))}
         </div>
+        <div className={style.btnAction}>
+            Ver catalogo
+        </div>
       </div>
     </section>
   );
