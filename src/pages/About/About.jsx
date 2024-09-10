@@ -4,6 +4,8 @@ import style from "./About.module.css";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 
 const About = () => {
+  const latitude = "-32.89259531361538";
+  const longitude = "-68.85343209005165";
   return (
     <div className={style.aboutContainer}>
       <h1 className={style.title}>¿Quiénes somos?</h1>
@@ -15,7 +17,7 @@ const About = () => {
 
       <button
         className={style.mapButton}
-        onClick={() => window.open("https://goo.gl/maps/xyz123", "_blank")}
+        onClick={() => window.open(`https://www.google.com/maps?q=${latitude},${longitude}`, "_blank")}
       >
         Ver ubicación en Google Maps
       </button>

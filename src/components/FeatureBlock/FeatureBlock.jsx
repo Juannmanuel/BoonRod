@@ -3,6 +3,7 @@ import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import style from "./FeatureBlock.module.css";
 import image from "../../assets/images/imagesProductsAndModels/product-2/models/model-1.jpg";
 import { products, sections } from "../../data";
+import { Link } from "react-router-dom";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
 
@@ -23,7 +24,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
             />
           ))}
         </div>
-        <div className={style.btnAction}>Ver catalogo</div>
+        <div className={style.btnAction}><Link style={{color: "white", textDecoration: "none"}} to={"/catalogo"}>Ver catalogo</Link></div>
       </div>
     </section>
   );

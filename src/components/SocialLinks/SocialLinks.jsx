@@ -14,14 +14,14 @@ function SocialLinks() {
       <div className={style.socialMedia}>
         {/* Aquí agregarías los íconos o enlaces a las redes sociales */}
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/boonrod.mza/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaFacebookSquare className={style.icon} />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/boonrod.mza/?hl=es-la"
           target="_blank"
           rel="noopener noreferrer"
         >
