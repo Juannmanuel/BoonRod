@@ -1,40 +1,65 @@
-.about_main{
-    width: 100vw;
-    height: 100vh;
-    background-color: aqua;
-    overflow: hidden;
+.aboutContainer {
+  width: 100vw;
+  height: auto;
+  min-height: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  line-height: 0.8;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  z-index: 4;
+  margin-left: 1rem;
+  max-width: 90%;
+}
+.description {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  max-width: 90%;
+  z-index: 4;
+  margin-left: 1rem;
+  max-width: 80%;
+  text-align: center;
+}
+.mapContainer {
+}
+.mapButton {
+  min-width: 20rem;
+  height: 2.7rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  background-color: rgb(238, 238, 238);
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  pointer-events: all;
+  max-width: 50%;
+  border: none;
+}
+.socialMedia {
+    width: 25rem;
+    height: 5rem;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center         ;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+
 }
-.title{
-    width: 90%;
-    height: 3rem;
-    margin: auto;
-    border: 1px solid black;
-}
-.description{
-    width: 90%;
-    height: 5rem;
-    margin: auto;
-    border: 1px solid black;
-}
-.container_map{
-    width: 90%;
-    height: 5rem;
-    margin: auto;
-    border: 1px solid black;
-}
-.btn_map{
-    width: 90%;
-    height: 5rem;
-    margin: auto;
-    border: 1px solid black;
-}
-.social{
-    width: 90%;
-    height: 5rem;
-    margin: auto;
-    border: 1px solid black;  
+.icon{
+    color: black;
+    text-decoration: none;
 }
