@@ -14,7 +14,6 @@ function TarjetaDetalle({ expanded, name, price, description, sizes }) {
   const { id } = useParams();
   const product = products.filter((item) => item.id == id);
 
-  console.log(product[0].images[0].models);
 
   const tarjetaRef = useRef(null);
   useEffect(() => {

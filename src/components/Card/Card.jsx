@@ -3,7 +3,6 @@ import imagen from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.j
 import { IoAddCircleOutline } from "react-icons/io5";
 function Card({ images, title, price, description }) {
   const {models} = images
-  console.log(models, "models");
   
   
   return (

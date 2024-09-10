@@ -13,7 +13,6 @@ function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const location = useLocation();
   const currentPath = location.pathname;
-  console.log(currentPath, "app");
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);

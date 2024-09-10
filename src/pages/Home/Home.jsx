@@ -38,7 +38,6 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
 
 
   let outfitDown = products.filter((item) => item.type == "Pantalon" || item.type == "Zapatillas")
-  console.log(outfitDown , outfitUp, "prod");
   const sectionsObj = [
     {
       section: "NEW COLLECTION",

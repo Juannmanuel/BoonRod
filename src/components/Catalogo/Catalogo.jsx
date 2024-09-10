@@ -9,6 +9,7 @@ import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import NavbarMovile from "../NavbarMovile/NavbarMovile";
 
 function Catalogo({ currentPath , isScrollingUp, sectionRef }) {
+ console.log(isScrollingUp);
  
   return (
     <section ref={sectionRef} className={style.catalogo_main}>
