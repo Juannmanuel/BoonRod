@@ -10,16 +10,14 @@ function Footer() {
         BOONROD <PiTrademarkRegisteredLight />
       </h2>
       <SocialLinks />
-      <div className={style.contact}>
-        <Link
-          style={{ color: "black", textDecoration: "none" }}
-          target="_blank"
-          rel="noopener noreferrer"
-          to={"https://juan-manuel.vercel.app"}
-        >
-          Quiero mi página
-        </Link>
-      </div>
+      <Link
+        style={{ color: "black", textDecoration: "none" }}
+        target="_blank"
+        rel="noopener noreferrer"
+        to={"https://juan-manuel.vercel.app"}
+      >
+        <div className={style.contact}>Quiero mi página</div>
+      </Link>
     </footer>
   );
 }
