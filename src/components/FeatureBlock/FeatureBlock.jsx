@@ -24,7 +24,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
             />
           ))}
         </div>
-        <div className={style.btnAction}><Link style={{color: "white", textDecoration: "none"}} to={"/catalogo"}>Ver catalogo</Link></div>
+        <Link style={{color: "white", textDecoration: "none"}} to={"/catalogo"}><div className={style.btnAction}>Ver catalogo</div></Link>
       </div>
     </section>
   );
