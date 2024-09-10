@@ -1,6 +1,40 @@
 .about_main{
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     background-color: aqua;
     overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center         ;
+}
+.title{
+    width: 90%;
+    height: 3rem;
+    margin: auto;
+    border: 1px solid black;
+}
+.description{
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    border: 1px solid black;
+}
+.container_map{
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    border: 1px solid black;
+}
+.btn_map{
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    border: 1px solid black;
+}
+.social{
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    border: 1px solid black;  
 }

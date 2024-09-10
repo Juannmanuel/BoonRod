@@ -96,9 +96,9 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
           section={""}
         />
       </section>
-      {/* <section data-section="SOBRE NOSOTROS">
+      <section data-section="SOBRE NOSOTROS">
         <About/>
-      </section> */}
+      </section>
       <section data-section="LOOKBOOK">
         <FeaturedGallery
           images={sectionsObj[2].images}

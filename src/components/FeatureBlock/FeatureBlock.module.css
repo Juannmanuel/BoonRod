@@ -1,7 +1,7 @@
 .featureBlock_main {
   width: 100vw;
   height: auto;
-  min-height: 110vh;
+  min-height: 105vh;
   overflow: hidden;
 }
 .container {
@@ -37,17 +37,15 @@
   max-width: 90%;
 }
 .carousel {
-  width: auto;
   width: 95vw;
-  overflow: scroll;
+  overflow-x: scroll; /* Asegúrate de que el scroll sea horizontal */
+  max-height: 70%;
   height: 70%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
+  grid-auto-columns: 20rem; /* Ajusta el número de columnas */
   padding: 1rem;
   gap: 1rem;
-  overflow: scroll;
 }
 
 .btnAction {
@@ -65,4 +63,6 @@
   overflow: hidden;
   max-width: 50%;
   margin: auto;
+  
+  
 }
