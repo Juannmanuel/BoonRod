@@ -1,24 +1,21 @@
 .aboutContainer {
   width: 100vw;
   height: auto;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .title {
   padding: 0;
   margin: 0;
-  line-height: 0.8;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: rgb(0, 0, 0);
   font-size: 3.5rem;
-  z-index: 4;
-  margin-left: 1rem;
   max-width: 90%;
 }
 .description {
@@ -28,11 +25,8 @@
   font-weight: 400;
   max-width: 90%;
   z-index: 4;
-  margin-left: 1rem;
   max-width: 80%;
   text-align: center;
-}
-.mapContainer {
 }
 .mapButton {
   min-width: 20rem;
@@ -51,17 +45,51 @@
   max-width: 50%;
   border: none;
 }
-.socialMedia {
-    width: auto;
-    gap: 2rem;
-    height: 5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 2rem;
+
+
+.container_separator {
+  position: relative;
+  background: #000000;
+  height: 50vh;
+  width: 100vw;
+  border: 1px solid black;
 
 }
-.icon{
-    color: black;
-    text-decoration: none;
+
+.wave {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  background: #ffffff;
+  bottom: 0;
+  border: 1px solid black;
+
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  border: 1px solid black;
+
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: #000000;
+  right: -1.5%;
+  top: 60%;
+  border: 1px solid black;
+
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: #000000;
+  left: -1.5%;
+  top: 40%;
+  border: 1px solid black;
 }

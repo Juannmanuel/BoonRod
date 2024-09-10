@@ -1,0 +1,30 @@
+.socialLinks_main {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.title {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  z-index: 4;
+  max-width: 80%;
+  text-align: center;
+}
+.socialMedia {
+  width: auto;
+  gap: 2rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+.icon {
+  color: black;
+  text-decoration: none;
+}
