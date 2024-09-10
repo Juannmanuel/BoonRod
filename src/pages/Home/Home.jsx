@@ -33,11 +33,66 @@ import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
 
-function Home({ sectionRef, isScrollingUp, currentSection }) {
-  let outfitUp = products.filter((item) => item.type == "Remera" || item.type == "Campera" || item.type == "Buzo");
+function Home({  }) {
+  const sectionRef = useRef(null);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
 
-  let outfitDown = products.filter((item) => item.type == "Pantalon" || item.type == "Zapatillas")
+      if (currentScrollTop < lastScrollTop) {
+        setIsScrollingUp(true); // Scroll hacia arriba
+      } else {
+        setIsScrollingUp(false); // Scroll hacia abajo
+      }
+
+      // Actualizar la posición del scroll anterior
+      setLastScrollTop(currentScrollTop);
+
+      // Detectar la sección actual en pantalla
+      const sectionsRef = document.querySelectorAll("section"); // Seleccionamos todas las secciones
+      let foundSection = "NEW COLLECTION"; // Valor predeterminado
+      sectionsRef.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
+          foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
+        }
+      });
+      setCurrentSection(foundSection); // Actualizar la sección actual
+    };
+
+    const sectionEl = sectionRef.current;
+
+    if (sectionEl) {
+      sectionEl.addEventListener("scroll", handleScroll); // Escuchar evento de scroll
+    }
+
+    // Cleanup: remover el evento cuando el componente se desmonte
+    return () => {
+      if (sectionEl) {
+        sectionEl.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, [lastScrollTop]);
+
+  /*Funcion para filtrar los productos */
+  let outfitUp = products.filter(
+    (item) =>
+      item.type == "Remera" || item.type == "Campera" || item.type == "Buzo"
+  );
+  /*Funcion para filtrar los productos */
+
+  let outfitDown = products.filter(
+    (item) => item.type == "Pantalon" || item.type == "Zapatillas"
+  );
+  /* Objeto de las secciones */
+
   const sectionsObj = [
     {
       section: "NEW COLLECTION",
@@ -92,12 +147,11 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
             "Prendas cómodas y con estilo, diseñadas para destacar en cualquier ocasión."
           }
           sectionProducs={outfitUp}
-
           section={""}
         />
       </section>
       <section data-section="SOBRE NOSOTROS">
-        <About/>
+        <About />
       </section>
       <section data-section="LOOKBOOK">
         <FeaturedGallery

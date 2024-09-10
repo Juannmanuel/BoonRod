@@ -10,6 +10,7 @@ import NavbarMovile from "../NavbarMovile/NavbarMovile";
 
 function Catalogo({ currentPath , isScrollingUp, sectionRef }) {
  console.log(isScrollingUp);
+ console.log(sectionRef)
  
   return (
     <section ref={sectionRef} className={style.catalogo_main}>

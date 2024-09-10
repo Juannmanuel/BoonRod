@@ -9,10 +9,6 @@ import Catalogo from "./components/Catalogo/Catalogo";
 import Louder from "./components/Louder/Louder";
 
 function App() {
-  // Estado para manejar el slide actual
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const location = useLocation();
-  const currentPath = location.pathname;
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -68,7 +64,6 @@ function App() {
           element={
             <Home
               products={products}
-              currentSlide={currentSlide}
               sectionRef={sectionRef}
               isScrollingUp={isScrollingUp}
               currentSection={currentSection}
@@ -81,7 +76,6 @@ function App() {
             <Catalogo
               sectionRef={sectionRef}
               isScrollingUp={isScrollingUp}
-              currentSlide={currentSlide}
             />
           }
         />
