@@ -1,60 +1,27 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import Detail from "./pages/Detail/Detail";
 import { products } from "./data";
 import "./App.css";
 import Home from "./pages/Home/Home";
-import { useLocation } from "react-router-dom";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Louder from "./components/Louder/Louder";
+import DesktopView from "./components/DesktopView/DesktopView"; // Asegurate de tener este componente
 
 function App() {
-  const sectionRef = useRef(null);
-  const [isScrollingUp, setIsScrollingUp] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [currentSection, setCurrentSection] = useState("NEW COLLECTION"); // Nueva variable para la sección actual
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 780);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
-
-      if (currentScrollTop < lastScrollTop) {
-        setIsScrollingUp(true); // Scroll hacia arriba
-      } else {
-        setIsScrollingUp(false); // Scroll hacia abajo
-      }
-
-      // Actualizar la posición del scroll anterior
-      setLastScrollTop(currentScrollTop);
-
-      // Detectar la sección actual en pantalla
-      const sectionsRef = document.querySelectorAll("section"); // Seleccionamos todas las secciones
-      let foundSection = "NEW COLLECTION"; // Valor predeterminado
-      sectionsRef.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (
-          rect.top <= window.innerHeight / 2 &&
-          rect.bottom >= window.innerHeight / 2
-        ) {
-          foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
-        }
-      });
-      setCurrentSection(foundSection); // Actualizar la sección actual
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 780); // Actualiza el estado si la pantalla es menor o igual a 780px
     };
 
-    const sectionEl = sectionRef.current;
+    window.addEventListener("resize", handleResize); // Agrega el evento al cambiar el tamaño de la ventana
 
-    if (sectionEl) {
-      sectionEl.addEventListener("scroll", handleScroll); // Escuchar evento de scroll
-    }
-
-    // Cleanup: remover el evento cuando el componente se desmonte
     return () => {
-      if (sectionEl) {
-        sectionEl.removeEventListener("scroll", handleScroll);
-      }
+      window.removeEventListener("resize", handleResize); // Limpia el evento al desmontar el componente
     };
-  }, [lastScrollTop]);
+  }, []);
 
   return (
     <div className="App">
@@ -62,23 +29,14 @@ function App() {
         <Route
           path="/"
           element={
-            <Home
-              products={products}
-              sectionRef={sectionRef}
-              isScrollingUp={isScrollingUp}
-              currentSection={currentSection}
-            />
+            isMobileView ? (
+              <Home products={products} /> // Renderiza Home en pantallas pequeñas
+            ) : (
+              <DesktopView /> // Renderiza DesktopView en pantallas grandes
+            )
           }
         />
-        <Route
-          path="/catalogo"
-          element={
-            <Catalogo
-              sectionRef={sectionRef}
-              isScrollingUp={isScrollingUp}
-            />
-          }
-        />
+        <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/detalle/:id" element={<Detail />} />
         <Route path="/louder" element={<Louder />} />
       </Routes>

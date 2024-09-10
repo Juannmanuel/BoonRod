@@ -33,12 +33,12 @@ import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
 
-function Home({  }) {
+function Home({ }) {
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
