@@ -44,6 +44,7 @@
   display: grid;
   grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
   grid-auto-columns: 20rem; /* Ajusta el número de columnas */
+ grid-template-rows: 95%;
   padding: 1rem;
   gap: 1rem;
 }
