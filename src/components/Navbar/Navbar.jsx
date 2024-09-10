@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { CiShoppingCart } from "react-icons/ci";
 
-const Navbar = ({isScrollingUp, currentSection, sectionRef }) => {
+const Navbar = ({ isScrollingUp, currentSection, sectionRef }) => {
   return (
     <nav ref={sectionRef} className={styles.nav_main_container}>
       <div className={styles.nav_actions_container}>
@@ -32,37 +32,11 @@ const Navbar = ({isScrollingUp, currentSection, sectionRef }) => {
               isScrollingUp ? styles.hidden : styles.visible
             }`}
           >
-           {currentSection}
+            {currentSection}
           </span>
         </div>
-        <div className={styles.categories_carousel}>
-
-        </div>
+        <div className={styles.categories_carousel}></div>
       </div>
-
-      {/* <div className={styles.actions_buttons}>
-      <img src={logoImage} alt="Logo de la tienda" className={styles.logo} />
-
-      </div>
-      <div className={styles.link}>
-        {currentPath === "/catalogo" || currentPath === "/detalle"
-          ? null
-          : sections.map((item, index) => (
-              <Link to={"/catalogo"}>
-                <button
-                  className={`${styles.cta} ${
-                    currentSlide === index ? styles.active : styles.inActive
-                  }`}
-                  key={index}
-                  id={index}
-                >
-                  <span className={styles.hover_underline_animation}>
-                    {item.section}
-                  </span>
-                </button>
-              </Link>
-            ))}
-      </div> */}
     </nav>
   );
 };

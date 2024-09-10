@@ -85,7 +85,7 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
           description={sectionsObj[0].description}
         />
       </section>
-      <section data-section="NUESTRO CATALOGO">
+      <section data-section="">
         <FeatureBlock
           title={"Outfits de la Parte Superior"}
           description={
@@ -93,7 +93,7 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
           }
           sectionProducs={outfitUp}
 
-          section={"NUESTRO CATALOGO"}
+          section={""}
         />
       </section>
       {/* <section data-section="SOBRE NOSOTROS">
@@ -107,9 +107,9 @@ function Home({ sectionRef, isScrollingUp, currentSection }) {
           description={sectionsObj[2].description}
         />
       </section>
-      <section data-section="CONTACTANOS">
+      <section data-section="">
         <FeatureBlock
-          section={"CONTACTANOS"}
+          section={""}
           title={"Outfits de la Parte Inferior"}
           description={
             "Elige los mejores complementos para tu look urbano con nuestra selección de ropa y calzado."
