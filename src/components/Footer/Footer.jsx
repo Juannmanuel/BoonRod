@@ -11,7 +11,14 @@ function Footer() {
       </h2>
       <SocialLinks />
       <div className={style.contact}>
-        <Link style={{color: "black", textDecoration: "none"}} to={"https://juan-manuel.vercel.app"}>Quiero mi página</Link>
+        <Link
+          style={{ color: "black", textDecoration: "none" }}
+          target="_blank"
+          rel="noopener noreferrer"
+          to={"https://juan-manuel.vercel.app"}
+        >
+          Quiero mi página
+        </Link>
       </div>
     </footer>
   );
