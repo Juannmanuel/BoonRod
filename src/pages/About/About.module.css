@@ -1,11 +1,12 @@
 .aboutContainer {
   width: 100vw;
   height: auto;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 .title {
   padding: 0;
@@ -15,7 +16,7 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(0, 0, 0);
-  font-size: 4rem;
+  font-size: 3.5rem;
   z-index: 4;
   margin-left: 1rem;
   max-width: 90%;
@@ -51,7 +52,8 @@
   border: none;
 }
 .socialMedia {
-    width: 25rem;
+    width: auto;
+    gap: 2rem;
     height: 5rem;
     display: flex;
     justify-content: space-around;
