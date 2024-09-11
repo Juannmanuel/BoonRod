@@ -5,9 +5,9 @@ import image from "../../assets/images/imagesProductsAndModels/product-2/models/
 import { products, sections } from "../../data";
 import { Link } from "react-router-dom";
 
-function FeatureBlock({ section, title, description, sectionProducs }) {
+function FeatureBlock({ section, title, description, sectionProducs, id }) {
+  console.log(id);
 
-  
   return (
     <section className={style.featureBlock_main} data-section={section}>
       <div className={style.container}>
@@ -15,16 +15,26 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
         <div className={style.description}>{description}</div>
         <div className={style.carousel}>
           {sectionProducs.map((item, index) => (
-            <Card
-              key={index}
-              title={item.name}
-              price={item.price}
-              description={item.description}
-              images={item.images[0]}
-            />
+            <Link
+              to={`/detalle/${item.id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <Card
+                key={index}
+                title={item.name}
+                price={item.price}
+                description={item.description}
+                images={item.images[0]}
+              />
+            </Link>
           ))}
         </div>
-        <Link style={{color: "white", textDecoration: "none"}} to={"/catalogo"}><div className={style.btnAction}>Ver catalogo</div></Link>
+        <Link
+          style={{ color: "white", textDecoration: "none" }}
+          to={"/catalogo"}
+        >
+          <div className={style.btnAction}>Ver catalogo</div>
+        </Link>
       </div>
     </section>
   );

@@ -86,11 +86,13 @@ function Home({ }) {
     (item) =>
       item.type == "Remera" || item.type == "Campera" || item.type == "Buzo"
   );
+  
   /*Funcion para filtrar los productos */
-
+  
   let outfitDown = products.filter(
     (item) => item.type == "Pantalon" || item.type == "Zapatillas"
   );
+  console.log(outfitDown);
   /* Objeto de las secciones */
 
   const sectionsObj = [
