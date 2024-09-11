@@ -142,14 +142,14 @@ function Home({ }) {
           description={sectionsObj[0].description}
         />
       </section>
-      <section data-section="">
+      <section data-section="CATÁLOGO">
         <FeatureBlock
           title={"Outfits de la Parte Superior"}
           description={
             "Prendas cómodas y con estilo, diseñadas para destacar en cualquier ocasión."
           }
           sectionProducs={outfitUp}
-          section={""}
+          section={"CATÁLOGO"}
         />
       </section>
       <section data-section="SOBRE NOSOTROS">
@@ -163,9 +163,9 @@ function Home({ }) {
           description={sectionsObj[2].description}
         />
       </section>
-      <section data-section="">
+      <section data-section="CATÁLOGO">
         <FeatureBlock
-          section={""}
+          section={"CATÁLOGO"}
           title={"Outfits de la Parte Inferior"}
           description={
             "Elige los mejores complementos para tu look urbano con nuestra selección de ropa y calzado."

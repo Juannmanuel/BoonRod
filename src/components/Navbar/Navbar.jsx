@@ -8,7 +8,7 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = ({ isScrollingUp, currentSection, sectionRef }) => {
   return (
-    <nav ref={sectionRef} className={styles.nav_main_container}>
+    <nav ref={sectionRef} className={ isScrollingUp ? styles.nav_main_container : styles.nav_main_container_withBackground }>
       <div className={styles.nav_actions_container}>
         <div className={styles.menu_button}>
           <IoMenu />

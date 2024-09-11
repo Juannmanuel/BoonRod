@@ -2,11 +2,20 @@
 
 .nav_main_container {
   width: 100vw;
-  height: 30vh;
+  height: auto;
   position: absolute;
   top: 0;
   z-index: 3;
   pointer-events: none;
+}
+.nav_main_container_withBackground {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.688);
 }
 .nav_actions_container {
   width: 100vw;

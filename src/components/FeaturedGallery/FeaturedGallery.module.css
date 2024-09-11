@@ -121,7 +121,7 @@
 }
 @media (max-width: 768px) {
   .header {
-    height: 90vh;
+    height: 100vh;
   }
   .twoColumnsContainer {
     height: 65vh;
