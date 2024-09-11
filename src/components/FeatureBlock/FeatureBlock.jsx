@@ -5,8 +5,7 @@ import image from "../../assets/images/imagesProductsAndModels/product-2/models/
 import { products, sections } from "../../data";
 import { Link } from "react-router-dom";
 
-function FeatureBlock({ section, title, description, sectionProducs, id }) {
-  console.log(id);
+function FeatureBlock({ section, title, description, sectionProducs }) {
 
   return (
     <section className={style.featureBlock_main} data-section={section}>
