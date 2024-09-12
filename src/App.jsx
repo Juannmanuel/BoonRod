@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import Catalogo from "./components/Catalogo/Catalogo";
 import Louder from "./components/Louder/Louder";
 import DesktopView from "./components/DesktopView/DesktopView"; // Asegurate de tener este componente
-
+import CustomerSupport from "./components/CustomerSupport/CustomerSupport";
 function App() {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 780);
 
@@ -38,7 +38,7 @@ function App() {
         />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/detalle/:id" element={<Detail />} />
-        <Route path="/louder" element={<Louder />} />
+        <Route path="/louder" element={<CustomerSupport />} />
       </Routes>
     </div>
   );

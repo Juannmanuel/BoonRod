@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
 body {
   margin: 0;
@@ -10,4 +12,20 @@ body {
 img {
   height: auto;
   object-fit: cover;
+}
+
+:root {
+  /* Tipografías */
+  --font-title: "Bebas Neue", sans-serif;
+  --font-subtitle: font-family: "Hind Siliguri", sans-serif;
+  --font-paragraph: font-family: "Dosis", sans-serif;
+  /* Tamaños de fuente */
+  --font-size-title: 2.25rem; 
+  --font-size-subtitle: 1.5rem; 
+  --font-size-paragraph: 1.2rem; 
+  
+  /* Pesos de fuente */
+  --font-weight-title: 700; /* o 400, si prefieres usar números */
+  --font-weight-subtitle: 500; /* Semi-bold */
+  --font-weight-paragraph: 400; /* Regular */
 }
