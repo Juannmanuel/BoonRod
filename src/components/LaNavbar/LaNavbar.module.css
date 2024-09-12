@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
+
+.nav_main_container {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.753);
+  backdrop-filter: blur(5px);
+  transition: background-color 1.5s, top 1.5s;
+}
+
+.nav_main_container_withBackground {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.59);
+  backdrop-filter: blur(5px);
+
+  transition: background-color 1.5s, top 1.5s;
+}
+
+.nav_actions_container {
+  width: 90vw;
+  margin: auto;
+  height: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 2px;
+  font-family: var(--font-title);
+  font-size: var(--text-medium);
+  transition: font-size 1.5s;
+  position: relative;
+}
+
+.icon {
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  transition: font-size 1.5s;
+}
+
+.categorie {
+  position: relative;
+  transition: left 1.5s;
+  width: 20rem;
+  height: 2rem;
+  left: 0;
+}
+
+.categorie img {
+  max-width: 12rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.categorie h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-big);
+}

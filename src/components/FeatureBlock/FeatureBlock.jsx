@@ -6,18 +6,14 @@ import { products, sections } from "../../data";
 import { Link } from "react-router-dom";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
-
   return (
     <section className={style.featureBlock_main} data-section={section}>
       <div className={style.container}>
-        <div className={style.heading}>{title}</div>
+        <div className={style.heading}><h2>{title}</h2></div>
         <div className={style.description}>{description}</div>
         <div className={style.carousel}>
           {sectionProducs.map((item, index) => (
-            <Link
-              to={`/detalle/${item.id}`}
-              style={{ textDecoration: "none" }}
-            >
+            <Link to={`/detalle/${item.id}`} style={{ textDecoration: "none" }}>
               <Card
                 key={index}
                 title={item.name}

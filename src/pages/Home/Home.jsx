@@ -33,13 +33,14 @@ import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
 import CustomerSupport from "../../components/CustomerSupport/CustomerSupport";
+import LaNavbar from "../../components/LaNavbar/LaNavbar";
 
-function Home({ }) {
+function Home({}) {
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
@@ -87,9 +88,9 @@ function Home({ }) {
     (item) =>
       item.type == "Remera" || item.type == "Campera" || item.type == "Buzo"
   );
-  
+
   /*Funcion para filtrar los productos */
-  
+
   let outfitDown = products.filter(
     (item) => item.type == "Pantalon" || item.type == "Zapatillas"
   );
@@ -130,7 +131,12 @@ function Home({ }) {
 
   return (
     <section ref={sectionRef} className={style.home_main}>
-      <Navbar
+      {/* <Navbar
+        sectionRef={sectionRef}
+        isScrollingUp={isScrollingUp}
+        currentSection={currentSection}
+      /> */}
+      <LaNavbar
         sectionRef={sectionRef}
         isScrollingUp={isScrollingUp}
         currentSection={currentSection}
@@ -174,7 +180,7 @@ function Home({ }) {
           sectionProducs={outfitDown}
         />
       </section>
-      <CustomerSupport/>
+      <CustomerSupport />
       <Footer />
     </section>
   );
