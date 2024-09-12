@@ -20,9 +20,9 @@ img {
   --font-subtitle: font-family: "Hind Siliguri", sans-serif;
   --font-paragraph: font-family: "Dosis", sans-serif;
   /* Tamaños de fuente */
-  --font-size-title: 2rem; 
-  --font-size-subtitle: 1.2rem; 
-  --font-size-paragraph: 1rem; 
+  --font-size-title: 1.5rem; 
+  --font-size-subtitle: 1rem; 
+  --font-size-paragraph: .9rem; 
   
   /* Pesos de fuente */
   --font-weight-title: 700; /* o 400, si prefieres usar números */
