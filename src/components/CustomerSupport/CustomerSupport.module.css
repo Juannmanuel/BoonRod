@@ -4,12 +4,14 @@
   flex-wrap: nowrap;
   justify-content: start;
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
+  min-height: 80vh;
 }
 .title {
   font-family: var(--font-title);
   font-size: var(--font-size-title);
   font-weight: var(--font-weight-title);
+  text-align: center;
 }
 .contactItem {
   display: flex;
@@ -22,29 +24,26 @@
 .contactIcon {
   font-size: 2rem;
 }
-.container_text{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: start;
-    gap: .5rem;
+.container_text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
 }
 .contactText {
   font-family: var(--font-subtitle);
   font-size: var(--font-size-subtitle);
   font-weight: var(--font-weight-subtitle);
-
-
-
 }
 
 .faqContainer {
-  margin-top: 2rem;
   gap: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: start;
+  align-items: center;
 }
 
 .faqItem {
@@ -77,5 +76,5 @@
   margin: 0 auto;
   font-family: var(--font-paragraph);
   font-size: var(--font-size-paragraph);
-  font-weight: var( --font-weight-paragraph);
+  font-weight: var(--font-weight-paragraph);
 }

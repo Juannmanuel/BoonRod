@@ -32,6 +32,7 @@ import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
 import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
+import CustomerSupport from "../../components/CustomerSupport/CustomerSupport";
 
 function Home({ }) {
   const sectionRef = useRef(null);
@@ -173,6 +174,7 @@ function Home({ }) {
           sectionProducs={outfitDown}
         />
       </section>
+      <CustomerSupport/>
       <Footer />
     </section>
   );

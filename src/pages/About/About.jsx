@@ -2,6 +2,7 @@ import React from "react";
 import style from "./About.module.css";
 
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
+import CustomerSupport from "../../components/CustomerSupport/CustomerSupport";
 
 const About = () => {
   const latitude = "-32.89259531361538";
@@ -17,7 +18,12 @@ const About = () => {
 
       <button
         className={style.mapButton}
-        onClick={() => window.open(`https://www.google.com/maps?q=${latitude},${longitude}`, "_blank")}
+        onClick={() =>
+          window.open(
+            `https://www.google.com/maps?q=${latitude},${longitude}`,
+            "_blank"
+          )
+        }
       >
         Ver ubicación en Google Maps
       </button>
