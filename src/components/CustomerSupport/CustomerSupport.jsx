@@ -6,10 +6,10 @@ const CustomerSupport = () => {
       <h2 className={styles.title}>Atencion al Cliente</h2>
       <div className={styles.contactItem}>
         <i className={styles.contactIcon}>
-          <BsWhatsapp />
+          <BsWhatsapp style={{color: "green"}} />
         </i>
         <div className={styles.container_text}>
-          <span className={styles.contactText}>+123 456 789</span>
+          <span className={styles.contactText_title}>+123 456 789</span>
           <span className={styles.contactText}>Mensaje de WhatsApp</span>
         </div>
       </div>
@@ -18,7 +18,7 @@ const CustomerSupport = () => {
           <BsEnvelopeAt />
         </i>
         <div className={styles.container_text}>
-          <span className={styles.contactText}>info@ejemplo.com</span>
+          <span className={styles.contactText_title}>info@ejemplo.com</span>
           <span className={styles.contactText}>Mandanos un mail</span>
         </div>
       </div>
@@ -27,7 +27,7 @@ const CustomerSupport = () => {
           <BsClock />
         </i>
         <div className={styles.container_text}>
-          <span className={styles.contactText}>Horario de atencion</span>
+          <span className={styles.contactText_title}>Horario de atencion</span>
           <span className={styles.contactText}>Lunes a Viernes 9 a 18 hs</span>
         </div>
       </div>
