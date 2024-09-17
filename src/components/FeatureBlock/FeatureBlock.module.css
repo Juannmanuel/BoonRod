@@ -60,6 +60,25 @@
   width: auto;
   height: 100%;
 }
+.container_card_link{
+  width: auto;
+  height: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.icon {
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.798);
+  border-radius: 50%;
+  font-weight: 200;
+}
+.title {
+  font-family: var(--font-title);
+  font-size: var(--text-big);
+}
 .btnAction {
   min-width: 90vw;
   height: 2.7rem;

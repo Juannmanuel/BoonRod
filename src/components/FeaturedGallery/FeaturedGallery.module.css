@@ -29,11 +29,10 @@
   justify-content: end;
   align-items: center;
   overflow: hidden;
-
 }
 .card {
   width: 100vw;
-  min-height: 60vh;
+  min-height: 50vh;
   height: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -41,7 +40,19 @@
   align-items: start;
   z-index: 2;
   position: absolute;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.765) 0%, rgba(0, 0, 0, 0.77) 60%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.765) 0%,
+    rgba(0, 0, 0, 0.77) 60%,
+    transparent 100%
+  );
+}
+.container_logo{
+  max-width: 13rem;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  object-fit: contain;
 }
 
 .title {
@@ -61,14 +72,11 @@
   color: rgb(243, 243, 243);
   font-size: 1rem;
   font-family: "Roboto Slab", serif;
-  font-weight: var( --font-weight-small);
+  font-weight: var(--font-weight-small);
   max-width: 90%;
   z-index: 4;
   margin-left: 1rem;
   max-width: 90%;
-
-
-
 }
 .btnAction {
   min-width: 20rem;
@@ -87,9 +95,6 @@
   z-index: 5;
   margin-left: 1rem;
   max-width: 50%;
-
-
-  
 }
 
 .twoColumnsContainer {
@@ -109,7 +114,6 @@
   background-color: aliceblue;
   overflow: hidden;
   position: relative;
-
 
   /* otras propiedades si es necesario */
 }

@@ -2,9 +2,9 @@ import Card from "../Card/Card";
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import style from "./FeatureBlock.module.css";
 import imageHotSale from "../../assets/images/Tarjetas/hotSale.jpg";
-import image from "../../assets/images/imagesProductsAndModels/product-2/models/model-1.jpg";
-import { products, sections } from "../../data";
+import logo from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import { Link } from "react-router-dom";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
@@ -16,19 +16,27 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
         </div>
         <div className={style.description}>{description}</div>
         <div className={style.carousel}>
-          {sectionProducs.map((item, index) => (
-            <Link key={index} to={`/detalle/${item.id}`} style={{ textDecoration: "none" }}>
+          {sectionProducs.slice(0, 4).map((item, index) => (
+            <Link
+              key={index}
+              to={`/detalle/${item.id}`}
+              style={{ textDecoration: "none" }}
+            >
               <div className={style.container_card}>
-              <Card
-                key={index}
-                title={item.name}
-                price={item.price}
-                description={item.description}
-                images={item.images[0]}
-              />
-            </div>
+                <Card
+                  key={index}
+                  title={item.name}
+                  price={item.price}
+                  description={item.description}
+                  images={item.images[0]}
+                />
+              </div>
             </Link>
           ))}
+          <div className={style.container_card_link}>
+            <span className={style.title}>Ver más</span>
+            <IoAddCircleOutline className={style.icon} />
+          </div>
         </div>
         <Link
           style={{ color: "white", textDecoration: "none" }}
