@@ -17,6 +17,7 @@
 .header {
   width: 100vw;
   height: 75vh;
+  position: sticky;
   top: 0;
   left: 0;
   background-size: cover;
@@ -32,7 +33,6 @@
   width: 100vw;
   min-height: 50vh;
   height: auto;
-  border-radius: 5px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
@@ -96,6 +96,7 @@
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 -4px 20px rgb(0, 0, 0);
 }
 
 .singleRowContainer {
@@ -132,10 +133,10 @@
 }
 @media (max-width: 500px) {
   .header {
-    height: 80vh;
+    height: 100vh;
   }
   .twoColumnsContainer {
-    height: 30vh;
+    height: 50vh;
   }
   .singleRowContainer {
     height: 50vh;
