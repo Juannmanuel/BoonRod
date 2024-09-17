@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
     <section className={style.featureBlock_main} data-section={section}>
-      <img className={style.img_hotSale} src={imageHotSale} alt="20%OFF" />
+      {/* <img className={style.img_hotSale} src={imageHotSale} alt="20%OFF" /> */}
       <div className={style.container}>
         <div className={style.heading}>
           <h2>{title}</h2>
@@ -37,7 +37,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
           <div className={style.btnAction}>Ver catalogo</div>
         </Link>
       </div>
-      <img className={style.img_hotSale} src={imageHotSale} alt="20%OFF" />
+      {/* <img className={style.img_hotSale} src={imageHotSale} alt="20%OFF" /> */}
     </section>
   );
 }

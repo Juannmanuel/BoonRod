@@ -61,7 +61,7 @@
   color: rgb(243, 243, 243);
   font-size: 1rem;
   font-family: "Roboto Slab", serif;
-  font-weight: 400;
+  font-weight: var( --font-weight-small);
   max-width: 90%;
   z-index: 4;
   margin-left: 1rem;
@@ -133,6 +133,12 @@
   .singleRowContainer {
     height: 85vh;
   }
+  .title {
+    font-size: 5rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 500px) {
   .header {
@@ -143,5 +149,11 @@
   }
   .singleRowContainer {
     height: 50vh;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .description {
+    font-size: 1rem;
   }
 }

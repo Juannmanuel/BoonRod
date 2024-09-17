@@ -27,5 +27,5 @@ img {
   /* Pesos de fuente */
   --font-weight-big: 800; /* Título */
   --font-weight-medium: 600; /* Subtítulo */
-  --font-weight-small: 400; /* Párrafo */
+  --font-weight-small: 300; /* Párrafo */
 }
