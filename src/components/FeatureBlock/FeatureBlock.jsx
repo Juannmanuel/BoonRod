@@ -17,7 +17,8 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
         <div className={style.description}>{description}</div>
         <div className={style.carousel}>
           {sectionProducs.map((item, index) => (
-            <Link to={`/detalle/${item.id}`} style={{ textDecoration: "none" }}>
+            <Link key={index} to={`/detalle/${item.id}`} style={{ textDecoration: "none" }}>
+              <div className={style.container_card}>
               <Card
                 key={index}
                 title={item.name}
@@ -25,6 +26,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
                 description={item.description}
                 images={item.images[0]}
               />
+            </div>
             </Link>
           ))}
         </div>

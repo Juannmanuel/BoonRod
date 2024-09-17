@@ -151,9 +151,9 @@ function Home({}) {
       </section>
       <section data-section="CATÁLOGO">
         <FeatureBlock
-          title={"Outfits de la Parte Superior"}
+          title={"Tendencias Urbanas que Rompen Esquemas"}
           description={
-            "Prendas cómodas y con estilo, diseñadas para destacar en cualquier ocasión."
+            "Explorá lo último en moda urbana para destacar en la ciudad. Prendas pensadas para marcar tu estilo sin límites."
           }
           sectionProducs={outfitUp}
           section={"CATÁLOGO"}
