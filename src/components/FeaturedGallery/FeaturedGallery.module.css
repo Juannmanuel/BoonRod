@@ -149,10 +149,10 @@
     height: 100vh;
   }
   .twoColumnsContainer {
-    height: 50vh;
+    height: 40vh;
   }
   .singleRowContainer {
-    height: 50vh;
+    height: 60vh;
   }
   .title {
     font-size: 4rem;

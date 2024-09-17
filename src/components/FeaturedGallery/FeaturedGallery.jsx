@@ -37,12 +37,6 @@ function FeaturedGallery({ images, section, buttonText, description }) {
         <img src={images[3]} alt="" />
         {/* <IoAddCircleOutline className={style.icon} /> */}
       </div>
-      <div className={style.twoColumnsContainer}>
-        <img src={images[1]} alt="" />
-        {/* <IoAddCircleOutline className={style.icon} /> */}
-        <img src={images[2]} alt="" />
-        {/* <IoAddCircleOutline className={style.icon} /> */}
-      </div>
     </div>
   );
 }
