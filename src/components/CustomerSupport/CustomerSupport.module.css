@@ -68,15 +68,23 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   font-family: var(--font-subtitle);
-  font-size: var(--font-size-subtitle);
-  font-weight: var(--font-weight-medium);
-}
+  font-size: var( --text-medium);
+  font-weight: var(--font-weight-small);
+  transition: height 1s ease, transform 1s ease;
 
+}
 .faqContent {
+  max-height: 0; /* Escondido por defecto */
+  overflow: hidden;
+  transition: max-height 10s ease; /* Animación de altura */
   font-size: 1.2rem;
-  padding: .8rem;
-  margin: 0 auto;
+  padding: 0 .8rem;
   font-family: var(--font-paragraph);
   font-size: var(--text-small);
   font-weight: var(--font-weight-small);
+}
+
+details[open] .faqContent {
+  max-height: 300px; /* Ajusta la altura máxima según tu contenido */
+
 }

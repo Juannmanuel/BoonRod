@@ -1,6 +1,7 @@
 import styles from "./CustomerSupport.module.css";
 import { BsWhatsapp, BsClock, BsEnvelopeAt, BsArrowDown } from "react-icons/bs";
 const CustomerSupport = () => {
+
   return (
     <div className={styles.contactInfoContainer}>
       <h2 className={styles.title}>Atencion al Cliente</h2>

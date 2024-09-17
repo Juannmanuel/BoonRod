@@ -173,9 +173,9 @@ function Home({}) {
       <section data-section="CATÁLOGO">
         <FeatureBlock
           section={"CATÁLOGO"}
-          title={"Outfits de la Parte Inferior"}
+          title={"Ofertas que Marcan Tendencia"}
           description={
-            "Elige los mejores complementos para tu look urbano con nuestra selección de ropa y calzado."
+            "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
           }
           sectionProducs={outfitDown}
         />
