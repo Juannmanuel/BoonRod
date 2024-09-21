@@ -23,7 +23,7 @@
 .icon {
   position: absolute;
   left: 50%;
-  top: 65%;
+  bottom: 5.5rem;
   transform: translate(-50%);
   color: rgba(0, 0, 0, 0.798);
   background-color: rgba(255, 255, 255, 0.533);

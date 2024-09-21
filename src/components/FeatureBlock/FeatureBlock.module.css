@@ -9,10 +9,11 @@
   align-items: center;
   background-color: var(--color-white-medium);
   position: relative;
+  padding: 2rem 0;
 }
 .container {
   width: 90vw;
-  height: 80vh;
+  height: auto;
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
