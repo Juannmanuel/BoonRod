@@ -24,7 +24,8 @@
 .product_price_percentage {
   color: white;
   background-color: rgba(0, 0, 0, 0.762);
-  padding: 5px;
+  font-size: 1rem;
+  padding: 3px;
 }
 .product_price_normal {
   color: green;
