@@ -1,33 +1,28 @@
-.product_price{
-    display: flex;
-    margin-left: .5rem;
+.product_price {
+  display: flex;
+  margin-left: 0.5rem;
 }
-.product_price_details{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-
-
+.product_price_details {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
-.product_price_original{
-    color: red;
-    text-decoration: line-through;
-
-
+.product_price_original {
+  color: red;
+  text-decoration: line-through;
+  font-size: .8rem;
 }
-.product_price_discounted{
-    color: green;
-
+.product_price_discounted {
+  color: green;
 }
-.product_price_percentage{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.762);
-    padding: 2px;
+.product_price_percentage {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.762);
+  font-size: 0.8rem;
+  padding: 3px;
 }
-.product_price_normal{
-    color: green;
-    font-size: 1.2rem;
-
+.product_price_normal {
+  color: green;
 }
