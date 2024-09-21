@@ -1,28 +1,33 @@
 .product_price {
   display: flex;
   margin-left: 0.5rem;
+  height: 1rem;
 }
 .product_price_details {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: start;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0 0.8rem;
 }
 .product_price_original {
   color: red;
   text-decoration: line-through;
-  font-size: .8rem;
+  font-size: 1rem;
+
 }
 .product_price_discounted {
   color: green;
+  font-size: 1.2rem;
+
 }
 .product_price_percentage {
   color: white;
   background-color: rgba(0, 0, 0, 0.762);
-  font-size: 0.8rem;
-  padding: 3px;
+  padding: 5px;
 }
 .product_price_normal {
   color: green;
+  font-size: 1.2rem;
+
 }

@@ -36,7 +36,8 @@
   margin-left: 0.5rem;
   font-size: 1rem;
   font-family: "Barlow Condensed", sans-serif;
-  font-family: "Barlow Condensed", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: 400;
   font-style: normal;
   height: auto;
