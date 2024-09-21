@@ -20,12 +20,17 @@ img {
   --font-subtitle: font-family: "Hind Siliguri", sans-serif;
   --font-paragraph: font-family: "Dosis", sans-serif;
   /* Tamaños de fuente */
-  --text-big: 2rem; /* Título */
-  --text-medium: 1rem; /* Subtítulo */
-  --text-small: .9rem; /* Párrafo */
+  --text-big: 2.3rem; /* Título */
+  --text-medium: 1.5rem; /* Subtítulo */
+  --text-small: 1rem; /* Párrafo */
   
   /* Pesos de fuente */
   --font-weight-big: 800; /* Título */
   --font-weight-medium: 600; /* Subtítulo */
   --font-weight-small: 300; /* Párrafo */
+
+  --color-white-big: #fbfcfc; /* Título */
+  --color-white-medium: #f7f9f9; /* Subtítulo */
+  --color-white-small: #f4f6f7; /* Párrafo */
+
 }

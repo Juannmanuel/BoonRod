@@ -3,10 +3,14 @@ import styles from "./LaNavbar.module.css";
 import boonrodText from "../../assets/images/logo/logo_tipografia_boonrod_claro.png";
 import { IoMenu } from "react-icons/io5";
 import { CiShoppingCart } from "react-icons/ci";
+import { useSelector } from "react-redux";
+const LaNavbar = ({ currentSection, sectionRef }) => {
+  const isScrollingUp = useSelector((state) => state.isScrollingUp);
+  console.log(currentSection, isScrollingUp, "nav");
 
-const LaNavbar = ({ isScrollingUp, currentSection, sectionRef }) => {
   return (
     <nav
+      data-section="Hola"
       ref={sectionRef}
       className={
         isScrollingUp

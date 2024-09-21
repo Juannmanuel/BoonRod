@@ -19,7 +19,7 @@ function RecommendedProducts({ section }) {
     >
       {products?.map((item, index) => (
         <Link style={{textDecoration: "none"}} key={index} to={`/detalle/${item.id}`}>
-          <Card section={section} images={item.images[0]} title={item.name} price={item.price} />
+          <Card section={section} images={item.images[0]} title={item.name} price={item.price} percentage={item.discount.percentage} isDiscounted={item.discount.isDiscounted}  />
         </Link>
       ))}
     </section>

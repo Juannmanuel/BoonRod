@@ -10,13 +10,15 @@ import DesktopView from "./components/DesktopView/DesktopView"; // Asegurate de 
 import CustomerSupport from "./components/CustomerSupport/CustomerSupport";
 import FeatureBlock from "./components/FeatureBlock/FeatureBlock";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductsByCategory } from "./redux/actions";
+import { getProductsByCategory, getAllSections } from "./redux/actions";
+import Dashboard from "./pages/Dashboard/dashboard";
+import ProductForm from "./pages/Dashboard/dashboard";
 function App() {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 780);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProductsByCategory());
+
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 780); // Actualiza el estado si la pantalla es menor o igual a 780px
     };
@@ -26,10 +28,12 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize); // Limpia el evento al desmontar el componente
     };
-  }, []);
+  }, [dispatch]);
 
-  const products = useSelector((state) => state.products);
-  console.log(products);
+  let products = useSelector((state) => state.products);
+  let sections = useSelector((state) => state.sections);
+  console.log(products, "products");
+  console.log(sections, "sections");
 
   return (
     <div className="App">
@@ -46,10 +50,11 @@ function App() {
         />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/detalle/:id" element={<Detail />} />
-        {/* <Route
+        <Route
           path="/louder"
+          element={<ProductForm/>}
 
-        /> */}
+        />
       </Routes>
     </div>
   );

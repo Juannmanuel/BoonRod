@@ -9,11 +9,11 @@ import imgTC4 from "../../assets/images/Tarjetas/visa.png";
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import Footer from "../Footer/Footer";
 import Louder from "../Louder/Louder.jsx";
+import ProductPrice from "../ProductPrice/ProductPrice.jsx";
 
-function TarjetaDetalle({ expanded, name, price, description, sizes }) {
+function TarjetaDetalle({ expanded, name, price, description, sizes, percentage, isDiscounted  }) {
   const { id } = useParams();
   const product = products.filter((item) => item.id == id);
-
 
   const tarjetaRef = useRef(null);
   useEffect(() => {
@@ -30,22 +30,22 @@ function TarjetaDetalle({ expanded, name, price, description, sizes }) {
       ref={tarjetaRef}
       className={expanded ? style.tarjeta_main_expanding : style.tarjeta_main}
     >
-      <div className={style.shadow}></div>
       <div className={style.productHeader}>
         <h2 className={style.productName}>{name}</h2>
         <div className={style.priceContainer}>
-          {discount > 0 && (
-            <span className={style.productPriceOriginal}>${price}</span>
-          )}
           <span className={style.productPriceDiscounted}>
-            ${discount > 0 ? discountedPrice : price}
+            <ProductPrice
+            price={price}
+            isDiscounted={isDiscounted}
+            percentage={percentage}
+            />
           </span>
         </div>
         <p className={style.productDescription}>{description}</p>
       </div>
-      <div className={style.line}></div>
+
       <div className={style.productSizes}>
-        <span>¿Qué talle buscas?</span>
+        <span className={style.title_sizes}>¿Qué talle buscas?</span>
         <div className={style.sizes}>
           {sizes.map((item, index) => (
             <span key={index} className={style.size}>
@@ -54,7 +54,10 @@ function TarjetaDetalle({ expanded, name, price, description, sizes }) {
           ))}
         </div>
       </div>
-      <div className={style.line}></div>
+      <div className={style.productActions_btn}>
+        <button>Añadir al carrito</button>
+        <button>Comprar ahora</button>
+      </div>
 
       <div className={style.cash_media}>
         <span style={{ margin: "0" }}>Medios de pago</span>
@@ -63,11 +66,6 @@ function TarjetaDetalle({ expanded, name, price, description, sizes }) {
             <img className={style.imgCard} key={index} src={item} />
           ))}
         </div>
-      </div>
-
-      <div className={style.productActions_btn}>
-        <button>Añadir al carrito</button>
-        <button>Comprar ahora</button>
       </div>
 
       <div className={style.reccomended}>

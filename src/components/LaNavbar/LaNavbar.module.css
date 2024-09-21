@@ -7,9 +7,9 @@
   top: 0;
   z-index: 3;
   pointer-events: none;
-  background-color: rgb(255, 255, 255);
+  background-color: #f7f9f9ac;
   backdrop-filter: blur(5px);
-  transition: background-color 1.5s, top 1.5s;
+  transition: background-color .5s, top .5s;
 }
 
 .nav_main_container_withBackground {
@@ -27,7 +27,7 @@
 .nav_actions_container {
   width: 90vw;
   margin: auto;
-  height: 3rem;
+  height: 5vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

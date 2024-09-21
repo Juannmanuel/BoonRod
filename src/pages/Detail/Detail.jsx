@@ -19,26 +19,11 @@ function Detail() {
   const { id } = useParams();
   useEffect(() => {}, [id]);
   const product = products.filter((item) => item.id == id);
-  let imagenes = [
-    imagenModelo1,
-    imagenModelo2,
-    imagenModelo3,
-    imagenModelo4,
-    imagenPrenda1,
-    ,
-    imagenPrenda2,
-    imagenPrenda3,
-  ];
+console.log(product[0].discount.isDiscounted, "DEtalle");
+
   return (
     <section className={style.detail_main}>
-      <nav className={style.navbar}>
-        <IoMenu className={style.menu_icon} />
-        <Link to={"/"}>
-          <img src={logo} alt="Logo de la tienda" className={style.logo} />
-        </Link>
-
-        <CiSearch className={style.menu_icon} />
-      </nav>
+      
       <Swiper
         className={style.carousel}
         direction="vertical"
@@ -69,6 +54,9 @@ function Detail() {
         price={product[0].price}
         description={product[0].description}
         sizes={product[0].sizes}
+        isDiscounted={product[0].discount.isDiscounted}
+        percentage={product[0].discount.percentage}
+
       />
     </section>
   );

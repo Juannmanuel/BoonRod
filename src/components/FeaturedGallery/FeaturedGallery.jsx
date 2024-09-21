@@ -1,42 +1,51 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { IoAddCircleOutline } from "react-icons/io5";
 import logo from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import style from "./FeaturedGallery.module.css";
 import FeatureBlock from "../FeatureBlock/FeatureBlock";
+import { products } from "../../data";
 
-function FeaturedGallery({ images, section, buttonText, description }) {
+function FeaturedGallery({ sections }) {
+  console.log(sections, "fea");
+
   return (
-    <div className={style.home_container} id={section.section}>
+    <div className={style.home_container} id={sections?.id}>
       <div
         className={style.header}
-        style={{ backgroundImage: `url(${images[0]})` }}
+        style={{ backgroundImage: `url(${sections?.images[0]})` }}
       >
         <div className={style.container_logo}>
           <img className={style.logo} src={logo} alt="boonrod" />
         </div>
         <div className={style.card}>
-          <h2 className={style.title}>{section}</h2>
+          <h2 className={style.title}>{sections?.title}</h2>
 
-          <p className={style.description}>{description}</p>
+          <p className={style.description}>{sections?.description}</p>
           <Link
             to={`/catalogo`}
             style={{ textDecoration: "none" }}
             className={style.btnAction}
           >
-            {buttonText}
+            {sections?.buttonText}
           </Link>
         </div>
       </div>
       <div className={style.twoColumnsContainer}>
-        <img src={images[1]} alt="" />
-        {/* <IoAddCircleOutline className={style.icon} /> */}
-        <img src={images[2]} alt="" />
-        {/* <IoAddCircleOutline className={style.icon} /> */}
+        <img src={sections.images[1]} alt="" />
+        <img src={sections.images[2]} alt="" />
       </div>
       <div className={style.singleRowContainer}>
-        <img src={images[3]} alt="" />
-        {/* <IoAddCircleOutline className={style.icon} /> */}
+        <img src={sections.images[3]} alt="" />
       </div>
+      <FeatureBlock
+        section={"CATÁLOGO"}
+        title={"Ofertas que Marcan Tendencia"}
+        description={
+          "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
+        }
+        sectionProducs={products}
+      />
     </div>
   );
 }

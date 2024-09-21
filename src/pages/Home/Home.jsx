@@ -1,54 +1,47 @@
 import { useState, useRef, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setScrollDirection, setCurrentSection } from "../../redux/actions";
 import style from "./Home.module.css";
-import Covers from "../../components/Covers/Covers";
-import Navbar from "../../components/Navbar/Navbar";
-import Louder from "../../components/Louder/Louder";
-import RecommendedProducts from "../../components/RecommendedProducts/RecommendedProducts";
-
-/* Imágenes */
-import imgF1 from "../../assets/images/Categorias/footer/1.jpg";
-import imgF2 from "../../assets/images/Categorias/footer/2.jpg";
-import imgF3 from "../../assets/images/Categorias/footer/3.jpg";
-import imgF4 from "../../assets/images/Categorias/footer/4.jpg";
-import imgF5 from "../../assets/images/Categorias/footer/5.jpg";
-import imgF6 from "../../assets/images/Categorias/footer/6.jpg";
-/*hotsale*/
-import imgD1 from "../../assets/images/Categorias/hotSale/1.jpg";
-import imgD2 from "../../assets/images/Categorias/hotSale/2.jpg";
-import imgD3 from "../../assets/images/Categorias/hotSale/3.jpg";
-import imgD4 from "../../assets/images/Categorias/hotSale/4.jpg";
-import imgD5 from "../../assets/images/Categorias/hotSale/5.jpg";
-import imgD6 from "../../assets/images/Categorias/hotSale/6.jpg";
-/*new collection*/
-import imgC1 from "../../assets/images/Categorias/newCollection/1.jpg";
-import imgC2 from "../../assets/images/Categorias/newCollection/2.jpg";
-import imgC3 from "../../assets/images/Categorias/newCollection/3.jpg";
-import imgC4 from "../../assets/images/Categorias/newCollection/4.jpg";
-import imgC5 from "../../assets/images/Categorias/newCollection/5.jpg";
-import imgC6 from "../../assets/images/Categorias/newCollection/6.jpg";
 import { products } from "../../data";
 import FeaturedGallery from "../../components/FeaturedGallery/FeaturedGallery";
 import FeatureBlock from "../../components/FeatureBlock/FeatureBlock";
-import NavbarMovile from "../../components/NavbarMovile/NavbarMovile";
 import Footer from "../../components/Footer/Footer";
 import About from "../About/About";
 import CustomerSupport from "../../components/CustomerSupport/CustomerSupport";
 import LaNavbar from "../../components/LaNavbar/LaNavbar";
-
+import { getProductsByCategory, getAllSections } from "../../redux/actions";
 function Home({}) {
+  const dispatch = useDispatch();
+  const sections = useSelector((state) => state.backUpSections);
+  console.log(sections, "sections home");
+  /*
+
+id: "strin";_
+description: "string";
+buttonText: "string";
+images: [4];
+sectionName: "string"
+title: "string"
+
+  
+  */
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
 
   useEffect(() => {
+    dispatch(getProductsByCategory());
+    dispatch(getAllSections());
     const handleScroll = () => {
       const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
 
       if (currentScrollTop < lastScrollTop) {
         setIsScrollingUp(true); // Scroll hacia arriba
+        dispatch(setScrollDirection(isScrollingUp));
       } else {
         setIsScrollingUp(false); // Scroll hacia abajo
+        dispatch(setScrollDirection(isScrollingUp));
       }
 
       // Actualizar la posición del scroll anterior
@@ -67,6 +60,7 @@ function Home({}) {
         }
       });
       setCurrentSection(foundSection); // Actualizar la sección actual
+      // dispatch(setCurrentSection(currentSection))
     };
 
     const sectionEl = sectionRef.current;
@@ -81,107 +75,20 @@ function Home({}) {
         sectionEl.removeEventListener("scroll", handleScroll);
       }
     };
-  }, [lastScrollTop]);
-
-  /*Funcion para filtrar los productos */
-  let outfitUp = products.filter(
-    (item) =>
-      item.type == "Remera" || item.type == "Campera" || item.type == "Buzo"
-  );
-
-  /*Funcion para filtrar los productos */
-
-  let outfitDown = products.filter(
-    (item) => item.type == "Pantalon" || item.type == "Zapatillas"
-  );
-  console.log(outfitDown);
-  /* Objeto de las secciones */
-
-  const sectionsObj = [
-    {
-      section: "NEW COLLECTION",
-      buttonText: "Explorar",
-      images: [imgC1, imgC2, imgC3, imgC4, imgC5, imgC6],
-      title: "Nuevas colecciones disponibles.",
-      description:
-        "Explora nuestras últimas colecciones y mantente al día con las tendencias urbanas más recientes.",
-    },
-    {
-      section: "HOT SALE",
-      buttonText: "Hasta 30% OFF",
-      images: [imgD1, imgD2, imgD3, imgD4, imgD5, imgD6],
-      title: "Nuestras ofertas exclusivas.",
-      description:
-        "Aprovecha las mejores ofertas y actualiza tu guardarropa sin gastar de más.",
-    },
-    {
-      section: "LOOKBOOK",
-      buttonText: "Inspírate",
-      images: [imgF1, imgF2, imgF3, imgF4, imgF5, imgF6],
-      title: "Inspírate con nuestro Lookbook.",
-      description:
-        "Encuentra las mejores combinaciones y estilos para llevar la moda urbana a otro nivel.",
-    },
-  ];
-
-  // const [isLouding, setIsLouding] = useState(true);
-  // setTimeout(() => {
-  //   setIsLouding(false);
-  // }, 4000);
+  }, [lastScrollTop, dispatch]);
+  console.log(sections[0], "fe  a");
 
   return (
     <section ref={sectionRef} className={style.home_main}>
-      {/* <Navbar
-        sectionRef={sectionRef}
-        isScrollingUp={isScrollingUp}
-        currentSection={currentSection}
-      /> */}
-      <LaNavbar
-        sectionRef={sectionRef}
-        isScrollingUp={isScrollingUp}
-        currentSection={currentSection}
-      />
-      <section data-section="NEW COLLECTION">
-        <FeaturedGallery
-          images={sectionsObj[0].images}
-          section={sectionsObj[0].section}
-          buttonText={sectionsObj[0].buttonText}
-          description={sectionsObj[0].description}
-        />
-      </section>
-      <section data-section="CATÁLOGO">
-        <FeatureBlock
-          title={"Tendencias Urbanas que Rompen Esquemas"}
-          description={
-            "Explorá lo último en moda urbana para destacar en la ciudad. Prendas pensadas para marcar tu estilo sin límites."
-          }
-          sectionProducs={outfitUp}
-          section={"CATÁLOGO"}
-        />
-      </section>
-      <section data-section="SOBRE NOSOTROS">
-        <About />
-      </section>
-      <section data-section="LOOKBOOK">
-        <FeaturedGallery
-          images={sectionsObj[2].images}
-          section={sectionsObj[2].section}
-          buttonText={sectionsObj[2].buttonText}
-          description={sectionsObj[2].description}
-        />
-      </section>
-      <section data-section="CATÁLOGO">
-        <FeatureBlock
-          section={"CATÁLOGO"}
-          title={"Ofertas que Marcan Tendencia"}
-          description={
-            "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
-          }
-          sectionProducs={outfitDown}
-        />
-      </section>
-      <CustomerSupport />
-      <Footer />
+      <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
+      {sections.map((item, index) => {
+        return (
+          <section id={index} data-section={item.sectionName}>
+            <FeaturedGallery sections={item} />
+          </section>
+        );
+      })}
+      <Footer/>
     </section>
   );
 }

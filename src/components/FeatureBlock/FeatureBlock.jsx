@@ -9,14 +9,14 @@ import { IoAddCircleOutline } from "react-icons/io5";
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
     <section className={style.featureBlock_main} data-section={section}>
-      {/* <img className={style.img_hotSale} src={imageHotSale} alt="20%OFF" /> */}
+      <div className={style.wave_container}></div>
       <div className={style.container}>
         <div className={style.heading}>
           <h2>{title}</h2>
+          <div className={style.description}>{description}</div>
         </div>
-        <div className={style.description}>{description}</div>
         <div className={style.carousel}>
-          {sectionProducs.slice(0, 4).map((item, index) => (
+          {sectionProducs.slice(0, 6).map((item, index) => (
             <Link
               key={index}
               to={`/detalle/${item.id}`}
@@ -35,7 +35,9 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
           ))}
           <div className={style.container_card_link}>
             <span className={style.title}>Ver más</span>
-            <IoAddCircleOutline className={style.icon} />
+            <Link  to={"/catalogo"}>
+              <IoAddCircleOutline className={style.icon} />
+            </Link>
           </div>
         </div>
         <Link

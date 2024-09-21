@@ -1,7 +1,8 @@
 import style from "./Card.module.css";
 import imagen from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.jpg";
 import { IoAddCircleOutline } from "react-icons/io5";
-function Card({ images, title, price, description }) {
+import ProductPrice from "../ProductPrice/ProductPrice";
+function Card({ images, title, price, description,percentage, isDiscounted  }) {
   const {models} = images
   
   
@@ -13,7 +14,11 @@ function Card({ images, title, price, description }) {
       <span className={style.description}>
         {description}
       </span>
-      <span className={style.price}>{price}EUR</span>
+      <ProductPrice
+      price={price}
+      percentage={percentage}
+      isDiscounted={isDiscounted}
+      />
     </div>
   );
 }

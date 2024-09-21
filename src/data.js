@@ -290,6 +290,28 @@ import bucket3 from "../src/assets/images/imagesProductsAndModels/product-44/pro
 
 
 
+/*Ejemplo Product*/
+/*
+id:,
+name: "",
+categoryProduct: "Pantalon, remera"
+price: number;
+size: [],
+inStock: boolean,
+discount: boolean
+categories: []
+images []
+discountPercentage: number
+description: ""
+
+Ejemplo  Section
+id
+sectionName
+buttonText
+images
+title
+description
+*/
 
 
 export const products = [
@@ -297,7 +319,7 @@ export const products = [
     id: 1,
     name: "CAMISETA BOXY FIT",
     type: "Remera",
-    price: "15,95",
+    price: "18900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
@@ -313,11 +335,11 @@ export const products = [
     id: 2,
     name: "BERMUDA JOGGER LAVADA",
     type: "Pantalon",
-    price: "19,95",
+    price: "35000",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Novedades"],
@@ -329,7 +351,7 @@ export const products = [
     id: 3,
     name: "BERMUDA VISCOSA - LINO",
     type: "Pantalon",
-    price: "28,95",
+    price: "24700",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
@@ -345,7 +367,7 @@ export const products = [
     id: 4,
     name: "BERMUDA DENIM BÁSICA",
     type: "Pantalon",
-    price: "20,95",
+    price: "20900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
@@ -361,7 +383,7 @@ export const products = [
     id: 5,
     name: "JEANS SLIM FIT",
     type: "Pantalon",
-    price: "20,95",
+    price: "24900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
@@ -377,7 +399,7 @@ export const products = [
     id: 6,
     name: "JEANS SLIM FIT",
     type: "Pantalon",
-    price: "20,95",
+    price: "26900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
@@ -393,7 +415,7 @@ export const products = [
     id: 7,
     name: "BERMUDA CHINO ESTRUCTURA",
     type: "Pantalon",
-    price: "20,95",
+    price: "28900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
@@ -409,7 +431,7 @@ export const products = [
     id: 8,
     name: "BERMUDA DENIM COLOR",
     type: "Pantalon",
-    price: "20,95",
+    price: "29900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
@@ -425,12 +447,12 @@ export const products = [
     id: 9,
     name: "BERMUDA DENIM CARGO",
     type: "Pantalon",
-    price: "20,95",
+    price: "29900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
-      isDiscounted: true,
-      percentage: 20
+      isDiscounted: false,
+      percentage: 15
     },
     categories: ["Novedades", "Hot Sale"],
     images: [{ models: [bermudaDeminCargo1, bermudaDeminCargo2, bermudaDeminCargo3, bermudaDeminCargo4], products: [bermudaDeminCargo5, bermudaDeminCargo6, bermudaDeminCargo7] }],
@@ -441,11 +463,11 @@ export const products = [
     id: 10,
     name: "PANTALÓN CARGO RELAXED FIT",
     type: "Pantalon",
-    price: "35,95",
+    price: "40900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Novedades", "Hot Sale"],
@@ -457,12 +479,12 @@ export const products = [
     id: 11,
     name: "PANTALÓN CARGO",
     type: "Pantalon",
-    price: "29,95",
+    price: "42900",
     sizes: ["36", "38", "40", "42", "44", "46"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 35
     },
     categories: ["Novedades", "Hot Sale"],
     images: [{ models: [pantalonCargo1, pantalonCargo2, pantalonCargo3, pantalonCargo4], products: [pantalonCargo5, pantalonCargo6, pantalonCargo7] }],
@@ -473,12 +495,12 @@ export const products = [
     id: 11,
     name: "CAMPERA DENIM BOXY FIT",
     type: "Campera",
-    price: "39,95",
+    price: "60900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 15
     },
     categories: ["Hot Sale"],
     images: [{ models: [camperaDeminBoxy1, camperaDeminBoxy2, camperaDeminBoxy3, camperaDeminBoxy4], products: [camperaDeminBoxy5, camperaDeminBoxy6, camperaDeminBoxy7] }],
@@ -489,12 +511,12 @@ export const products = [
     id: 12,
     name: "CAMPERA DENIM BOXY FIT",
     type: "Campera",
-    price: "39,95",
+    price: "75900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 40
     },
     categories: ["Hot Sale"],
     images: [{ models: [camperaDeminBoxyFit1, camperaDeminBoxyFit2, camperaDeminBoxyFit3, camperaDeminBoxyFit4], products: [camperaDeminBoxyFit5, camperaDeminBoxyFit6, camperaDeminBoxyFit7] }],
@@ -505,12 +527,12 @@ export const products = [
     id: 13,
     name: "SOBRECAMISA DENIM CROPPED FIT",
     type: "Campera",
-    price: "39,95",
+    price: "75900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 40
     },
     categories: ["Hot Sale"],
     images: [{ models: [deminCropped1, deminCropped2, deminCropped3, deminCropped4], products: [deminCropped5, deminCropped6, deminCropped7] }],
@@ -521,12 +543,12 @@ export const products = [
     id: 14,
     name: "CAMPERA ACOLCHADA LIGERA",
     type: "Campera",
-    price: "35,95",
+    price: "78900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 40
     },
     categories: ["Hot Sale"],
     images: [{ models: [acolchada1, acolchada2, acolchada3, acolchada4], products: [acolchada5, acolchada6, acolchada7] }],
@@ -537,11 +559,11 @@ export const products = [
     id: 15,
     name: "CAMPERA ACOLCHADA LIGERA",
     type: "Campera",
-    price: "35,95",
+    price: "90000",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -553,12 +575,12 @@ export const products = [
     id: 16,
     name: "CAMPERA TÉCNICA CONTRASTE",
     type: "Campera",
-    price: "35,95",
+    price: "69900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 10
     },
     categories: ["Hot Sale"],
     images: [{ models: [camperaTec1, camperaTec2, camperaTec3, camperaTec4], products: [camperaTec5, camperaTec6, camperaTec7] }],
@@ -569,11 +591,11 @@ export const products = [
     id: 17,
     name: "CAZADORA BOMBER",
     type: "Campera",
-    price: "49,95",
+    price: "79900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -585,12 +607,12 @@ export const products = [
     id: 18,
     name: "CAZADORA EFECTO PIEL LAVADA",
     type: "Campera",
-    price: "59,95",
+    price: "46900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 10
     },
     categories: ["Hot Sale"],
     images: [{ models: [pielLavada1, pielLavada2, pielLavada3, pielLavada4], products: [pielLavada5, pielLavada6, pielLavada7] }],
@@ -601,12 +623,12 @@ export const products = [
     id: 19,
     name: "CAZADORA EFECTO ANTE PARCHES",
     type: "Campera",
-    price: "49,95",
+    price: "46900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 10
     },
     categories: ["Hot Sale"],
     images: [{ models: [anteParche1, anteParche2, anteParche3, anteParche4], products: [anteParche5, anteParche6, anteParche7] }],
@@ -617,11 +639,11 @@ export const products = [
     id: 20,
     name: "POLO PUNTO RAYAS",
     type: "Buzo",
-    price: "35,95",
+    price: "46900",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -633,11 +655,11 @@ export const products = [
     id: 21,
     name: "POLO PUNTO ALGODÓN",
     type: "Buzo",
-    price: "29,95",
+    price: "49900",
     sizes: ["M", "L", "XL"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -649,11 +671,11 @@ export const products = [
     id: 22,
     name: "POLO PUNTO MEZCLA VISCOSA",
     type: "Buzo",
-    price: "29,95",
+    price: "49900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -665,12 +687,12 @@ export const products = [
     id: 23,
     name: "POLO CUELLO CONTRASTE",
     type: "Buzo",
-    price: "27,95",
+    price: "63900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 40
     },
     categories: ["Hot Sale"],
     images: [{ models: [cuelloContraste1, cuelloContraste2, cuelloContraste3, cuelloContraste4], products: [cuelloContraste5, cuelloContraste6, cuelloContraste7] }],
@@ -681,11 +703,11 @@ export const products = [
     id: 24,
     name: "POLO PUNTO ESTRUCTURA",
     type: "Buzo",
-    price: "27,95",
+    price: "49900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -697,7 +719,7 @@ export const products = [
     id: 25,
     name: "POLO PUNTO CANALÉ",
     type: "Buzo",
-    price: "29,95",
+    price: "49900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
@@ -713,7 +735,7 @@ export const products = [
     id: 26,
     name: "CAMISETA TEXTO ESTAMPADO",
     type: "Remera",
-    price: "19,95",
+    price: "48900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
@@ -729,7 +751,7 @@ export const products = [
     id: 27,
     name: "CAMISETA JACQUARD RAYAS",
     type: "Remera",
-    price: "25,95",
+    price: "48900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
@@ -745,7 +767,7 @@ export const products = [
     id: 28,
     name: "CAMISETA BORDADO COMBINADO",
     type: "Remera",
-    price: "19,95",
+    price: "48900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
@@ -761,7 +783,7 @@ export const products = [
     id: 29,
     name: "CAMISETA BÁSICA HEAVY WEIGHT",
     type: "Remera",
-    price: "15,95",
+    price: "36900",
     sizes: ["S","M", "L", "XL"],
     inStock: true,
     discount: {
@@ -777,11 +799,11 @@ export const products = [
     id: 30,
     name: "ZAPATILLA CASUAL",
     type: "Zapatillas",
-    price: "35,95",
+    price: "36900",
     sizes: ["39","40", "41", "42","43","44"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -793,12 +815,12 @@ export const products = [
     id: 31,
     name: "ZAPATILLA PIEL ESTILO RETRO",
     type: "Zapatillas",
-    price: "39,95",
+    price: "90900",
     sizes: ["39","40", "41", "42","43","44"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 25
     },
     categories: ["Hot Sale"],
     images: [{ models: [pielestilo1, pielestilo2, pielestilo3, pielestilo4], products: [pielestilo5, pielestilo6, pielestilo7] }],
@@ -809,12 +831,12 @@ export const products = [
     id: 32,
     name: "ZAPATILLA BÁSICA",
     type: "Zapatillas",
-    price: "25,95",
+    price: "90900",
     sizes: ["39","40", "41", "42","43","44"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 25
     },
     categories: ["Hot Sale"],
     images: [{ models: [basic1, basic2, basic3, basic4], products: [basic5, basic6, basic7] }],
@@ -825,11 +847,11 @@ export const products = [
     id: 33,
     name: "ZAPATILLA REJILLA",
     type: "Zapatillas",
-    price: "29,95",
+    price: "90900",
     sizes: ["39","40", "41", "42","43","44"],
     inStock: true,
     discount: {
-      isDiscounted: true,
+      isDiscounted: false,
       percentage: 20
     },
     categories: ["Hot Sale"],
@@ -841,12 +863,12 @@ export const products = [
     id: 34,
     name: "ZAPATILLA MULTICOLOR",
     type: "Zapatillas",
-    price: "39,95",
+    price: "90900",
     sizes: ["39","40", "41", "42","43","44"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 25
     },
     categories: ["Hot Sale"],
     images: [{ models: [multiColor1, multiColor2, multiColor3, multiColor4], products: [multiColor5, multiColor6, multiColor7] }],
@@ -857,12 +879,12 @@ export const products = [
     id: 35,
     name: "SOMBRERO BUCKET TÉCNICO",
     type: "Accesorios",
-    price: "17,95",
+    price: "34900",
     sizes: ["M","L"],
     inStock: true,
     discount: {
       isDiscounted: true,
-      percentage: 20
+      percentage: 10
     },
     categories: ["Hot Sale"],
     images: [{ models: [bucket1, bucket2], products: [bucket3] }],

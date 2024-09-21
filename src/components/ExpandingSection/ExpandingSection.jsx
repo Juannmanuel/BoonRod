@@ -3,7 +3,7 @@ import style from "./ExpandingSection.module.css";
 import DetailCard from "../DetailCard/DetailCard";
 import TarjetaDetalle from "../TarjetaDetalle/TarjetaDetalle";
 
-function ExpandingSection({name, price, description, sizes}) {
+function ExpandingSection({name, price, description, sizes ,isDiscounted,percentage  }) {
   
   const [startTouchY, setStartTouchY] = useState(0);
   const [currentTouchY, setCurrentTouchY] = useState(0);
@@ -51,12 +51,12 @@ function ExpandingSection({name, price, description, sizes}) {
       ref={sectionRef}
       className={style.expandingSection}
       style={{
-        height: expanded ? "80vh" : "20vh",
+        height: expanded ? "95vh" : "20vh",
       }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <TarjetaDetalle name={name} price={price} description={description} sizes={sizes} expanded={expanded} />
+      <TarjetaDetalle percentage={percentage} isDiscounted={isDiscounted} name={name} price={price} description={description} sizes={sizes} expanded={expanded} />
     </div>
   );
 }
