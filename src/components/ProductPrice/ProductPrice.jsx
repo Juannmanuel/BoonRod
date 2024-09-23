@@ -22,9 +22,6 @@ function ProductPrice({ price, percentage, isDiscounted }) {
           <span className={style.product_price_discounted} >
             ${discountedPrice}
           </span>
-          <span className={style.product_price_percentage} >
-            {percentage}% off
-          </span>
         </div>
       ) : (
         <span className={style.product_price_normal}>${price}</span>

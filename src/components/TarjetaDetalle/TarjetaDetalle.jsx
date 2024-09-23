@@ -72,7 +72,6 @@ function TarjetaDetalle({ expanded, name, price, description, sizes, percentage,
         <span style={{ margin: "0" }}>NUESTRAS RECOMENDACIONES</span>
         <RecommendedProducts />
       </div>
-      <div className={style.line}></div>
 
       <Footer />
     </section>

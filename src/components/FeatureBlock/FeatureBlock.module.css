@@ -1,7 +1,7 @@
 .featureBlock_main {
   width: 100vw;
   height: auto;
-  min-height: 90vh;
+  min-height: 95vh;
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
@@ -56,19 +56,20 @@
   overflow-x: scroll;
   overflow-y: hidden;
   height: auto;
+  min-height: 25rem;
+  max-height: 35rem;
   display: grid;
   grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
-  grid-auto-columns: 20rem; /* Ajusta el número de columnas */
   gap: 1rem;
-  padding: 1rem;
   margin-top: 2rem;
 }
 .container_card {
-  width: auto;
+  width: 16rem;
   height: 100%;
+
 }
 .container_card_link {
-  width: auto;
+  width: 16rem;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -106,7 +107,7 @@
   text-transform: uppercase;
 }
 .wave_container {
-  height: 30vh;
+  height: 28vh;
   width: 100vw;
   background-color: #000000;
   position: absolute;

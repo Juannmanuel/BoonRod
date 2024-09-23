@@ -1,24 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .card_main {
-  width: auto;
+  width: 100%;
   height: 100%;
-  min-width: 10rem;
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var( --color-white-small);
+  box-sizing: border-box; /* Incluye padding y border dentro de las dimensiones */
+}
+
+.container_carrousel {
+  width: 100%;
+  height: 80%; /* Cambié a un 70% para dar más espacio a la descripción */
+  position: relative; /* Para posicionar elementos dentro del contenedor, como el icono */
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+  object-fit: cover;
+
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translate(-50%, 0);
+  color: rgba(0, 0, 0, 0.798);
+  background-color: rgba(255, 255, 255, 0.533);
+  border-radius: 50%;
+  font-size: 1.7rem;
+}
+.flag_discount{
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: auto;
+  height: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: red;
+  box-shadow: 2px 4px 8px 0px rgba(0,0,0,0.6);
+}
+
+.description {
+  width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
+  height: auto;
+  min-height: 5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   justify-content: start;
+  align-items: flex-start;
+  gap: 0.2rem; /* Espacio entre los elementos internos */
+  margin-top: .5rem;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 400;
+  font-style: normal;
+  height: auto;
+  color: black;
+  margin-left: 0.5rem;
+}
+
+.text_discount{
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+
+}
+.description_text {
+  max-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  
+}
+/* .card_main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1.5fr .5fr;
   text-transform: uppercase;
   text-decoration: none;
   text-align: start;
   background-color: #f7f9f9;
   gap: 0.5rem;
+  border: 1px solid black;
 }
-.image {
+.container_carrousel{
   width: 100%;
-  height: 75%;
+  height: 100%;
+}
+.image{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+.description {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  height: 10rem;
 }
 .icon {
   position: absolute;
@@ -29,6 +130,25 @@
   background-color: rgba(255, 255, 255, 0.533);
   border-radius: 50%;
   font-size: 1.7rem;
+}
+.flag_discount{
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: auto;
+  height: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: red;
+}
+.text_discount{
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+
 }
 .title {
   overflow: hidden;
@@ -50,7 +170,7 @@
   font-weight: 200;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Cambia este valor para ajustar el número de líneas visibles */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   text-decoration: none;
@@ -64,4 +184,4 @@
   font-size: 0.9rem;
   margin-left: 0.5rem;
 
-}
+} */

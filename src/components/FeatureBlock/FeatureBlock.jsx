@@ -29,6 +29,10 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
                   price={item.price}
                   description={item.description}
                   images={item.images[0]}
+                  isDiscounted={item.discount.isDiscounted}
+                  percentage={item.discount.percentage}
+                  
+
                 />
               </div>
             </Link>

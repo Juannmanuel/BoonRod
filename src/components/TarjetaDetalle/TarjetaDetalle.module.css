@@ -168,11 +168,9 @@
   color: rgb(0, 0, 0);
 }
 .reccomended {
-  width: 95%;
-  margin: 1.5rem auto;
+  width: 100%;
   height: auto;
   min-height: 10rem;
-  font-size: 0.8rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
