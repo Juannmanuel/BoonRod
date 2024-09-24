@@ -7,7 +7,6 @@
   margin: auto;
   min-height: 80vh;
   background-color: var(--color-white-medium);
-  border: 1px solid black;
 }
 .title {
   font-family: var( --font-title);
