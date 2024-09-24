@@ -3,11 +3,12 @@
 .nav_main_container {
   width: 100vw;
   height: auto;
+  max-height: 5vh;
   position: absolute;
   top: 0;
   z-index: 3;
   pointer-events: none;
-  background-color: #f7f9f9ac;
+  background-color: var( --color-white-medium);
   backdrop-filter: blur(5px);
   transition: background-color .5s, top .5s;
 }

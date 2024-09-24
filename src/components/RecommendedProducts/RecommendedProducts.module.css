@@ -1,17 +1,7 @@
 .RecommendedProducts_main {
-  width: 100%;
+  width: 100vw;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 50rem;
-  grid-gap: 1px 1px;
-  overflow: hidden;
-
-
-}
-.RecommendedProducts_main_white_navbar {
-  width: 100%;
-  height: auto;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 50rem;
@@ -19,12 +9,27 @@
   margin-bottom: 1rem;
   margin-top: 20vh;
   overflow: hidden;
+  box-sizing: border-box;
+}
+.RecommendedProducts_main_white_navbar {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
 
-
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50rem;
+  grid-gap: 3px 3px;
+  margin-bottom: 1rem;
+  margin-top: 20vh;
+  overflow: hidden;
 }
 .container_card {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 15rem;
+  box-sizing: border-box;
+  border: 1px solid black;
 }
 
 /*============== Scren 1440 =============*/
@@ -36,7 +41,6 @@ height: 100%;
   .RecommendedProducts_main_white_navbar {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 35rem;
-  
   }
 }
 /*============== Scren 1080 =============*/
@@ -51,7 +55,6 @@ height: 100%;
   .RecommendedProducts_main_white_navbar {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 35rem;
-  
   }
 }
 /*============== Scren 770=============*/
@@ -63,17 +66,18 @@ height: 100%;
   .RecommendedProducts_main_white_navbar {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 25rem;
-  
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .RecommendedProducts_main {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 25rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    border: 1px solid black;
   }
   .RecommendedProducts_main_white_navbar {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 25rem;
-  
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    border: 1px solid black;
+
   }
 }

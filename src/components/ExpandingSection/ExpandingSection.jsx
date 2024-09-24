@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import style from "./ExpandingSection.module.css";
-import DetailCard from "../DetailCard/DetailCard";
 import TarjetaDetalle from "../TarjetaDetalle/TarjetaDetalle";
 
 function ExpandingSection({name, price, description, sizes ,isDiscounted,percentage  }) {
@@ -51,7 +50,7 @@ function ExpandingSection({name, price, description, sizes ,isDiscounted,percent
       ref={sectionRef}
       className={style.expandingSection}
       style={{
-        height: expanded ? "90vh" : "20vh",
+        height: expanded ? "95vh" : "20vh",
       }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}

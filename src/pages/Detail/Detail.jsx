@@ -15,6 +15,7 @@ import { CiSearch } from "react-icons/ci";
 import { products } from "../../data.js";
 
 import logo from "../../assets/images/logo/logo_tipografia_boonrod_claro.png";
+import LaNavbar from "../../components/LaNavbar/LaNavbar.jsx";
 function Detail() {
   const { id } = useParams();
   useEffect(() => {}, [id]);
@@ -23,7 +24,7 @@ console.log(product[0].discount.isDiscounted, "DEtalle");
 
   return (
     <section className={style.detail_main}>
-      
+      <LaNavbar/>
       <Swiper
         className={style.carousel}
         direction="vertical"

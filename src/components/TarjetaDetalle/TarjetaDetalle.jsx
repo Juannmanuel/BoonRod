@@ -11,7 +11,15 @@ import Footer from "../Footer/Footer";
 import Louder from "../Louder/Louder.jsx";
 import ProductPrice from "../ProductPrice/ProductPrice.jsx";
 
-function TarjetaDetalle({ expanded, name, price, description, sizes, percentage, isDiscounted  }) {
+function TarjetaDetalle({
+  expanded,
+  name,
+  price,
+  description,
+  sizes,
+  percentage,
+  isDiscounted,
+}) {
   const { id } = useParams();
   const product = products.filter((item) => item.id == id);
 
@@ -24,6 +32,7 @@ function TarjetaDetalle({ expanded, name, price, description, sizes, percentage,
   const discountedPrice = 8500;
   const discount = 1;
   const imgCards = [imgTC1, imgTC2, imgTC3, imgTC4];
+  const colors = ["#2ecc71", "#3498db", "#8e44ad"];
 
   return (
     <section
@@ -33,17 +42,26 @@ function TarjetaDetalle({ expanded, name, price, description, sizes, percentage,
       <div className={style.productHeader}>
         <h2 className={style.productName}>{name}</h2>
         <div className={style.priceContainer}>
-          <span className={style.productPriceDiscounted}>
-            <ProductPrice
+          <ProductPrice
             price={price}
             isDiscounted={isDiscounted}
             percentage={percentage}
-            />
-          </span>
+          />
         </div>
         <p className={style.productDescription}>{description}</p>
       </div>
-
+      <div className={style.productColorsContainer}>
+        <span className={style.title_colors}>¿Qué color prefieres?</span>
+        <div className={style.colors}>
+          {colors.map((color, index) => (
+            <div
+              key={index}
+              className={style.colorOption}
+              style={{ backgroundColor: color }}
+            ></div>
+          ))}
+        </div>
+      </div>
       <div className={style.productSizes}>
         <span className={style.title_sizes}>¿Qué talle buscas?</span>
         <div className={style.sizes}>

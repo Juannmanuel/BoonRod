@@ -20,7 +20,6 @@ function RecommendedProducts({ section }) {
           key={index}
           to={`/detalle/${item.id}`}
         >
-          <div className={style.container_card}>
             <Card
               section={section}
               images={item.images[0]}
@@ -29,7 +28,6 @@ function RecommendedProducts({ section }) {
               percentage={item.discount.percentage}
               isDiscounted={item.discount.isDiscounted}
             />
-          </div>
         </Link>
       ))}
     </section>
