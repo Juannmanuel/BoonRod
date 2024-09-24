@@ -51,7 +51,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
           <div className={style.btnAction}>Ver catalogo</div>
         </Link>
       </div>
-      {/* <img className={style.img_hotSale} src={imageHotSale} alt="20%OFF" /> */}
+
     </section>
   );
 }

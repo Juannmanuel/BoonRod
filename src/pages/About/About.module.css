@@ -1,7 +1,7 @@
 .aboutContainer {
   width: 100vw;
   height: auto;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -49,7 +49,7 @@
 }
 
 .wave_container {
-  height: 15vh;
+  height: 20vh;
   width: 100vw;
   background-color: #000000;
   position: absolute;
