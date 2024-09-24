@@ -3,7 +3,6 @@
 .nav_main_container {
   width: 100vw;
   height: auto;
-  max-height: 5vh;
   position: absolute;
   top: 0;
   z-index: 3;
