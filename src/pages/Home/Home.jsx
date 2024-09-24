@@ -87,6 +87,7 @@ title: "string"
       <section data-section="¿Quienes somos?">
       <About />
       </section>
+      <img src="https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/sz9bzsomb0pnmwhvisc06pyk7ho5" style={{width: "100vw", margin: "0"}} alt="" />
       <section data-section={sections[1].sectionName}>
         <FeaturedGallery sections={sections[1]} />
       </section>

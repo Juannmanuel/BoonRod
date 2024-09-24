@@ -9,6 +9,7 @@
   gap: 1rem;
   background-color: var(--color-white-medium);
   position: relative;
+  margin: 0;
 }
 .title {
   padding: 0;
