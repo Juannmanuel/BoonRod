@@ -3,14 +3,16 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  min-height: 80vh;
+  min-height: 100vh;
+  background-color: var(--color-white-medium);
 }
 .title {
   font-family: var(--font-title);
   font-size: var(--text-big);
   font-weight: var(--font-weight-big);
+  margin-left: 1rem;
 }
 .contactItem {
   display: flex;

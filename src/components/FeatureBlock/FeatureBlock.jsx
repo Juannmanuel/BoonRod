@@ -9,7 +9,7 @@ import { IoAddCircleOutline } from "react-icons/io5";
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
     <section className={style.featureBlock_main} data-section={section}>
-      <div className={style.wave_container}></div>
+      {/* <div className={style.wave_container}></div> */}
       <div className={style.container}>
         <div className={style.heading}>
           <h2>{title}</h2>

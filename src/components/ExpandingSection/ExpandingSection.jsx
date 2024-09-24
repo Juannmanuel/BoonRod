@@ -50,7 +50,7 @@ function ExpandingSection({name, price, description, sizes ,isDiscounted,percent
       ref={sectionRef}
       className={style.expandingSection}
       style={{
-        height: expanded ? "95vh" : "20vh",
+        height: expanded ? "85vh" : "20vh",
       }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}

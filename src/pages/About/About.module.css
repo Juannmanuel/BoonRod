@@ -1,12 +1,14 @@
 .aboutContainer {
   width: 100vw;
   height: auto;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
+  background-color: var(--color-white-medium);
+  position: relative;
 }
 .title {
   padding: 0;
@@ -14,9 +16,10 @@
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 3.5rem;
   max-width: 90%;
+  z-index: 2
 }
 .description {
   color: rgb(0, 0, 0);
@@ -45,50 +48,28 @@
   border: none;
 }
 
-
-.container_separator {
-  position: relative;
-  background: #000000;
-  height: 50vh;
+.wave_container {
+  height: 15vh;
   width: 100vw;
-  border: 1px solid black;
-
-}
-
-.wave {
+  background-color: #000000;
   position: absolute;
-  height: 70px;
-  width: 100%;
-  background: #ffffff;
-  bottom: 0;
-  border: 1px solid black;
-
+  top: 0;
 }
-
-.wave::before,
-.wave::after {
+.wave_container::before {
   content: "";
-  display: block;
+  width: 100%;
+  height: 160px;
   position: absolute;
-  border-radius: 100% 50%;
-  border: 1px solid black;
-
+  bottom: -0.3%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 35vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  116' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 85L50 80C100 75 200 64 300 43C400 22 500 -9 600 2C700 12 800 64 900 85C1000 106 1100 96 1150 90L1200 85V116H1150C1100 116 1000 116 900 116C800 116 700 116 600 116C500 116 400 116 300 116C200 116 100 116 50 116H0V85Z' fill='%23f7f9f9'/></svg>");
 }
 
-.wave::before {
-  width: 55%;
-  height: 109%;
-  background-color: #000000;
-  right: -1.5%;
-  top: 60%;
-  border: 1px solid black;
-
-}
-.wave::after {
-  width: 55%;
-  height: 100%;
-  background-color: #000000;
-  left: -1.5%;
-  top: 40%;
-  border: 1px solid black;
+@media (max-width: 850px) {
+  .wave_container::before {
+    height: 80px;
+  }
 }

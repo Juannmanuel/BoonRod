@@ -81,14 +81,22 @@ title: "string"
   return (
     <section ref={sectionRef} className={style.home_main}>
       <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
-      {sections.map((item, index) => {
-        return (
-          <section id={index} data-section={item.sectionName}>
-            <FeaturedGallery sections={item} />
-          </section>
-        );
-      })}
-      <Footer/>
+      <section data-section={sections[0].sectionName}>
+        <FeaturedGallery sections={sections[0]} />
+      </section>
+      <section data-section="¿Quienes somos?">
+      <About />
+      </section>
+      <section data-section={sections[1].sectionName}>
+        <FeaturedGallery sections={sections[1]} />
+      </section>
+      <section data-section="Contactenos">
+      <CustomerSupport/>
+      </section>
+      <section data-section={sections[2].sectionName}>
+        <FeaturedGallery sections={sections[2]} />
+      </section>
+      <Footer />
     </section>
   );
 }
