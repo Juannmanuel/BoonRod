@@ -40,15 +40,6 @@ function FeaturedGallery({ sections }) {
       <div className={style.singleRowContainer}>
         <img src={sections.images[3]} alt="" />
       </div>
-
-      <FeatureBlock
-        section={"CATÁLOGO"}
-        title={"Ofertas que Marcan Tendencia"}
-        description={
-          "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
-        }
-        sectionProducs={products}
-      />
     </div>
   );
 }

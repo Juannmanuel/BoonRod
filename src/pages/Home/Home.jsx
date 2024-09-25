@@ -92,6 +92,19 @@ title: "string"
           <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
           <section data-section={sections[0].sectionName}>
             <FeaturedGallery sections={sections[0]} />
+            <LedBanner
+              text={
+                " 🏷️ ¡Liquidación final! Prendas con hasta un 50% de descuento 🏷️"
+              }
+            />
+            <FeatureBlock
+              section={"CATÁLOGO"}
+              title={"Ofertas que Marcan Tendencia"}
+              description={
+                "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
+              }
+              sectionProducs={products}
+            />
           </section>
           {/* <LedBanner
             text={"Hola amigo, que tal soy oscar, tengo nueve añitos"}
@@ -102,7 +115,7 @@ title: "string"
           </section>
           <LedBanner
             text={
-              " ¡6 cuotas sin interés en todos los productos desde octubre! ¡No te lo pierdas!"
+              " 🎁 ¡Comprá hoy y llevate un regalo sorpresa en tu pedido! 🎁"
             }
           />
           <section data-section={sections[1].sectionName}>
@@ -119,7 +132,7 @@ title: "string"
           </section>
           <LedBanner
             text={
-              "  ¡Nuevas colecciones disponibles! Descubre lo último en moda"
+              " 🌞 ¡Ofertas de verano! Hasta un 30% OFF en nuestra colección de temporada 🌞"
             }
           />
 
