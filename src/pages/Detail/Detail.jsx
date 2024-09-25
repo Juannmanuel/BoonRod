@@ -24,7 +24,7 @@ console.log(product[0].discount.isDiscounted, "DEtalle");
 
   return (
     <section className={style.detail_main}>
-      <LaNavbar/>
+      <LaNavbar />
       <Swiper
         className={style.carousel}
         direction="vertical"

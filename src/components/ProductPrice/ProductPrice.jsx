@@ -20,7 +20,7 @@ function ProductPrice({ price, percentage, isDiscounted }) {
   return (
     <div className={style.product_price}>
       {isDiscounted ? (
-        <div className={location.pathname == "/louder" ? style.product_price_details_Detail_card : style.product_price_details}>
+        <div className={location.pathname.includes("detalle") ? style.product_price_details_Detail_card : style.product_price_details}>
           <span className={style.product_price_original}>${price}</span>
           <span className={style.product_price_discounted}>
             ${discountedPrice}

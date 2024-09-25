@@ -6,7 +6,7 @@
   min-height: 20vh;
   max-height: none;
   overflow: hidden;
-  transition: height 1s ease, transform 1s ease;
+  transition: height 1.5s ease, transform 1.5s ease;
   z-index: 4;
 
 
