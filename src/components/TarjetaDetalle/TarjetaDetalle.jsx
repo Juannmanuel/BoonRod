@@ -48,6 +48,7 @@ function TarjetaDetalle({
             percentage={percentage}
             fontSize={1.5}
           />
+          {isDiscounted? <span style={{fontSize: "1.5rem"}}>{percentage}%OFF</span> : null}
         </div>
         <p className={style.productDescription}>{description}</p>
       </div>

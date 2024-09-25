@@ -19,7 +19,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 780); // Actualiza el estado si la pantalla es menor o igual a 780px
     };
@@ -51,18 +50,7 @@ function App() {
         />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/detalle/:id" element={<Detail />} />
-        <Route
-          path="/louder"
-          element={<TarjetaDetalle   expanded={true}
-            name={"CAMISETA BOXY FIT"}
-            price={"18900"}
-            description={"Camiseta boxy fit. Cuello redondo y manga corta. Efecto lavado. La prenda tiene una apariencia única gracias a su especial proceso de lavado. Por este motivo, puede diferir ligeramente en color con respecto al de la foto."}
-            sizes={["S", "M", "L", "XL"]}
-            percentage={20}
-            isDiscounted={true}
-            />}
-
-        />
+        <Route path="/louder" element={<Louder />} />
       </Routes>
     </div>
   );

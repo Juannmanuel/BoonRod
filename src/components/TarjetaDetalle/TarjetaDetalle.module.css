@@ -92,7 +92,7 @@
   border-radius: 50%;
 }
 .productSizes {
-  min-height: 7.5rem;
+  gap: 1rem;
   height: auto;
   width: 95%;
   display: flex;

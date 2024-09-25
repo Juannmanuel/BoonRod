@@ -10,6 +10,7 @@ import About from "../About/About";
 import CustomerSupport from "../../components/CustomerSupport/CustomerSupport";
 import LaNavbar from "../../components/LaNavbar/LaNavbar";
 import { getProductsByCategory, getAllSections } from "../../redux/actions";
+import Louder from "../../components/Louder/Louder";
 function Home({}) {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.backUpSections);
@@ -27,6 +28,7 @@ title: "string"
   */
   const sectionRef = useRef(null);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [isLoader, setIsLoader] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
 
@@ -68,6 +70,9 @@ title: "string"
     if (sectionEl) {
       sectionEl.addEventListener("scroll", handleScroll); // Escuchar evento de scroll
     }
+    setTimeout(() => {
+      setIsLoader(false);
+    }, 3000);
 
     // Cleanup: remover el evento cuando el componente se desmonte
     return () => {
@@ -76,27 +81,32 @@ title: "string"
       }
     };
   }, [lastScrollTop, dispatch]);
-  console.log(sections[0], "fe  a");
 
   return (
     <section ref={sectionRef} className={style.home_main}>
-      <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
-      <section data-section={sections[0].sectionName}>
-      <FeaturedGallery sections={sections[0]} />
-      </section>
-      <section data-section="¿Quienes somos?">
-      <About />
-      </section>
-      <section data-section={sections[1].sectionName}>
-      <FeaturedGallery sections={sections[1]} />
-      </section>
-      <section data-section="Contactenos">
-      <CustomerSupport/>
-      </section>
-      <section data-section={sections[2].sectionName}>
-      <FeaturedGallery sections={sections[2]} />
-      </section>
-      <Footer />
+      {isLoader ? (
+        <Louder />
+      ) : (
+        <>
+          <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
+          <section data-section={sections[0].sectionName}>
+            <FeaturedGallery sections={sections[0]} />
+          </section>
+          <section data-section="¿Quienes somos?">
+            <About />
+          </section>
+          <section data-section={sections[1].sectionName}>
+            <FeaturedGallery sections={sections[1]} />
+          </section>
+          <section data-section="Contactenos">
+            <CustomerSupport />
+          </section>
+          <section data-section={sections[2].sectionName}>
+            <FeaturedGallery sections={sections[2]} />
+          </section>
+          <Footer />
+        </>
+      )}
     </section>
   );
 }

@@ -53,17 +53,17 @@
   text-align: start;
 }
 .carousel {
-  width: 95vw;
+  width: 100vw;
   overflow-x: scroll;
   overflow-y: hidden;
   height: auto;
-  min-height: 25rem;
-  max-height: 35rem;
   display: grid;
   grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
   gap: 1rem;
-  margin-top: 2rem;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+
+
+
 }
 .container_card {
   width: 16rem;
@@ -109,3 +109,19 @@
   text-transform: uppercase;
 }
 
+@keyframes circle-swoop {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+.inCustom {
+  --transition__duration: 1s;
+  --transition__easing: ease-in-out;
+  animation-name: circle-swoop;
+  animation-duration: var(--transition__duration);
+  animation-timing-function: var(--transition__easing);
+}

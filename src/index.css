@@ -4,9 +4,6 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 350px;
-  min-height: 100vh;
   overflow: hidden;
 }
 img {
@@ -32,5 +29,7 @@ img {
   --color-white-big: #fbfcfc; /* Título */
   --color-white-medium: #f7f9f9; /* Subtítulo */
   --color-white-small: #f4f6f7; /* Párrafo */
+
+  
 
 }
