@@ -52,7 +52,7 @@
   align-items: start;
   padding: 3px;
   background-color: var(--color-white-medium);
-  font-size: .9rem;
+  font-size: .75rem;
 }
 .flag_discount{
   position: absolute;

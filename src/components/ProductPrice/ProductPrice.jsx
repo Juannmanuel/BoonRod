@@ -2,11 +2,8 @@ import React from "react";
 import style from "./ProductPrice.module.css";
 import { useLocation } from "react-router-dom";
 
-function ProductPrice({ price, percentage, isDiscounted }) {
- /*Accedemos al path, para poder ajustar los valores del fontsize dependiendo si está
- en el detalle o en la tarjeta*/
-  const location = useLocation();
-  console.log(location.pathname); // Te da la URL actual
+function ProductPrice({ price, percentage, isDiscounted, fontSize=1 }) {
+
 
 
   // Calcular el precio con descuento si está disponible
@@ -18,9 +15,9 @@ function ProductPrice({ price, percentage, isDiscounted }) {
     : numericPrice;
 
   return (
-    <div className={style.product_price}>
+    <div className={style.product_price} style={{fontSize: `${fontSize}rem`}}>
       {isDiscounted ? (
-        <div className={location.pathname.includes("detalle") ? style.product_price_details_Detail_card : style.product_price_details}>
+        <div className={style.product_price_details}>
           <span className={style.product_price_original}>${price}</span>
           <span className={style.product_price_discounted}>
             ${discountedPrice}

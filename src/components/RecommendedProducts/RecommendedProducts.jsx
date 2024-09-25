@@ -23,11 +23,19 @@ function RecommendedProducts({ section }) {
             <img src={item.images[0].models[0]} alt="" />
             {item.discount.isDiscounted ? (
               <div className={style.flag_discount}>
-                <span className={style.text_discount}>{item.discount.percentage}%OFF</span>
+                <span className={style.text_discount}>
+                  {item.discount.percentage}%OFF
+                </span>
               </div>
             ) : null}
             <div className={style.description}>
               <span>{item.name}</span>
+              <ProductPrice
+                price={item.price}
+                isDiscounted={item.discount.isDiscounted}
+                percentage={item.discount.percentage}
+                fontSize={.85}
+              />
             </div>
           </div>
         </Link>

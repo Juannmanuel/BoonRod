@@ -152,6 +152,11 @@
   font-size: var(--text-small);
   text-transform: uppercase;
 }
+.cash_media li {
+  font-family: var( --font-paragraph);
+  font-size: var(--text-small);
+  width: 100%;
+}
 .cash_media_container_img {
   width: auto;
   object-fit: contain;

@@ -46,6 +46,7 @@ function TarjetaDetalle({
             price={price}
             isDiscounted={isDiscounted}
             percentage={percentage}
+            fontSize={1.5}
           />
         </div>
         <p className={style.productDescription}>{description}</p>
@@ -82,9 +83,6 @@ function TarjetaDetalle({
             <li>PayPal</li>
             <li>Efectivo en tienda</li>
           </ul>
-          {imgCards.map((item, index) => (
-            <img className={style.imgCard} key={index} src={item} />
-          ))}
         </div>
       </div>
 
