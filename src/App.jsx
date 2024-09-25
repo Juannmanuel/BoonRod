@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProductsByCategory, getAllSections } from "./redux/actions";
 import Dashboard from "./pages/Dashboard/dashboard";
 import ProductForm from "./pages/Dashboard/dashboard";
+import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
 function App() {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 780);
   const dispatch = useDispatch();
@@ -52,7 +53,14 @@ function App() {
         <Route path="/detalle/:id" element={<Detail />} />
         <Route
           path="/louder"
-          element={<ProductForm/>}
+          element={<TarjetaDetalle   expanded={true}
+            name={"CAMISETA BOXY FIT"}
+            price={"18900"}
+            description={"Camiseta boxy fit. Cuello redondo y manga corta. Efecto lavado. La prenda tiene una apariencia única gracias a su especial proceso de lavado. Por este motivo, puede diferir ligeramente en color con respecto al de la foto."}
+            sizes={["S", "M", "L", "XL"]}
+            percentage={20}
+            isDiscounted={true}
+            />}
 
         />
       </Routes>

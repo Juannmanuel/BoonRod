@@ -17,12 +17,12 @@ img {
 :root {
   /* Tipografías */
   --font-title: "Bebas Neue", sans-serif;
-  --font-subtitle: font-family: "Hind Siliguri", sans-serif;
-  --font-paragraph: font-family: "Dosis", sans-serif;
+  --font-subtitle: "Hind Siliguri", sans-serif;
+  --font-paragraph: "Dosis", sans-serif;
   /* Tamaños de fuente */
   --text-big: 2.3rem; /* Título */
-  --text-medium: 1.5rem; /* Subtítulo */
-  --text-small: 1rem; /* Párrafo */
+  --text-medium: 1.2rem; /* Subtítulo */
+  --text-small: .9rem; /* Párrafo */
   
   /* Pesos de fuente */
   --font-weight-big: 800; /* Título */

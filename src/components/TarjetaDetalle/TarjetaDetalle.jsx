@@ -72,18 +72,25 @@ function TarjetaDetalle({
           ))}
         </div>
       </div>
-      <div className={style.productActions_btn}>
-        <button>Añadir al carrito</button>
-        <button>Comprar ahora</button>
-      </div>
-
       <div className={style.cash_media}>
-        <span style={{ margin: "0" }}>Medios de pago</span>
+        <span className={style.title_cash_media}>Medios de pago</span>
         <div className={style.cash_media_container_img}>
+          <ul>
+            <li>Tarjetas de crédito/débito (Visa, Mastercard)</li>
+            <li>Transferencia bancaria</li>
+            <li>Mercado Pago</li>
+            <li>PayPal</li>
+            <li>Efectivo en tienda</li>
+          </ul>
           {imgCards.map((item, index) => (
             <img className={style.imgCard} key={index} src={item} />
           ))}
         </div>
+      </div>
+
+      <div className={style.productActions_btn}>
+        <button>Añadir al carrito</button>
+        <button>Comprar ahora</button>
       </div>
 
       <div className={style.reccomended}>
