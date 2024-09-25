@@ -1,6 +1,7 @@
 .product_price {
   display: flex;
-  margin-left: 0.5rem;
+  font-size: 1rem;
+
 }
 .product_price_details {
   display: flex;
@@ -8,7 +9,6 @@
   justify-content: start;
   align-items: center;
   gap: 0 0.8rem;
-  font-size: 1rem;
 }
 .product_price_details_Detail_card {
   display: flex;

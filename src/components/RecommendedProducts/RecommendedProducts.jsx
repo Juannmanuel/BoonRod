@@ -2,10 +2,9 @@ import style from "./RecommendedProducts.module.css";
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
 import { products } from "../../data.js";
+import ProductPrice from "../ProductPrice/ProductPrice.jsx";
 
 function RecommendedProducts({ section }) {
-
-
   return (
     <section
       className={
@@ -20,14 +19,17 @@ function RecommendedProducts({ section }) {
           key={index}
           to={`/detalle/${item.id}`}
         >
-            <Card
-              section={section}
-              images={item.images[0]}
-              title={item.name}
-              price={item.price}
-              percentage={item.discount.percentage}
-              isDiscounted={item.discount.isDiscounted}
-            />
+          <div className={style.item}>
+            <img src={item.images[0].models[0]} alt="" />
+            {item.discount.isDiscounted ? (
+              <div className={style.flag_discount}>
+                <span className={style.text_discount}>{item.discount.percentage}%OFF</span>
+              </div>
+            ) : null}
+            <div className={style.description}>
+              <span>{item.name}</span>
+            </div>
+          </div>
         </Link>
       ))}
     </section>

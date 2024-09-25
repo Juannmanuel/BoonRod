@@ -9,7 +9,7 @@ function Card({ images, title, price, description, percentage, isDiscounted }) {
   return (
     <div className={style.card_main}>
       <div className={style.container_carrousel}>
-        <img className={style.image} src={models[0]} alt="" />
+        {/* <img className={style.image} src={models[0]} alt="" /> */}
         <IoAddCircleOutline className={style.icon} />
         {isDiscounted ? (
           <div className={style.flag_discount}>

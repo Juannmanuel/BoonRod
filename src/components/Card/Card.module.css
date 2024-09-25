@@ -3,8 +3,7 @@
 .card_main {
   width: 100%;
   height: 100%;
-  min-width: 5rem;
-  min-height: 4rem;
+  min-width: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,9 +22,8 @@
 .image {
   width: 100%;
   height: 100%; /* Asegura que ocupe toda la altura del contenedor */
-  min-height: none;
   object-fit: cover;
-  min-width: none;
+
 
 }
 
@@ -52,7 +50,7 @@
 }
 
 .description {
-  width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
+  width: 100%;
   height: auto;
   min-height: 5rem;
   box-sizing: border-box;
@@ -61,7 +59,6 @@
   justify-content: start;
   align-items: flex-start;
   gap: 0.2rem; /* Espacio entre los elementos internos */
-  margin-top: .5rem;
 }
 
 .title {
@@ -87,98 +84,3 @@
   font-weight: 600;
 
 }
-
-/* .card_main {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: grid;
-  grid-template-rows: 1.5fr .5fr;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: start;
-  background-color: #f7f9f9;
-  gap: 0.5rem;
-  border: 1px solid black;
-}
-.container_carrousel{
-  width: 100%;
-  height: 100%;
-}
-.image{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.description {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid black;
-  height: 10rem;
-}
-.icon {
-  position: absolute;
-  left: 50%;
-  bottom: 6.5rem;
-  transform: translate(-50%);
-  color: rgba(0, 0, 0, 0.798);
-  background-color: rgba(255, 255, 255, 0.533);
-  border-radius: 50%;
-  font-size: 1.7rem;
-}
-.flag_discount{
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  width: auto;
-  height: 2rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  background-color: red;
-}
-.text_discount{
-  padding: 10px;
-  font-size: 1rem;
-  color: white;
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
-
-}
-.title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-  font-family: "Barlow Condensed", sans-serif;
-  white-space: nowrap;
-  overflow: hidden;
-  font-weight: 400;
-  font-style: normal;
-  height: auto;
-  color: black;
-  margin-left: 0.5rem;
-}
-.description {
-  max-height: 1rem;
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 200;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  margin-left: 0.5rem;
-
-}
-.price {
-  color: green;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-
-} */
