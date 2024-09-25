@@ -1,0 +1,30 @@
+@keyframes slide {
+    0% {
+      transform: translateX(100%); /* El texto empieza fuera de la pantalla */
+    }
+    100% {
+      transform: translateX(-100%); /* El texto se mueve hacia fuera del lado izquierdo */
+    }
+  }
+  
+  .ledContainer {
+    width: 100%; /* Ancho total del contenedor */
+    height: 3rem; /* Altura del contenedor */
+    overflow: hidden; /* Escondemos el texto cuando sale del contenedor */
+    background-color: black; /* Para darle un efecto de LED */
+    color: white; /* Color del texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    font-size: var(--text-big);
+  text-transform: uppercase;
+
+  }
+  
+  .ledText {
+    white-space: nowrap; /* Evita que el texto haga salto de línea */
+    display: inline-block;
+    color: white;
+    animation: slide 20s linear infinite; /* Animación de 10s, continua */
+  }

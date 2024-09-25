@@ -5,11 +5,12 @@ import imageHotSale from "../../assets/images/Tarjetas/hotSale.jpg";
 import logo from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import { Link } from "react-router-dom";
 import { IoAddCircleOutline } from "react-icons/io5";
+import LedBanner from "../LedBanner/LedBanner";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
     <section className={style.featureBlock_main} data-section={section}>
-      <div className={style.inCustom}>
+
       <div className={style.container}>
         <div className={style.heading}>
           <h2>{title}</h2>
@@ -48,7 +49,6 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
         >
           <div className={style.btnAction}>Ver catalogo</div>
         </Link>
-      </div>
       </div>
     </section>
   );

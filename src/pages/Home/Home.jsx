@@ -11,6 +11,7 @@ import CustomerSupport from "../../components/CustomerSupport/CustomerSupport";
 import LaNavbar from "../../components/LaNavbar/LaNavbar";
 import { getProductsByCategory, getAllSections } from "../../redux/actions";
 import Louder from "../../components/Louder/Louder";
+import LedBanner from "../../components/LedBanner/LedBanner";
 function Home({}) {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.backUpSections);
@@ -72,7 +73,7 @@ title: "string"
     }
     setTimeout(() => {
       setIsLoader(false);
-    }, 3000);
+    }, 2000);
 
     // Cleanup: remover el evento cuando el componente se desmonte
     return () => {
@@ -83,29 +84,50 @@ title: "string"
   }, [lastScrollTop, dispatch]);
 
   return (
-    <section ref={sectionRef} className={style.home_main}>
+    <section className={style.home_main}>
       {isLoader ? (
         <Louder />
       ) : (
-        <>
+        <section ref={sectionRef} className={style.home_main}>
           <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
           <section data-section={sections[0].sectionName}>
             <FeaturedGallery sections={sections[0]} />
           </section>
+          {/* <LedBanner
+            text={"Hola amigo, que tal soy oscar, tengo nueve añitos"}
+          /> */}
+
           <section data-section="¿Quienes somos?">
             <About />
           </section>
+          <LedBanner
+            text={
+              " ¡6 cuotas sin interés en todos los productos desde octubre! ¡No te lo pierdas!"
+            }
+          />
           <section data-section={sections[1].sectionName}>
             <FeaturedGallery sections={sections[1]} />
           </section>
+          <LedBanner
+            text={
+              " 🔥 Descuento especial: ¡20% OFF en prendas seleccionadas hasta el 30 de Diciembre! 🔥 "
+            }
+          />
+
           <section data-section="Contactenos">
             <CustomerSupport />
           </section>
+          <LedBanner
+            text={
+              "  ¡Nuevas colecciones disponibles! Descubre lo último en moda"
+            }
+          />
+
           <section data-section={sections[2].sectionName}>
             <FeaturedGallery sections={sections[2]} />
           </section>
           <Footer />
-        </>
+        </section>
       )}
     </section>
   );

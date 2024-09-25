@@ -1,11 +1,11 @@
 .featureBlock_main {
   width: 100vw;
   height: auto;
-  min-height: 95vh;
+  min-height: 75vh;
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: var(--color-white-medium);
   position: relative;
@@ -109,19 +109,3 @@
   text-transform: uppercase;
 }
 
-@keyframes circle-swoop {
-  from {
-    clip-path: var(--circle-top-right-out);
-  }
-  to {
-    clip-path: var(--circle-bottom-right-in);
-  }
-}
-
-.inCustom {
-  --transition__duration: 1s;
-  --transition__easing: ease-in-out;
-  animation-name: circle-swoop;
-  animation-duration: var(--transition__duration);
-  animation-timing-function: var(--transition__easing);
-}

@@ -4,6 +4,7 @@ import { IoAddCircleOutline } from "react-icons/io5";
 import logo from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import style from "./FeaturedGallery.module.css";
 import FeatureBlock from "../FeatureBlock/FeatureBlock";
+import LedBanner from "../LedBanner/LedBanner";
 import { products } from "../../data";
 
 function FeaturedGallery({ sections }) {
@@ -31,6 +32,7 @@ function FeaturedGallery({ sections }) {
           </Link>
         </div>
       </div>
+
       <div className={style.twoColumnsContainer}>
         <img src={sections.images[1]} alt="" />
         <img src={sections.images[2]} alt="" />
@@ -38,6 +40,7 @@ function FeaturedGallery({ sections }) {
       <div className={style.singleRowContainer}>
         <img src={sections.images[3]} alt="" />
       </div>
+
       <FeatureBlock
         section={"CATÁLOGO"}
         title={"Ofertas que Marcan Tendencia"}
@@ -45,7 +48,6 @@ function FeaturedGallery({ sections }) {
           "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
         }
         sectionProducs={products}
-        
       />
     </div>
   );
