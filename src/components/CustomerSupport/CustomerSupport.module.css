@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: start;
-  width: 100%;
+  justify-content: center;
+  align-items: start;
+  width: 100vw;
   margin: auto;
-  min-height: 80vh;
+  min-height: 75vh;
   background-color: var(--color-white-medium);
 }
 .title {
-  font-family: var( --font-title);
+  font-family: var(--font-title);
   font-size: var(--text-big);
   font-weight: var(--font-weight-big);
+  margin: 0.5rem auto;
+  padding: 0;
   margin-left: 1rem;
 }
 .contactItem {
@@ -20,20 +23,22 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1rem;
+  max-height: 2rem;
 }
 
 .contactIcon {
   font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
 }
 .container_text {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: start;
-  gap: 0.5rem;
 }
 .contactText_title {
-  font-family: var( --font-subtitle);
+  font-family: var(--font-subtitle);
   font-size: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
 }
@@ -43,7 +48,6 @@
   font-weight: var(--font-weight-small);
 }
 .faqContainer {
-  gap: 1rem;
   margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
@@ -56,8 +60,9 @@
 
 .faqItem {
   overflow: hidden;
-  width: 100%;
+  width: 90vw;
   min-height: 3rem;
+  margin-left: 10%;
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
@@ -79,14 +84,13 @@
   font-size: var(--font-weight-medium);
   font-weight: var(--font-weight-small);
   transition: height 1s ease, transform 1s ease;
-
 }
 .faqContent {
   max-height: 0; /* Escondido por defecto */
   overflow: hidden;
   transition: max-height 10s ease; /* Animación de altura */
   font-size: 1.2rem;
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
   font-family: var(--font-paragraph);
   font-size: var(--text-small);
   font-weight: var(--font-weight-small);
@@ -94,5 +98,4 @@
 
 details[open] .faqContent {
   max-height: 300px; /* Ajusta la altura máxima según tu contenido */
-
 }
