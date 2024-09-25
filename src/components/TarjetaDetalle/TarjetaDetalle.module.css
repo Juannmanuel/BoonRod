@@ -21,7 +21,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
-  min-height: 20vh;
+  min-height: 15vh;
   height: auto;
   width: 95%;
   margin: auto;
@@ -92,7 +92,7 @@
   border-radius: 50%;
 }
 .productSizes {
-  min-height: 4.5rem;
+  min-height: 7.5rem;
   height: auto;
   width: 95%;
   display: flex;

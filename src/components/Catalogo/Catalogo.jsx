@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import Card from "../Card/Card";
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import NavbarMovile from "../NavbarMovile/NavbarMovile";
+import LaNavbar from "../LaNavbar/LaNavbar";
 
 function Catalogo({}) {
   const sectionRef = useRef(null);
@@ -58,7 +59,7 @@ function Catalogo({}) {
 
   return (
     <section ref={sectionRef} className={style.catalogo_main}>
-      <NavbarMovile sectionRef={sectionRef} isScrollingUp={isScrollingUp} />
+      <LaNavbar/>
       <RecommendedProducts section={"catalogo"} />
       <Footer />
     </section>

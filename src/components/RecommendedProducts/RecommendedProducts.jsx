@@ -5,6 +5,8 @@ import { products } from "../../data.js";
 import ProductPrice from "../ProductPrice/ProductPrice.jsx";
 
 function RecommendedProducts({ section }) {
+
+
   return (
     <section
       className={
