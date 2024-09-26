@@ -9,20 +9,38 @@
     width: 100vw;
     position: absolute;
     background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
   }
-  
+  .container_logo {
+    width: 10rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 20rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_logo img {
+    max-width: 10rem;
+  }
+
   .loader .circle {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 5px;
+    height: 5px;
     border: solid 2px var(--color);
     border-radius: 50%;
     margin: 0 10px;
     background-color: transparent;
     animation: circle-keys var(--animation);
+    border: 1px solid rgb(255, 255, 255);
+
   }
   
   .loader .circle .dot {

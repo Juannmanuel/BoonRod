@@ -32,7 +32,6 @@ function FeaturedGallery({ sections }) {
           </Link>
         </div>
       </div>
-
       <div className={style.twoColumnsContainer}>
         <img src={sections.images[1]} alt="" />
         <img src={sections.images[2]} alt="" />
