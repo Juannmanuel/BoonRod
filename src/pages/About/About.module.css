@@ -74,7 +74,7 @@
 .wave_container img {
   position: absolute;
   width: 100%;
-  max-height: 25vh;
+  height: 35vh;
 }
 .wave_container::before {
   content: "";
