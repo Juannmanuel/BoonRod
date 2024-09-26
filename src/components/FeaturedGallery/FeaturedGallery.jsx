@@ -16,9 +16,6 @@ function FeaturedGallery({ sections }) {
         className={style.header}
         style={{ backgroundImage: `url(${sections?.images[0]})` }}
       >
-        <div className={style.container_logo}>
-          <img className={style.logo} src={logo} alt="boonrod" />
-        </div>
         <div className={style.card}>
           <h2 className={style.title}>{sections?.title}</h2>
 
