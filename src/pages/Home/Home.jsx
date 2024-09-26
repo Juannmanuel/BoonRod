@@ -73,7 +73,7 @@ title: "string"
     }
     setTimeout(() => {
       setIsLoader(false);
-    }, 2000);
+    }, 4000);
 
     // Cleanup: remover el evento cuando el componente se desmonte
     return () => {
