@@ -38,7 +38,7 @@
 .description {
   color: rgb(255, 255, 255);
   font-family: var(--font-paragraph);
-  font-size: var(--text-small);
+  font-size: 1.1rem;
   font-weight: var(--font-weight-small);
   max-width: 90%;
   max-width: 80%;

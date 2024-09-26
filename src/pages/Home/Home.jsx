@@ -113,11 +113,6 @@ title: "string"
           <section data-section="¿Quienes somos?">
             <About />
           </section>
-          <LedBanner
-            text={
-              " 🎁 ¡Comprá hoy y llevate un regalo sorpresa en tu pedido! 🎁"
-            }
-          />
           <section data-section={sections[1].sectionName}>
             <FeaturedGallery sections={sections[1]} />
           </section>
@@ -130,11 +125,6 @@ title: "string"
           <section data-section="Contactenos">
             <CustomerSupport />
           </section>
-          <LedBanner
-            text={
-              " 🌞 ¡Ofertas de verano! Hasta un 30% OFF en nuestra colección de temporada 🌞"
-            }
-          />
 
           <section data-section={sections[2].sectionName}>
             <FeaturedGallery sections={sections[2]} />

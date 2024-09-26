@@ -59,9 +59,10 @@
   height: auto;
   display: grid;
   grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
-  gap: 1rem;
+  gap: 1.5rem;
   scroll-behavior: smooth;
-
+  padding: 10px;
+  margin: 1rem auto;
 
 
 }
@@ -71,24 +72,30 @@
 
 }
 .container_card_link {
-  width: 16rem;
-  height: 100%;
+  width: 15rem;
+  height: 70%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   color: black;
+  position: relative;
 }
 .icon {
   font-size: 3rem;
   color: rgba(0, 0, 0, 0.798);
   border-radius: 50%;
   font-weight: 200;
+
 }
 .title {
   font-family: var(--font-title);
   font-size: var(--text-big);
+  font-weight: 500;
+
+
+
 }
 .btnAction {
   min-width: 90vw;

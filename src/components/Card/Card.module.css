@@ -8,35 +8,37 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: var( --color-white-small);
+  background-color: #ecf0f1;
   box-sizing: border-box; /* Incluye padding y border dentro de las dimensiones */
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .container_carrousel {
-  width: 100%;
+  width: 90%;
   height: 80%; /* Cambié a un 70% para dar más espacio a la descripción */
   position: relative; /* Para posicionar elementos dentro del contenedor, como el icono */
   overflow: hidden;
+  margin-top: 1rem;
 }
 
 .image {
   width: 100%;
   height: 100%; /* Asegura que ocupe toda la altura del contenedor */
   object-fit: cover;
-
-
 }
 
 .icon {
   position: absolute;
   left: 50%;
-  bottom: .2rem;
+  bottom: 0.2rem;
   transform: translate(-50%, 0);
   color: rgba(0, 0, 0, 0.798);
   border-radius: 50%;
   font-size: 1.7rem;
 }
-.flag_discount{
+.flag_discount {
   position: absolute;
   top: 1rem;
   left: 0;
@@ -46,11 +48,12 @@
   flex-flow: column nowrap;
   justify-content: center;
   background-color: red;
-  box-shadow: 2px 4px 8px 0px rgba(0,0,0,0.6);
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.6);
 }
 
 .description {
-  width: 100%;
+  width: auto;
+  min-width: 90%;
   height: auto;
   min-height: 5rem;
   box-sizing: border-box;
@@ -59,12 +62,13 @@
   justify-content: start;
   align-items: flex-start;
   gap: 0.2rem; /* Espacio entre los elementos internos */
+  margin-top: 0.5rem;
+  background-color: #ecf0f1;
 }
 
 .title {
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 0.5rem;
   font-size: 1.2rem;
   font-family: "Barlow Condensed", sans-serif;
   white-space: nowrap;
@@ -73,14 +77,12 @@
   font-style: normal;
   height: auto;
   color: black;
-  margin-left: 0.5rem;
 }
 
-.text_discount{
+.text_discount {
   padding: 10px;
   font-size: 1rem;
   color: white;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-
 }
