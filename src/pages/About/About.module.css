@@ -75,6 +75,7 @@
   position: absolute;
   width: 100%;
   height: 35vh;
+  margin-top: 2rem;
 }
 .wave_container::before {
   content: "";
