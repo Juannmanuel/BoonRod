@@ -4,12 +4,23 @@
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
   background-color: var(--color-white-medium);
   position: relative;
   margin: 0;
+  margin-bottom: 5rem;
+}
+.container_content{
+  width: 95vw;
+  height: auto;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20rem;
 }
 .title {
   padding: 0;
@@ -20,7 +31,9 @@
   color: rgb(255, 255, 255);
   font-size: 3.5rem;
   max-width: 90%;
-  z-index: 2
+  z-index: 2;
+  margin-bottom: 6rem;
+  text-align: center;
 }
 .description {
   color: rgb(0, 0, 0);
@@ -30,6 +43,8 @@
   max-width: 90%;
   max-width: 80%;
   text-align: center;
+  margin-bottom: 5rem;
+
 }
 .mapButton {
   min-width: 20rem;
@@ -50,11 +65,16 @@
 }
 
 .wave_container {
-  height: 20vh;
+  height: 55vh;
   width: 100vw;
   background-color: #000000;
   position: absolute;
   top: 0;
+}
+.wave_container img {
+  position: absolute;
+  width: 100%;
+  max-height: 25vh;
 }
 .wave_container::before {
   content: "";
