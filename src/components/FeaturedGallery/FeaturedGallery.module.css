@@ -125,6 +125,13 @@
 
   /* otras propiedades si es necesario */
 }
+.twoColumnsContainer img, 
+.singleRowContainer img {
+  animation: zoomInOut 20s ease-in-out infinite; /* Duración de 6 segundos, puedes ajustarla */
+  width: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
+  height: 100%;
+  object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+}
 .icon {
   position: absolute;
   left: 50%;
@@ -134,6 +141,50 @@
   background-color: rgba(255, 255, 255, 0.533);
   border-radius: 50%;
   font-size: 1.5rem;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.1); /* Zoom in */
+  }
+  100% {
+    transform: scale(1); /* Zoom out */
+  }
+}
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.title {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+.description {
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+
+.btnAction {
+  animation: slideUp 0.7s ease-in-out forwards;
 }
 @media (max-width: 768px) {
   .header {
