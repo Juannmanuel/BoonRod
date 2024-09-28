@@ -10,22 +10,21 @@
   background-color: var(--color-white-medium);
   position: relative;
   padding: 2rem 0;
-
 }
 .container {
-  width: 90vw;
+  width: 95vw;
   height: auto;
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  align-items: start;
+  align-items: center;
   position: relative;
 }
 .heading {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: start;
   gap: 1rem;
   margin-bottom: 1rem;
@@ -45,15 +44,17 @@
   font-size: 2rem;
 }
 .description {
-  font-size: var(  --text-small);
-  font-family: var(--font-paragraph);
+  font-size: var(--text-small);
+  font-family: var(--font-subtitle);
   font-weight: 300;
   max-width: 90%;
   max-width: 90%;
   text-align: start;
+  padding: 0 5px;
 }
 .carousel {
   width: 100vw;
+  margin-left: 1rem;
   overflow-x: scroll;
   overflow-y: hidden;
   height: auto;
@@ -62,23 +63,18 @@
   gap: 1.5rem;
   scroll-behavior: smooth;
   padding: 10px;
-  margin: 1rem auto;
-
-
 }
 .container_card {
-  width: 16rem;
+  width: 19rem;
   height: 100%;
-
 }
 .container_card_link {
-  width: 15rem;
+  width: 20rem;
   height: 70%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   color: black;
   position: relative;
 }
@@ -87,32 +83,25 @@
   color: rgba(0, 0, 0, 0.798);
   border-radius: 50%;
   font-weight: 200;
-
+  margin: 2rem;
 }
 .title {
   font-family: var(--font-title);
   font-size: var(--text-big);
-  font-weight: 500;
-
-
-
+  font-weight: 300;
 }
 .btnAction {
-  min-width: 90vw;
-  margin: auto;
-  height: 3rem;
+  margin-top: 1.5rem;
+  min-width: 15rem;
+  height: 2.5rem;
   display: flex;
-  margin: auto;
-  margin-top: 3rem;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   font-size: var(--text-small);
   font-family: "Roboto Slab", serif;
   background-color: black;
   color: rgb(255, 255, 255);
   text-decoration: none;
   text-transform: uppercase;
+  
 }
-

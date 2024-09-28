@@ -14,8 +14,8 @@ function FeaturedGallery({ sections }) {
     <div className={style.home_container} id={sections?.id}>
       <div
         className={style.header}
-        style={{ backgroundImage: `url(${sections?.images[0]})` }}
       >
+        <img src={sections?.images[0]} alt="Image" />
         <div className={style.card}>
           <h2 className={style.title}>{sections?.title}</h2>
 

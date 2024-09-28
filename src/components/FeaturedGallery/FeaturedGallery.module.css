@@ -125,9 +125,10 @@
 
   /* otras propiedades si es necesario */
 }
+.header img,
 .twoColumnsContainer img, 
 .singleRowContainer img {
-  animation: zoomInOut 20s ease-in-out infinite; /* Duración de 6 segundos, puedes ajustarla */
+  animation: zoomInOut 40s ease-in-out infinite; /* Duración de 6 segundos, puedes ajustarla */
   width: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
   height: 100%;
   object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
