@@ -32,8 +32,7 @@ function App() {
 
   let products = useSelector((state) => state.products);
   let sections = useSelector((state) => state.sections);
-  console.log(products, "products");
-  console.log(sections, "sections");
+
 
   return (
     <div className="App">

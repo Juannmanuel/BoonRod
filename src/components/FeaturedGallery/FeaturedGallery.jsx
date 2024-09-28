@@ -8,7 +8,7 @@ import LedBanner from "../LedBanner/LedBanner";
 import { products } from "../../data";
 
 function FeaturedGallery({ sections }) {
-  console.log(sections, "fea");
+
 
   return (
     <div className={style.home_container} id={sections?.id}>

@@ -12,97 +12,36 @@ import LaNavbar from "../../components/LaNavbar/LaNavbar";
 import { getProductsByCategory, getAllSections } from "../../redux/actions";
 import Louder from "../../components/Louder/Louder";
 import LedBanner from "../../components/LedBanner/LedBanner";
+import { featuredBlock } from "../../data";
+import { ledBanner } from "../../data";
 function Home({}) {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.backUpSections);
-  console.log(sections, "sections home");
-  /*
-
-id: "strin";_
-description: "string";
-buttonText: "string";
-images: [4];
-sectionName: "string"
-title: "string"
-
-  
-  */
   const sectionRef = useRef(null);
-  const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [isLoader, setIsLoader] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
 
   useEffect(() => {
     // dispatch(getProductsByCategory());
     // dispatch(getAllSections());
-    const handleScroll = () => {
-      const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
-
-      if (currentScrollTop < lastScrollTop) {
-        setIsScrollingUp(true); // Scroll hacia arriba
-        dispatch(setScrollDirection(isScrollingUp));
-      } else {
-        setIsScrollingUp(false); // Scroll hacia abajo
-        dispatch(setScrollDirection(isScrollingUp));
-      }
-
-      // Actualizar la posición del scroll anterior
-      setLastScrollTop(currentScrollTop);
-
-      // Detectar la sección actual en pantalla
-      const sectionsRef = document.querySelectorAll("section"); // Seleccionamos todas las secciones
-      let foundSection = "NEW COLLECTION"; // Valor predeterminado
-      sectionsRef.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (
-          rect.top <= window.innerHeight / 2 &&
-          rect.bottom >= window.innerHeight / 2
-        ) {
-          foundSection = section.getAttribute("data-section"); // Encontrar la sección visible
-        }
-      });
-      setCurrentSection(foundSection); // Actualizar la sección actual
-      // dispatch(setCurrentSection(currentSection))
-    };
-
-    const sectionEl = sectionRef.current;
-
-    if (sectionEl) {
-      sectionEl.addEventListener("scroll", handleScroll); // Escuchar evento de scroll
-    }
     setTimeout(() => {
       setIsLoader(false);
     }, 4000);
-
-    // Cleanup: remover el evento cuando el componente se desmonte
-    return () => {
-      if (sectionEl) {
-        sectionEl.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [lastScrollTop, dispatch]);
+  }, []);
 
   return (
     <section className={style.home_main}>
       {isLoader ? (
         <Louder />
       ) : (
-        <section ref={sectionRef} className={style.home_main}>
-          <LaNavbar sectionRef={sectionRef} currentSection={currentSection} />
+        <section className={style.home_main}>
+          <LaNavbar />
           <section data-section={sections[0].sectionName}>
             <FeaturedGallery sections={sections[0]} />
-            <LedBanner
-              text={
-                " 🏷️ ¡Liquidación final! Prendas con hasta un 50% de descuento 🏷️"
-              }
-            />
+            <LedBanner text={ledBanner[0].text} />
             <FeatureBlock
-              section={"CATÁLOGO"}
-              title={"Ofertas que Marcan Tendencia"}
-              description={
-                "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
-              }
+              section={featuredBlock[0].section}
+              title={featuredBlock[0].title}
+              description={featuredBlock[0].description}
               sectionProducs={products.slice(4, 9)}
             />
           </section>
@@ -112,22 +51,15 @@ title: "string"
           <section data-section={sections[1].sectionName}>
             <FeaturedGallery sections={sections[1]} />
           </section>
-          <LedBanner
-            text={
-              " 🔥 Descuento especial: ¡20% OFF en prendas seleccionadas hasta el 30 de Diciembre! 🔥 "
-            }
-          />
-
+          <LedBanner text={ledBanner[1].text} />
           <section data-section={sections[2].sectionName}>
             <FeaturedGallery sections={sections[2]} />
           </section>
           <FeatureBlock
-            section={"CATÁLOGO"}
-            title={"Ofertas que Marcan Tendencia"}
-            description={
-              "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
-            }
-            sectionProducs={products.slice(4, 9)}
+            section={featuredBlock[1].section}
+            title={featuredBlock[1].title}
+            description={featuredBlock[1].description}
+            sectionProducs={products.slice(9, 15)}
           />
           <section data-section="Contactenos">
             <CustomerSupport />

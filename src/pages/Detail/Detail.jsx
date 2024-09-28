@@ -20,7 +20,6 @@ function Detail() {
   const { id } = useParams();
   useEffect(() => {}, [id]);
   const product = products.filter((item) => item.id == id);
-console.log(product[0].discount.isDiscounted, "DEtalle");
 
   return (
     <section className={style.detail_main}>

@@ -16,7 +16,7 @@ export function getProductsByCategory(category) {
     return async (dispatch) => {
         try {
             const { data } = await axios(`${path}/products`)
-            console.log(data);
+   
 
             dispatch({ type: GET_PRODUCTS_BY_CATEGORY, payload: data })
         } catch (error) {
@@ -26,7 +26,7 @@ export function getProductsByCategory(category) {
 }
 /*Actualiza el scroll*/
 export function setScrollDirection(isScrollingUp) {
-    console.log("action", isScrollingUp);
+
     
     return (dispatch) => {
         dispatch({ type: SET_SCROLL_DIRECTION, payload: isScrollingUp })
@@ -34,7 +34,7 @@ export function setScrollDirection(isScrollingUp) {
 
 }
 export function setCurrentSection(section){
-    console.log("entre", section);
+
     
     return (dispatch) => {
         dispatch({ type: SET_CURRENT_SECTION, payload: section });
@@ -46,7 +46,7 @@ export function postNewProduct(product) {
     return async (dispatch) => {
         try {
             const { data } = await axios.post(`${path}/products`)
-            console.log(data);
+
             
         } catch (error) {
             console.log(error.message);

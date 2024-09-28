@@ -33,7 +33,6 @@ const ProductForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Datos del producto:', formData);
     dispatch(postNewProduct(formData))
     
   };

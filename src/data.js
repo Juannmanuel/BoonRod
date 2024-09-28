@@ -312,8 +312,24 @@ images
 title
 description
 */
+export const ledBanner = [
+  { text: " 🏷️ ¡Liquidación final! Prendas con hasta un 50% de descuento 🏷️" },
+  { text: " 🔥 Descuento especial: ¡20% OFF en prendas seleccionadas hasta el 30 de Diciembre! 🔥 " },
+]
 
 
+export const featuredBlock = [
+  {
+    section: "CATÁLOGO",
+    title: "Ofertas que Marcan Tendencia",
+    description: "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio.",
+  },
+  {
+    section: "CATÁLOGO",
+    title: "Nuevas Colecciones Exclusivas",
+    description: "Descubrí las últimas tendencias en moda urbana. Estilo único, diseñado para destacar",
+  }
+]
 export const products = [
   {
     id: 1,
@@ -672,7 +688,7 @@ export const products = [
     name: "POLO PUNTO MEZCLA VISCOSA",
     type: "Buzo",
     price: "49900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: false,
@@ -688,7 +704,7 @@ export const products = [
     name: "POLO CUELLO CONTRASTE",
     type: "Buzo",
     price: "63900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -704,7 +720,7 @@ export const products = [
     name: "POLO PUNTO ESTRUCTURA",
     type: "Buzo",
     price: "49900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: false,
@@ -720,7 +736,7 @@ export const products = [
     name: "POLO PUNTO CANALÉ",
     type: "Buzo",
     price: "49900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -736,7 +752,7 @@ export const products = [
     name: "CAMISETA TEXTO ESTAMPADO",
     type: "Remera",
     price: "48900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -752,7 +768,7 @@ export const products = [
     name: "CAMISETA JACQUARD RAYAS",
     type: "Remera",
     price: "48900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -768,7 +784,7 @@ export const products = [
     name: "CAMISETA BORDADO COMBINADO",
     type: "Remera",
     price: "48900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -784,7 +800,7 @@ export const products = [
     name: "CAMISETA BÁSICA HEAVY WEIGHT",
     type: "Remera",
     price: "36900",
-    sizes: ["S","M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -800,7 +816,7 @@ export const products = [
     name: "ZAPATILLA CASUAL",
     type: "Zapatillas",
     price: "36900",
-    sizes: ["39","40", "41", "42","43","44"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
     inStock: true,
     discount: {
       isDiscounted: false,
@@ -816,7 +832,7 @@ export const products = [
     name: "ZAPATILLA PIEL ESTILO RETRO",
     type: "Zapatillas",
     price: "90900",
-    sizes: ["39","40", "41", "42","43","44"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -832,7 +848,7 @@ export const products = [
     name: "ZAPATILLA BÁSICA",
     type: "Zapatillas",
     price: "90900",
-    sizes: ["39","40", "41", "42","43","44"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -848,7 +864,7 @@ export const products = [
     name: "ZAPATILLA REJILLA",
     type: "Zapatillas",
     price: "90900",
-    sizes: ["39","40", "41", "42","43","44"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
     inStock: true,
     discount: {
       isDiscounted: false,
@@ -864,7 +880,7 @@ export const products = [
     name: "ZAPATILLA MULTICOLOR",
     type: "Zapatillas",
     price: "90900",
-    sizes: ["39","40", "41", "42","43","44"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
     inStock: true,
     discount: {
       isDiscounted: true,
@@ -880,7 +896,7 @@ export const products = [
     name: "SOMBRERO BUCKET TÉCNICO",
     type: "Accesorios",
     price: "34900",
-    sizes: ["M","L"],
+    sizes: ["M", "L"],
     inStock: true,
     discount: {
       isDiscounted: true,
