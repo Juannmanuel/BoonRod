@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { IoAddCircleOutline } from "react-icons/io5";
 import FilterItems from "../FilterItems/FilterItems";
 
-function FeatureBlock({ section, title, description, sectionProducs }) {
+function FeatureBlock({ section, title, description, sectionProducs, sectionRef }) {
   return (
-    <section className={style.featureBlock_main} data-section={section}>
+    <section ref={sectionRef} className={style.featureBlock_main} data-section={section}>
       <div className={style.container}>
         <div className={style.heading}>
           <h2 className={style.title}>{title}</h2>

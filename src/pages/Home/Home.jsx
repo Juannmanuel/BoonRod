@@ -104,6 +104,7 @@ title: "string"
                 "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
               }
               sectionProducs={products}
+              sectionRef={sectionRef}
             />
           </section>
           {/* <LedBanner
