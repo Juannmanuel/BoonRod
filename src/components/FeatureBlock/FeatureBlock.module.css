@@ -1,7 +1,7 @@
 .featureBlock_main {
   width: 100vw;
   height: auto;
-  min-height: 75vh;
+  min-height: 80vh;
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
@@ -24,18 +24,28 @@
 .heading {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: start;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  color: rgb(0, 0, 0);
+  overflow: scroll;
+  width: 95vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: mandatory;
 }
-.heading h2 {
+.title {
   margin: 0;
   padding: 0;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-  font-size: var(--text-big);
+  font-size: 1.5rem;
+  padding: 5px;
+}
+.item_discout {
+  min-width: 25rem;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  scroll-snap-align: center;
 }
 .img_hotSale {
   max-width: 30rem;
@@ -46,6 +56,7 @@
 .description {
   font-size: var(--text-small);
   font-family: var(--font-subtitle);
+  color: rgba(0, 0, 0, 0.817);
   font-weight: 300;
   max-width: 90%;
   max-width: 90%;
@@ -53,8 +64,7 @@
   padding: 0 5px;
 }
 .carousel {
-  width: 100vw;
-  margin-left: 1rem;
+  width: 90vw;
   overflow-x: scroll;
   overflow-y: hidden;
   height: auto;
@@ -63,13 +73,14 @@
   gap: 1.5rem;
   scroll-behavior: smooth;
   padding: 10px;
+  margin-top: 1rem;
 }
 .container_card {
   width: 19rem;
   height: 100%;
 }
 .container_card_link {
-  width: 20rem;
+  width: 17rem;
   height: 70%;
   display: flex;
   flex-flow: column nowrap;
@@ -103,5 +114,76 @@
   color: rgb(255, 255, 255);
   text-decoration: none;
   text-transform: uppercase;
-  
+}
+
+/*_------------------_*/
+.container_items {
+  width: 100%;
+  height: 5rem;
+  border: 1px solid black;
+}
+.gallery {
+  background: #eee;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.gallery_cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery_cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.09); /* Zoom in */
+  }
+  100% {
+    transform: scale(1); /* Zoom out */
+  }
+}
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.title {
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+
+.description {
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
 }

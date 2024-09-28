@@ -1,19 +1,15 @@
 import Card from "../Card/Card";
-import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import style from "./FeatureBlock.module.css";
-import imageHotSale from "../../assets/images/Tarjetas/hotSale.jpg";
-import logo from "../../assets/images/logo/logo_boonrod_oscuro.png";
 import { Link } from "react-router-dom";
 import { IoAddCircleOutline } from "react-icons/io5";
-import LedBanner from "../LedBanner/LedBanner";
+import FilterItems from "../FilterItems/FilterItems";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
     <section className={style.featureBlock_main} data-section={section}>
-
       <div className={style.container}>
         <div className={style.heading}>
-          <h2>{title}</h2>
+          <h2 className={style.title}>{title}</h2>
           <div className={style.description}>{description}</div>
         </div>
         <div className={style.carousel}>

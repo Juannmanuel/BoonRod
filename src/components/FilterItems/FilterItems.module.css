@@ -1,0 +1,26 @@
+.filter_items_main {
+  width: 100%;
+  height: auto;
+  min-height: 10rem;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  position: relative;
+  padding: 5px;
+}
+.header {
+  width: 100%;
+  height: auto;
+}
+.container_items {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: auto;
+}
+.text_wrapper {
+  min-width: 10rem;
+  height: 5rem;
+  border: 1px solid black;
+}

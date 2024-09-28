@@ -75,6 +75,8 @@
   z-index: 4;
   margin-left: 1rem;
   max-width: 90%;
+  animation: slideUp 0.5s ease-in-out forwards;
+
 }
 .description {
   color: rgb(243, 243, 243);
@@ -85,6 +87,8 @@
   z-index: 4;
   margin-left: 1rem;
   max-width: 90%;
+  animation: slideUp 0.6s ease-in-out forwards;
+
 }
 .btnAction {
   min-width: 20rem;
@@ -103,6 +107,8 @@
   z-index: 5;
   margin-left: 1rem;
   max-width: 50%;
+  animation: slideUp 0.7s ease-in-out forwards;
+
 }
 
 .twoColumnsContainer {
@@ -148,7 +154,7 @@
     transform: scale(1); /* Tamaño original */
   }
   50% {
-    transform: scale(1.1); /* Zoom in */
+    transform: scale(1.09); /* Zoom in */
   }
   100% {
     transform: scale(1); /* Zoom out */
@@ -177,7 +183,7 @@
 }
 
 .title {
-  animation: slideUp 0.5s ease-in-out forwards;
+  animation: slideUp 0.4s ease-in-out forwards;
 }
 
 .description {
