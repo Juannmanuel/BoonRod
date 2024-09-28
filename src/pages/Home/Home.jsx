@@ -34,8 +34,8 @@ title: "string"
   const [currentSection, setCurrentSection] = useState(""); // Nueva variable para la sección actual
 
   useEffect(() => {
-    dispatch(getProductsByCategory());
-    dispatch(getAllSections());
+    // dispatch(getProductsByCategory());
+    // dispatch(getAllSections());
     const handleScroll = () => {
       const currentScrollTop = sectionRef.current.scrollTop; // Obtener la posición actual del scroll
 
@@ -103,14 +103,9 @@ title: "string"
               description={
                 "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
               }
-              sectionProducs={products}
-              sectionRef={sectionRef}
+              sectionProducs={products.slice(4, 9)}
             />
           </section>
-          {/* <LedBanner
-            text={"Hola amigo, que tal soy oscar, tengo nueve añitos"}
-          /> */}
-
           <section data-section="¿Quienes somos?">
             <About />
           </section>
@@ -123,12 +118,19 @@ title: "string"
             }
           />
 
-          <section data-section="Contactenos">
-            <CustomerSupport />
-          </section>
-
           <section data-section={sections[2].sectionName}>
             <FeaturedGallery sections={sections[2]} />
+          </section>
+          <FeatureBlock
+            section={"CATÁLOGO"}
+            title={"Ofertas que Marcan Tendencia"}
+            description={
+              "No te pierdas las rebajas especiales en nuestras colecciones. La moda urbana ahora al mejor precio."
+            }
+            sectionProducs={products.slice(4, 9)}
+          />
+          <section data-section="Contactenos">
+            <CustomerSupport />
           </section>
           <Footer />
         </section>
