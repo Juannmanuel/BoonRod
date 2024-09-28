@@ -39,7 +39,6 @@
     margin: 0 10px;
     background-color: transparent;
     animation: circle-keys var(--animation);
-    border: 1px solid rgb(255, 255, 255);
 
   }
   
