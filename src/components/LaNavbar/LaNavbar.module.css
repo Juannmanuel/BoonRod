@@ -43,6 +43,7 @@
   font-size: 2rem;
   box-sizing: border-box;
   transition: font-size 1.5s;
+  pointer-events: all;
 }
 
 .categorie {
@@ -71,6 +72,52 @@
   margin-left: 0.5rem;
   flex-flow: column nowrap;
   justify-content: center;
+}
+/*Menu amburguesa*/
+.hamburger_menu_container {
+  position: absolute;
+  top: 3rem;
+  width: 0;
+  height: 100vh;
+  background-color: var(--color-white-medium);
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease; /* Opacidad transiciona de manera separada */
+}
+
+.hamburger_menu_container.open {
+  animation: expand 0.5s forwards;
+  opacity: 1; /* Se asegura que la opacidad sea 1 cuando está abierto */
+}
+
+.hamburger_menu_container.closed {
+  animation: contract 0.5s forwards;
+  opacity: 0; /* Reduce opacidad al cerrar */
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100vw;
+  }
+}
+
+@keyframes contract {
+  from {
+    width: 100vw;
+  }
+  to {
+    width: 0;
+  }
+}
+.container_links{
+  width: 90%;
+  height: auto;
+  min-height: 30rem;
+  border: 1px solid black;
+  margin-top: 1rem;
 }
 @media (max-width: 768px) {
   .nav_actions_container {

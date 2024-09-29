@@ -31,7 +31,6 @@ function App() {
   }, [dispatch]);
 
   let products = useSelector((state) => state.products);
-  let sections = useSelector((state) => state.sections);
 
 
   return (

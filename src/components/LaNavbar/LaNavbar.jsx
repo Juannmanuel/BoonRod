@@ -1,43 +1,46 @@
 import React from "react";
-import styles from "./LaNavbar.module.css";
+import style from "./LaNavbar.module.css";
 import boonrodText from "../../assets/images/logo/logo_tipografia_boonrod_claro.png";
 import { IoMenu } from "react-icons/io5";
 import { CiShoppingCart } from "react-icons/ci";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 const LaNavbar = ({ currentSection, ref }) => {
   const isScrollingUp = useSelector((state) => state.isScrollingUp);
-  console.log(currentSection, isScrollingUp, "nav");
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  function toggleMenu(){
+    console.log("entré");
+    setIsMenuOpen(!isMenuOpen)
+    
+  }
   return (
     <nav
       ref={ref}
       className={
         isScrollingUp
-          ? styles.nav_main_container
-          : styles.nav_main_container_withBackground
+          ? style.nav_main_container
+          : style.nav_main_container_withBackground
       }
     >
-      <div className={styles.nav_actions_container}>
+      <div className={style.nav_actions_container}>
         <IoMenu
           style={{ color: isScrollingUp ? "black" : "white" }}
-          className={styles.icon}
+          className={style.icon}
+          onClick={()=> toggleMenu()}
         />
 
-        <span
-          style={{ color: isScrollingUp ? "black" : "white" }}
-          className={styles.categorie}
-        >
-          {isScrollingUp ? (
-            <img src={boonrodText} />
-          ) : (
-            <h2>{currentSection}</h2>
-          )}
-        </span>
-        <CiShoppingCart
-          style={{ color: isScrollingUp ? "black" : "white" }}
-          className={styles.icon}
-        />
+        <div className={style.categorie}>
+          <img src={boonrodText} />
+        </div>
+        <CiShoppingCart className={style.icon} />
       </div>
+      {/* menú amburgesa */}
+      { isMenuOpen && <div className={`${style.hamburger_menu_container} ${isMenuOpen ? style.open : style.closed}`}>
+        <div className={style.container_links}>
+
+        </div>
+      </div>
+    }
     </nav>
   );
 };
