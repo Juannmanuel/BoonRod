@@ -3,6 +3,7 @@
   color: white; /* Letras blancas */
   padding: 2rem 1rem; /* Espaciado superior/inferior y lateral */
   text-align: center; /* Centrar el texto */
+  min-height: 65vh;
 }
 
 .title {

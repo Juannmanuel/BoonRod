@@ -3,10 +3,10 @@
 
 .catalogo_main {
   width: 100vw;
-  height: 100vh;
-  overflow: auto;
+  max-height: 100vh;
+  overflow: scroll;
   position: relative;
-
 }
+
 
 
