@@ -94,7 +94,7 @@ function TarjetaDetalle({
 
       <div className={style.reccomended}>
         <span style={{ margin: "0" }}>NUESTRAS RECOMENDACIONES</span>
-        <RecommendedProducts />
+        <RecommendedProducts products={products.slice(0,10)} />
       </div>
 
       <Footer />

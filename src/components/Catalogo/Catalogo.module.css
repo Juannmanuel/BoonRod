@@ -6,6 +6,8 @@
   max-height: 100vh;
   overflow: scroll;
   position: relative;
+  background-color: var(--color-white-medium);
+
 }
 .nav_main {
   width: auto;
@@ -25,8 +27,6 @@
   background-color: var(--color-white-medium);
   padding: 5px;
   box-sizing: border-box;
-  position: fixed;
-  z-index: 2;
 
 }
 .container_types {
@@ -57,6 +57,10 @@
   font-family: var(--font-subtitle);
   font-size: var( --text-small);
   font-weight: var(--font-weight-small);
+}
+.type_selected {
+  background-color: #000; /* Cambia por el color que desees */
+  color: #fff;
 }
 .container_button {
   width: 10%;
