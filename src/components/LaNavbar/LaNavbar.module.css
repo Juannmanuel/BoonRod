@@ -7,9 +7,9 @@
   top: 0;
   z-index: 3;
   pointer-events: none;
-  background-color: var( --color-white-medium);
+  background-color: var(--color-white-medium);
   backdrop-filter: blur(5px);
-  transition: background-color .5s, top .5s;
+  transition: background-color 0.5s, top 0.5s;
 }
 
 .nav_main_container_withBackground {
@@ -77,12 +77,12 @@
 .hamburger_menu_container {
   position: absolute;
   top: 3rem;
-  width: 0;
+  width: 100vw;
   height: 100vh;
   background-color: var(--color-white-medium);
   opacity: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease; /* Opacidad transiciona de manera separada */
+  transition: opacity 3s ease; /* Opacidad transiciona de manera separada */
 }
 
 .hamburger_menu_container.open {
@@ -91,34 +91,61 @@
 }
 
 .hamburger_menu_container.closed {
-  animation: contract 0.5s forwards;
-  opacity: 0; /* Reduce opacidad al cerrar */
+  animation: contract 5s forwards;
+  opacity: 0; /* Se asegura que la opacidad sea 1 cuando está abierto */
 }
+.container_links {
+  width: 90%;
+  height: auto;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.link_item {
+  width: auto;
+  min-width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-title);
+  font-size: var(--text-big);
+  font-weight: var(--font-weight-big);
+  animation: slideUp 1s ease-in-out forwards;
 
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes expand {
   from {
-    width: 0;
+    opacity: 0;
   }
   to {
-    width: 100vw;
+    opacity: 1;
   }
 }
 
 @keyframes contract {
   from {
-    width: 100vw;
+    opacity: 1;
   }
   to {
-    width: 0;
+    opacity: 0;
   }
 }
-.container_links{
-  width: 90%;
-  height: auto;
-  min-height: 30rem;
-  border: 1px solid black;
-  margin-top: 1rem;
-}
+
 @media (max-width: 768px) {
   .nav_actions_container {
     height: 4rem;
