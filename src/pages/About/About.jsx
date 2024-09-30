@@ -9,18 +9,18 @@ const About = () => {
   const longitude = "-68.85343209005165";
   return (
     <div className={style.aboutContainer}>
-      <div className={style.wave_container}>
-      </div>
+      <div className={style.wave_container}></div>
       <div className={style.container_content}>
         <h1 className={style.title}>¿Quiénes somos?</h1>
         <p className={style.description}>
-          Somos una empresa dedicada a la venta de indumentaria masculina,
-          enfocada en ofrecer productos de alta calidad que reflejan un estilo
-          urbano y moderno. Somos una empresa dedicada a la venta de
-          indumentaria masculina, enfocada en ofrecer productos de alta calidad
-          que reflejan un estilo urbano y moderno. Somos una empresa dedicada a
-          la venta de indumentaria masculina, enfocada en ofrecer productos de
-          alta calidad que reflejan un estilo urbano y moderno.
+          En <strong>Boonrod</strong>, nos especializamos en ropa urbana
+          masculina de alta calidad, diseñada para hombres que buscan un estilo
+          moderno y auténtico. Nuestra marca tiene raíces en{" "}
+          <strong>Mendoza, Argentina</strong>, una provincia vibrante donde la
+          moda urbana se encuentra con la cultura local. Actualmente, contamos
+          con dos sucursales en Mendoza, ofreciendo a nuestros clientes prendas
+          que combinan confort y estilo, pensadas para el día a día en la
+          ciudad.
         </p>
 
         <button
@@ -36,8 +36,7 @@ const About = () => {
         </button>
       </div>
       <SocialLinks />
-      <div className={style.wave_container_invertid}>
-      </div>
+      <div className={style.wave_container_invertid}></div>
     </div>
   );
 };
