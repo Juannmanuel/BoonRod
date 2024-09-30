@@ -48,8 +48,6 @@ function Home({}) {
           <section data-section="¿Quienes somos?">
             <About />
           </section>
-          <LedBanner text={ledBanner[0].text} />
-
           <section data-section={sections[1].sectionName}>
             <FeaturedGallery sections={sections[1]} />
           </section>

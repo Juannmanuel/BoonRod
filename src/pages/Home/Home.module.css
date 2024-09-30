@@ -1,7 +1,8 @@
 .home_main {
   width: 100vw;
   height: 100vh;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: var(--color-white-medium);
 }
 .home_container {
