@@ -48,7 +48,7 @@ const LaNavbar = ({ currentSection, ref }) => {
               );
             })}
             <div className={style.link_item}>
-              <SocialLinks />
+              <SocialLinks color="black" />
             </div>
           </div>
         </div>

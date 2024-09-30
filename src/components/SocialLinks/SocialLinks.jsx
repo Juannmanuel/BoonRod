@@ -5,10 +5,10 @@ import {
   FaWhatsapp,
   FaTwitter,
 } from "react-icons/fa";
-function SocialLinks() {
+function SocialLinks({color = "white"}) {
   return (
     <div className={style.socialLinks_main}>
-      <p className={style.title}>
+      <p className={style.title} style={{color: `${color}`}}>
         Síguenos en nuestras redes sociales:
       </p>
       <div className={style.socialMedia}>
@@ -18,20 +18,20 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaFacebookSquare className={style.icon} />
+          <FaFacebookSquare className={style.icon} style={{color: `${color}`}} />
         </a>
         <a
           href="https://www.instagram.com/boonrod.mza/?hl=es-la"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram className={style.icon} />
+          <FaInstagram className={style.icon} style={{color: `${color}`}} />
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter className={style.icon} />
+          <FaTwitter className={style.icon} style={{color: `${color}`}} />
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaWhatsapp className={style.icon} />
+          <FaWhatsapp className={style.icon} style={{color: `${color}`}} />
         </a>
       </div>
     </div>
