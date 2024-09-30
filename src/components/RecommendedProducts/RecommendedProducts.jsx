@@ -4,17 +4,9 @@ import { Link } from "react-router-dom";
 import { products } from "../../data.js";
 import ProductPrice from "../ProductPrice/ProductPrice.jsx";
 
-function RecommendedProducts({ section }) {
-
-
+function RecommendedProducts({ products }) {
   return (
-    <section
-      className={
-        section == "catalogo" || section == "/"
-          ? style.RecommendedProducts_main_white_navbar
-          : style.RecommendedProducts_main
-      }
-    >
+    <section className={style.RecommendedProducts_main}>
       {products?.map((item, index) => (
         <Link
           style={{ textDecoration: "none" }}
@@ -36,7 +28,7 @@ function RecommendedProducts({ section }) {
                 price={item.price}
                 isDiscounted={item.discount.isDiscounted}
                 percentage={item.discount.percentage}
-                fontSize={.85}
+                fontSize={0.85}
               />
             </div>
           </div>
