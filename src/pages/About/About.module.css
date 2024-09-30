@@ -17,12 +17,14 @@
 .container_content{
   width: 95vw;
   height: auto;
+  min-height: 50vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
   align-items: center;
   gap: 1rem;
   box-sizing: border-box;
+  margin: 2rem 0;
 }
 .title {
   padding: 0;
