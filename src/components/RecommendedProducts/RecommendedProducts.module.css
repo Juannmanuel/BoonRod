@@ -49,9 +49,10 @@
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: start;
-  padding: 3px;
+  padding: 0 10px;
   background-color: var(--color-white-medium);
   font-size: .75rem;
+  box-sizing: border-box;
 }
 .flag_discount{
   position: absolute;

@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts";
 import LaNavbar from "../LaNavbar/LaNavbar";
 import { products } from "../../data";
+import CustomerSupport from "../CustomerSupport/CustomerSupport";
 
 function Catalogo() {
   // Estado para manejar el tipo de producto seleccionado
@@ -66,7 +67,7 @@ function Catalogo() {
               }`}
               onClick={handleShowDiscounted}
             >
-              {showDiscounted ? "Todo" : "Ofertas"}
+              ofertas
             </span>
           </div>
         </section>
@@ -74,6 +75,7 @@ function Catalogo() {
       <section className={style.container_products}>
         <RecommendedProducts products={filteredProducts} section={"catalogo"} />
       </section>
+      <CustomerSupport/>
       <Footer />
     </section>
   );
