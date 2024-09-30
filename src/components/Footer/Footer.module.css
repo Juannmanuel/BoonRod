@@ -1,19 +1,64 @@
-.footer_main{
-    width: 100%;
-    height: auto;
-    min-height: 30vh;
-    background-color: #ecf0f1 ;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
+.footer_main {
+  background-color: black; /* Fondo negro */
+  color: white; /* Letras blancas */
+  padding: 2rem 1rem; /* Espaciado superior/inferior y lateral */
+  text-align: center; /* Centrar el texto */
 }
-.contact{
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
+
 .title {
-    margin: .2rem;
-    padding: 0;
-    font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  margin: 1.5rem 0; /* Espacio arriba y abajo */
+}
+
+.contact h3 {
+  font-size: 1.5rem; /* Tamaño del subtítulo */
+  margin-bottom: 0.5rem; /* Espacio debajo del subtítulo */
+  font-family: var(--font-subtitle);
+  font-size: var(--font-weight-medium);
+  font-weight: var(--font-weight-small);
+}
+
+.contact p {
+  font-size: 1rem; /* Tamaño del texto */
+  margin: 0.5rem 0; /* Espacio vertical entre párrafos */
+  font-family: var(--font-paragraph);
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-small);
+}
+
+.policies {
+  margin: 1.5rem 0; /* Espacio arriba y abajo */
+}
+
+.policies h3 {
+  font-size: 1.5rem; /* Tamaño del subtítulo */
+  margin-bottom: 0.5rem; /* Espacio debajo del subtítulo */
+  font-family: var(--font-subtitle);
+  font-size: var(--font-weight-medium);
+  font-weight: var(--font-weight-small);
+}
+
+.policies p {
+  font-size: 1rem; /* Tamaño del texto */
+  margin: 0.5rem 0; /* Espacio vertical entre párrafos */
+  font-family: var(--font-paragraph);
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-small);
+}
+
+.pageRequest {
+  margin-top: 2rem; /* Espacio arriba */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  background-color: white; /* Fondo blanco para el enlace */
+  color: black; /* Texto negro para el enlace */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s; /* Transición suave para hover */
+}
+
+.pageRequest:hover {
+  background-color: #f0f0f0; /* Cambio de fondo en hover */
 }

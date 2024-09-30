@@ -37,6 +37,9 @@ const LaNavbar = ({ currentSection, ref }) => {
           }`}
         >
           <div className={style.container_links}>
+            <div className={style.link_item}>
+              <span>HOME</span>
+            </div>
             {sections?.map((item, index) => {
               return (
                 <div key={index} className={style.link_item}>
