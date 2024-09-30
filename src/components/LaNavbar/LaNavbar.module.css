@@ -64,6 +64,7 @@
 /*Menu amburguesa*/
 .hamburger_menu_container {
   position: absolute;
+  z-index: 9;
   top: 3rem;
   width: 100vw;
   height: 100vh;

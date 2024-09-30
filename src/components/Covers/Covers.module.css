@@ -15,7 +15,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 1rem;
-  z-index: 4;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
