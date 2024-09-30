@@ -61,6 +61,7 @@ function Home({}) {
             description={featuredBlock[1].description}
             sectionProducs={products.slice(9, 15)}
           />
+          <LedBanner text={ledBanner[0].text} />
           <section data-section="Contactenos">
             <CustomerSupport />
           </section>

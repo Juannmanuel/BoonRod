@@ -12,17 +12,6 @@
   transition: background-color 0.5s, top 0.5s;
 }
 
-.nav_main_container_withBackground {
-  width: 100vw;
-  height: auto;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.59);
-  backdrop-filter: blur(5px);
-  transition: background-color 1.5s, top 1.5s;
-}
 
 .nav_actions_container {
   width: 90vw;
@@ -81,6 +70,8 @@
   height: 100vh;
   background-color: var(--color-white-medium);
   opacity: 0;
+  pointer-events: stroke;
+  z-index: 10;
   overflow: hidden;
   transition: opacity 3s ease; /* Opacidad transiciona de manera separada */
 }
@@ -115,7 +106,7 @@
   font-family: var(--font-title);
   font-size: var(--text-big);
   font-weight: var(--font-weight-big);
-  animation: slideUp 1s ease-in-out forwards;
+  animation: slideUp .5s ease-in-out forwards;
 
 }
 @keyframes slideUp {

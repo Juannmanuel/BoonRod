@@ -16,14 +16,7 @@ const LaNavbar = ({ currentSection, ref }) => {
     setIsMenuOpen(!isMenuOpen);
   }
   return (
-    <nav
-      ref={ref}
-      className={
-        isScrollingUp
-          ? style.nav_main_container
-          : style.nav_main_container_withBackground
-      }
-    >
+    <nav ref={ref} className={style.nav_main_container}>
       <div className={style.nav_actions_container}>
         {isMenuOpen ? (
           <IoMdClose className={style.icon} onClick={() => toggleMenu()} />
