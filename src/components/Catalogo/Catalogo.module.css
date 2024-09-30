@@ -30,7 +30,7 @@
 
 }
 .container_types {
-  width: 71%;
+  width: 74%;
   height: auto;
   overflow-x: scroll;
   display: flex;
@@ -38,8 +38,9 @@
   justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
-  padding: 5px;
-  gap: 10px;
+  padding: 0 5px;
+  gap: 5px;
+  border: 0px 0px 0px 1px solid black;
 
 
 
@@ -56,6 +57,7 @@
   align-items: center;
   text-transform: uppercase;
   font-family: var(--font-subtitle);
+  font-size: var(--font-weight-medium);
   font-weight: var(--font-weight-small);
 }
 .type_selected {
@@ -64,7 +66,7 @@
 }
 .container_button {
   width: auto;
-  max-width: 25%;
+  max-width: 20%;
   height: auto;
   box-sizing: border-box;
   display: flex;
@@ -72,11 +74,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-right: .5rem;
 
 }
 .type_discount{
   width: auto;
-  min-width: 5rem;
+  min-width: 4rem;
   padding: 7px;
   border-radius: 3px;
   border: none;
@@ -99,4 +102,6 @@
   font-weight: 500;
 
 }
-
+.container_products{
+  margin-top: 6rem;
+}
