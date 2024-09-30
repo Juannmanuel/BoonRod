@@ -10,7 +10,6 @@ const About = () => {
   return (
     <div className={style.aboutContainer}>
       <div className={style.wave_container}>
-        <img src={imageLocal} alt="" />
       </div>
       <div className={style.container_content}>
         <h1 className={style.title}>¿Quiénes somos?</h1>
@@ -37,6 +36,8 @@ const About = () => {
         </button>
       </div>
       <SocialLinks />
+      <div className={style.wave_container_invertid}>
+      </div>
     </div>
   );
 };
