@@ -16,6 +16,8 @@ import { featuredBlock } from "../../data";
 import { ledBanner } from "../../data";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import gifSale from "../../assets/images/Flyer/saleGif.gif";
+import gifSale2 from "../../assets/images/Flyer/saleGif2.gif";
+import gifSale3 from "../../assets/images/Flyer/saleGif3.gif";
 
 function Home({}) {
   const dispatch = useDispatch();
@@ -39,8 +41,8 @@ function Home({}) {
         <section className={style.home_main}>
           <LaNavbar />
           <FeaturedGallery sections={sections[0]} />
-          <LedBanner text={ledBanner[0].text} />
           <img className={style.gifSale} src={gifSale} alt="" />
+          <LedBanner text={ledBanner[0].text} />
           <FeatureBlock
             section={featuredBlock[0].section}
             title={featuredBlock[0].title}
@@ -49,8 +51,8 @@ function Home({}) {
           />
           <About />
           <FeaturedGallery sections={sections[1]} />
+          <img className={style.gifSale} src={gifSale3} alt="" />
           <LedBanner text={ledBanner[0].text} />
-          <img className={style.gifSale} src={gifSale} alt="" />
           <FeatureBlock
             section={featuredBlock[0].section}
             title={featuredBlock[0].title}
@@ -66,6 +68,8 @@ function Home({}) {
             description={featuredBlock[1].description}
             sectionProducs={products.slice(11, 17)}
           />
+          <img className={style.gifSale} src={gifSale2} alt="" />
+
           <Footer />
         </section>
       )}
