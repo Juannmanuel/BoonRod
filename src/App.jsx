@@ -14,6 +14,8 @@ import { getProductsByCategory, getAllSections } from "./redux/actions";
 import Dashboard from "./pages/Dashboard/dashboard";
 import ProductForm from "./pages/Dashboard/dashboard";
 import TarjetaDetalle from "./components/TarjetaDetalle/TarjetaDetalle";
+import CircleAnimation from "./components/CircleAnimation/CircleAnimation";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 function App() {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 780);
   const dispatch = useDispatch();
@@ -48,7 +50,7 @@ function App() {
         />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/detalle/:id" element={<Detail />} />
-        <Route path="/louder" element={<Louder />} />
+        <Route path="/louder" element={<LoadingScreen />} />
       </Routes>
     </div>
   );

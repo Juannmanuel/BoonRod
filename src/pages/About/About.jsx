@@ -34,8 +34,8 @@ const About = () => {
         >
           Ver ubicación en Google Maps
         </button>
-      </div>
       <SocialLinks />
+      </div>
       <div className={style.wave_container_invertid}></div>
     </div>
   );

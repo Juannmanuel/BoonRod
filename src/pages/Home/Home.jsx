@@ -14,6 +14,7 @@ import Louder from "../../components/Louder/Louder";
 import LedBanner from "../../components/LedBanner/LedBanner";
 import { featuredBlock } from "../../data";
 import { ledBanner } from "../../data";
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 function Home({}) {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.backUpSections);
@@ -31,7 +32,7 @@ function Home({}) {
   return (
     <section className={style.home_main}>
       {isLoader ? (
-        <Louder />
+        <LoadingScreen />
       ) : (
         <section className={style.home_main}>
           <LaNavbar />

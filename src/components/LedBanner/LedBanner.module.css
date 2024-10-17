@@ -25,10 +25,11 @@
 }
 
 .ledText {
+
   white-space: nowrap; /* Evita que el texto haga salto de línea */
   display: inline-block;
   color: white;
   margin: 0;
   padding: 0;
-  animation: slide 20s linear infinite; /* Animación de 10s, continua */
+  animation: slide 10s linear infinite; /* Animación de 10s, continua */
 }
