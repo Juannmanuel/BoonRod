@@ -15,7 +15,7 @@ function FeaturedGallery({ sections }) {
       <div
         className={style.header}
       >
-        <img src={sections?.images[0]} alt="Image" />
+        <img src={sections?.images[3]} alt="Image" />
         <div className={style.card}>
           <h2 className={style.title}>{sections?.title}</h2>
 
@@ -34,7 +34,7 @@ function FeaturedGallery({ sections }) {
         <img src={sections.images[2]} alt="" />
       </div>
       <div className={style.singleRowContainer}>
-        <img src={sections.images[3]} alt="" />
+        <img src={sections.images[0]} alt="" />
       </div>
     </div>
   );

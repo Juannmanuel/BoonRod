@@ -3,14 +3,17 @@ import style from "./FeatureBlock.module.css";
 import { Link } from "react-router-dom";
 import { IoAddCircleOutline } from "react-icons/io5";
 import FilterItems from "../FilterItems/FilterItems";
+import gifSale from "../../assets/images/Flyer/saleGif.gif"
+import CircleAnimation from "../CircleAnimation/CircleAnimation";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
   return (
     <section className={style.featureBlock_main} data-section={section}>
+      
       <div className={style.container}>
         <div className={style.heading}>
+          <div className={style.circle}></div>
           <h2 className={style.title}>{title}</h2>
-          <div className={style.description}>{description}</div>
         </div>
         <div className={style.carousel}>
           {sectionProducs.slice(0, 6).map((item, index) => (

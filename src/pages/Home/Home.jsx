@@ -15,6 +15,8 @@ import LedBanner from "../../components/LedBanner/LedBanner";
 import { featuredBlock } from "../../data";
 import { ledBanner } from "../../data";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
+import gifSale from "../../assets/images/Flyer/saleGif.gif";
+
 function Home({}) {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.backUpSections);
@@ -36,36 +38,34 @@ function Home({}) {
       ) : (
         <section className={style.home_main}>
           <LaNavbar />
-          <section data-section={sections[0].sectionName}>
-            <FeaturedGallery sections={sections[0]} />
-            <LedBanner text={ledBanner[0].text} />
-            <FeatureBlock
-              section={featuredBlock[0].section}
-              title={featuredBlock[0].title}
-              description={featuredBlock[0].description}
-              sectionProducs={products.slice(4, 9)}
-            />
-          </section>
-          <section data-section="¿Quienes somos?">
-            <About />
-          </section>
-          <section data-section={sections[1].sectionName}>
-            <FeaturedGallery sections={sections[1]} />
-          </section>
+          <FeaturedGallery sections={sections[0]} />
+          <LedBanner text={ledBanner[0].text} />
+          <img className={style.gifSale} src={gifSale} alt="" />
+          <FeatureBlock
+            section={featuredBlock[0].section}
+            title={featuredBlock[0].title}
+            description={featuredBlock[0].description}
+            sectionProducs={products.slice(0, 5)}
+          />
+          <About />
+          <FeaturedGallery sections={sections[1]} />
+          <LedBanner text={ledBanner[0].text} />
+          <img className={style.gifSale} src={gifSale} alt="" />
+          <FeatureBlock
+            section={featuredBlock[0].section}
+            title={featuredBlock[0].title}
+            description={featuredBlock[0].description}
+            sectionProducs={products.slice(6, 11)}
+          />
+          <CustomerSupport />
+          <FeaturedGallery sections={sections[2]} />
           <LedBanner text={ledBanner[1].text} />
-          <section data-section={sections[2].sectionName}>
-            <FeaturedGallery sections={sections[2]} />
-          </section>
           <FeatureBlock
             section={featuredBlock[1].section}
             title={featuredBlock[1].title}
             description={featuredBlock[1].description}
-            sectionProducs={products.slice(9, 15)}
+            sectionProducs={products.slice(11, 17)}
           />
-          <LedBanner text={ledBanner[0].text} />
-          <section data-section="Contactenos">
-            <CustomerSupport />
-          </section>
           <Footer />
         </section>
       )}
