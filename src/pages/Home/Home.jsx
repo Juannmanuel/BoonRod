@@ -50,6 +50,7 @@ function Home({}) {
             sectionProducs={products.slice(0, 5)}
           />
           <About />
+          <LedBanner text={ledBanner[0].text} />
           <FeaturedGallery sections={sections[1]} />
           <img className={style.gifSale} src={gifSale3} alt="" />
           <LedBanner text={ledBanner[0].text} />
