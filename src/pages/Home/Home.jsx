@@ -52,7 +52,7 @@ function Home({}) {
           <About />
           <LedBanner text={ledBanner[0].text} />
           <FeaturedGallery sections={sections[1]} />
-          <img className={style.gifSale} src={gifSale3} alt="" />
+          <img className={style.gifSale} src={gifSale2} alt="" />
           <LedBanner text={ledBanner[0].text} />
           <FeatureBlock
             section={featuredBlock[0].section}
@@ -69,7 +69,6 @@ function Home({}) {
             description={featuredBlock[1].description}
             sectionProducs={products.slice(11, 17)}
           />
-          <img className={style.gifSale} src={gifSale2} alt="" />
 
           <Footer />
         </section>
