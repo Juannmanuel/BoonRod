@@ -1,23 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap");
-
-/* General styles for the gallery */
-.galleryContainer {
+.main {
   width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  display: grid;
+  grid-row: 100vh 100vh;
   scroll-behavior: smooth;
   position: relative;
 }
 
-.galleryContainer img {
+.image {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-
-/* Header section */
 .header {
   width: 100vw;
   height: 75vh;
@@ -41,9 +35,11 @@
 
   background: linear-gradient(to top, rgba(0, 0, 0, 0.77), transparent 100%);
 }
-.inamtionCard{
+.inamtionCard {
   animation: slideUp 1s ease-in-out forwards;
-
+}
+.animationImage {
+  animation: zoomInOut 1s both;
 }
 
 .title {
@@ -64,60 +60,28 @@
   color: white;
 }
 
-.btnAction {
-  width: 10rem;
-  height: 2.7rem;
-  position: absolute;
-  top: 0;
+.button {
+  min-width: 15rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
   color: black;
   text-decoration: none;
   margin-left: 1rem;
-  border: 1px solid red;
-}
-
-/* Two-column image section */
-.twoColumns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 40vh;
-  overflow: hidden;
-  box-shadow: 0px -2px 13px rgba(0, 0, 0, 0.56);
-}
-
-/* Single row image section */
-.singleRow {
-  display: flex;
-  width: 100vw;
-  height: 60vh;
-  background-color: aliceblue;
-  overflow: hidden;
-}
-
-.imageContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* Icon inside image containers */
-.icon {
-  position: absolute;
-  left: 50%;
-  bottom: 1rem;
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.8);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  animation: bounceIn 2.5s both;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 /* Animations */
 @keyframes zoomInOut {
-  0%, 100% {
-    transform: scale(1);
+  0% {
+    transform: scale(0.8);
   }
-  50% {
-    transform: scale(1.09);
+  100% {
+    transform: scale(1);
   }
 }
 

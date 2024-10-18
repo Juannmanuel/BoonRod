@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { setScrollDirection, setCurrentSection } from "../../redux/actions";
 import style from "./Home.module.css";
@@ -18,12 +19,13 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import gifSale from "../../assets/images/Flyer/saleGif.gif";
 import gifSale2 from "../../assets/images/Flyer/saleGif2.gif";
 import gifSale3 from "../../assets/images/Flyer/saleGif3.gif";
+import CollectionBanner from "../../components/CollectionBanner/CollectionBanner";
 
 function Home({}) {
-  const dispatch = useDispatch();
   const sections = useSelector((state) => state.backUpSections);
-  const sectionRef = useRef(null);
   const [isLoader, setIsLoader] = useState(true);
+
+
 
   useEffect(() => {
     // dispatch(getProductsByCategory());
@@ -40,7 +42,7 @@ function Home({}) {
       ) : (
         <section className={style.home_main}>
           <LaNavbar />
-          <FeaturedGallery sections={sections[0]} />
+          <CollectionBanner sections={sections[0]}  />
           <img className={style.gifSale} src={gifSale} alt="" />
           <LedBanner text={ledBanner[0].text} />
           <FeatureBlock
@@ -51,7 +53,7 @@ function Home({}) {
           />
           <About />
           <LedBanner text={ledBanner[0].text} />
-          <FeaturedGallery sections={sections[1]} />
+          <CollectionBanner sections={sections[1]} />
           <img className={style.gifSale} src={gifSale2} alt="" />
           <LedBanner text={ledBanner[0].text} />
           <FeatureBlock
@@ -61,7 +63,7 @@ function Home({}) {
             sectionProducs={products.slice(6, 11)}
           />
           <CustomerSupport />
-          <FeaturedGallery sections={sections[2]} />
+          <CollectionBanner sections={sections[2]} />
           <LedBanner text={ledBanner[1].text} />
           <FeatureBlock
             section={featuredBlock[1].section}
