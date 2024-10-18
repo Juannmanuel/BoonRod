@@ -18,7 +18,7 @@ function CollectionBanner({ sections }) {
         >
           <h2 className={style.title}>{sections?.title}</h2>
           <p className={style.description}>{sections?.description}</p>
-          <button className={style.button}>
+          <button className={`${style.button} ${inView ? style.inamtionButton : ""}`}>
           <Link style={{textDecoration: "none", color: "black"}} to={`/catalogo`}>{sections?.buttonText.toUpperCase()}</Link>
         </button> 
         </div>
