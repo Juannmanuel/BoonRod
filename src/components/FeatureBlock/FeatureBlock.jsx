@@ -3,7 +3,7 @@ import style from "./FeatureBlock.module.css";
 import { Link } from "react-router-dom";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { useInView } from "react-intersection-observer";
-
+import pngBackGround from "../../assets/images/pngBackGround/pngbackprint.png"
 function FeatureBlock({ section, title, description, sectionProducs }) {
   const { ref, inView } = useInView();
   console.log(inView);
@@ -12,9 +12,10 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
     <section ref={ref} className={`${style.featureBlock_main} ${inView ? style.featureBlock_main_animated: ""}`} data-section={section}>
       {/* <CircleAnimation/> */}
       <div className={style.container}>
-        {/* <div className={style.heading}>
+        <div className={style.heading}>
+          <img className={style.pngBackGround} src={pngBackGround} alt="" />
           <h2 className={`${style.title} ${inView ? style.titleAnimated : ""}`}>{title}</h2>
-        </div> */}
+        </div>
         <div className={`${style.carousel} ${inView ? style.carrouselAnimated : ""}`}>
           {sectionProducs.slice(0, 6).map((item, index) => (
             <Link
