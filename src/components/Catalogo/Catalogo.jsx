@@ -60,9 +60,10 @@ function Catalogo() {
               );
             })}
           </div>
+          <div className={style.divider}></div>
           <div className={style.container_button}>
             <span
-              className={`${style.type_discount} ${
+              className={`${style.type} ${
                 showDiscounted ? style.type_discount_selected : ""
               }`}
               onClick={handleShowDiscounted}

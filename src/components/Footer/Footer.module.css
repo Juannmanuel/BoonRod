@@ -1,9 +1,11 @@
 .footer_main {
-  background-color: black; /* Fondo negro */
-  color: white; /* Letras blancas */
-  padding: 2rem 1rem; /* Espaciado superior/inferior y lateral */
-  text-align: center; /* Centrar el texto */
+  background-color: black;
+  color: white; 
+  padding: 2rem 1rem; 
+  text-align: center; 
   min-height: 65vh;
+  box-sizing: border-box;
+  margin-top: 5rem;
 }
 
 .title {
