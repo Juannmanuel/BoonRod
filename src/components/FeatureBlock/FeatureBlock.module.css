@@ -126,13 +126,10 @@
 
 @keyframes zoomInOut {
   0% {
-    transform: scale(1); /* Tamaño original */
-  }
-  50% {
-    transform: scale(1.09); /* Zoom in */
+    transform: scale(1.2);
   }
   100% {
-    transform: scale(1); /* Zoom out */
+    transform: scale(1);
   }
 }
 

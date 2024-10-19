@@ -3,13 +3,18 @@ import imagen from "../../assets/images/Ropa/Producto_5_Remera/Modelo/Modelo_2.j
 import { IoAddCircleOutline } from "react-icons/io5";
 import { CiDiscount1 } from "react-icons/ci";
 import ProductPrice from "../ProductPrice/ProductPrice";
+import { useInView } from "react-intersection-observer";
+
+
 function Card({ images, title, price, description, percentage, isDiscounted }) {
   const { models } = images;
+  const { ref, inView } = useInView();
+  console.log(inView);
 
   return (
-    <div className={style.card_main}>
+    <div ref={ref} className={style.card_main}>
       <div className={style.container_carrousel}>
-        <img className={style.image} src={models[0]} alt="" />
+        <img className={`${style.image} ${inView ? style.imageAnimated : null}`} src={models[0]} alt="" />
         <IoAddCircleOutline className={style.icon} />
         {isDiscounted ? (
           <div className={style.flag_discount}>
