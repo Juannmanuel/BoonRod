@@ -37,7 +37,7 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
             </Link>
           ))}
           <div className={style.container_card_link}>
-            <span className={style.title}>Ver más</span>
+            <span className={style.title_link}>Ver más</span>
             <Link to={"/catalogo"}>
               <IoAddCircleOutline className={style.icon} />
             </Link>

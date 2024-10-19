@@ -17,7 +17,7 @@ function Card({ images, title, price, description, percentage, isDiscounted }) {
         <img className={`${style.image} ${inView ? style.imageAnimated : null}`} src={models[0]} alt="" />
         <IoAddCircleOutline className={style.icon} />
         {isDiscounted ? (
-          <div className={style.flag_discount}>
+          <div className={`${style.flag_discount} ${inView ? style.flag_discountAnimated : ""}`}>
             <span className={style.text_discount}>{percentage}%OFF</span>
           </div>
         ) : null}
@@ -29,6 +29,7 @@ function Card({ images, title, price, description, percentage, isDiscounted }) {
           price={price}
           percentage={percentage}
           isDiscounted={isDiscounted}
+          inView={inView}
         />
       </div>
     </div>

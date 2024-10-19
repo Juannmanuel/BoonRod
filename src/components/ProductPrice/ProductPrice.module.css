@@ -1,8 +1,9 @@
 .product_price {
   display: flex;
-
-
+  border: 1px solid white;
 }
+
+
 .product_price_details {
   display: flex;
   flex-flow: row wrap;
@@ -42,3 +43,8 @@
   padding: 0;
 
 }
+.product_priceAnimated{
+  animation: slideRigth 1.5s ease-in-out forwards;
+
+}
+

@@ -2,7 +2,7 @@ import React from "react";
 import style from "./ProductPrice.module.css";
 import { useLocation } from "react-router-dom";
 
-function ProductPrice({ price, percentage, isDiscounted, fontSize=1 }) {
+function ProductPrice({ price, percentage, isDiscounted, fontSize=1, inView }) {
 
 
 
@@ -15,7 +15,7 @@ function ProductPrice({ price, percentage, isDiscounted, fontSize=1 }) {
     : numericPrice;
 
   return (
-    <div className={style.product_price} style={{fontSize: `${fontSize}rem`}}>
+    <div className={`${style.product_price} ${inView ? style.product_priceAnimated : ""}`} style={{fontSize: `${fontSize}rem`}}>
       {isDiscounted ? (
         <div className={style.product_price_details}>
           <span className={style.product_price_original}>${price}</span>

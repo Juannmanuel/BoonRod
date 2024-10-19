@@ -89,12 +89,25 @@
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
 }
+.flag_discountAnimated {
+  animation: slideRigth .5s ease-in-out forwards;
 
+}
 @keyframes zoomInOut {
   0% {
     transform: scale(1.05);
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes slideRigth {
+  0% {
+    opacity: 0;
+    transform: translatex(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
   }
 }
