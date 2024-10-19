@@ -9,12 +9,12 @@ function FeatureBlock({ section, title, description, sectionProducs }) {
   console.log(inView);
 
   return (
-    <section ref={ref} className={style.featureBlock_main} data-section={section}>
+    <section ref={ref} className={`${style.featureBlock_main} ${inView ? style.featureBlock_main_animated: ""}`} data-section={section}>
       {/* <CircleAnimation/> */}
       <div className={style.container}>
-        <div className={style.heading}>
+        {/* <div className={style.heading}>
           <h2 className={`${style.title} ${inView ? style.titleAnimated : ""}`}>{title}</h2>
-        </div>
+        </div> */}
         <div className={`${style.carousel} ${inView ? style.carrouselAnimated : ""}`}>
           {sectionProducs.slice(0, 6).map((item, index) => (
             <Link
