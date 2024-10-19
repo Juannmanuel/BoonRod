@@ -2,20 +2,20 @@ import Card from "../Card/Card";
 import style from "./FeatureBlock.module.css";
 import { Link } from "react-router-dom";
 import { IoAddCircleOutline } from "react-icons/io5";
-import FilterItems from "../FilterItems/FilterItems";
-import gifSale from "../../assets/images/Flyer/saleGif.gif"
-import CircleAnimation from "../CircleAnimation/CircleAnimation";
+import { useInView } from "react-intersection-observer";
 
 function FeatureBlock({ section, title, description, sectionProducs }) {
+  const { ref, inView } = useInView();
+  console.log(inView);
+
   return (
-    <section className={style.featureBlock_main} data-section={section}>
-      
+    <section ref={ref} className={style.featureBlock_main} data-section={section}>
+      {/* <CircleAnimation/> */}
       <div className={style.container}>
         <div className={style.heading}>
-          <div className={style.circle}></div>
-          <h2 className={style.title}>{title}</h2>
+          <h2 className={`${style.title} ${inView ? style.titleAnimated : ""}`}>{title}</h2>
         </div>
-        <div className={style.carousel}>
+        <div className={`${style.carousel} ${inView ? style.carrouselAnimated : ""}`}>
           {sectionProducs.slice(0, 6).map((item, index) => (
             <Link
               key={index}
